@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="tele">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rádiové spoje a siete — Telekomunikácie a IT — IOL.SK</title>
+<meta name="description" content="Mikrovlnné spoje bod–bod, anténne systémy, stožiare a nosné konštrukcie, montáže vo výškach, zameranie trás a servis rádiových sietí.">
+<link rel="icon" href="https://iol.sk/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/iol.css">
+</head>
+<body>
+<a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1.5"/><path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/><path d="M10 22v-3h4v3"/></symbol>
+  <symbol id="i-antenna" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4M16.2 7.8a6 6 0 0 1 0 8.4M4.9 19.1a10 10 0 0 1 0-14.2M19.1 4.9a10 10 0 0 1 0 14.2"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 16c4 0 4-8 8-8s4 8 8 8"/><path d="M18 16h4M2 8h2"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/><path d="M7 7h.01M7 17h.01"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-build" viewBox="0 0 24 24"><path d="M4 17a8 8 0 0 1 16 0"/><rect x="2" y="17" width="20" height="4" rx="1"/><path d="M9.5 9.5V4.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.5"/><path d="M22 20v-2a4 4 0 0 0-3-3.9"/></symbol>
+  <symbol id="i-dig" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M5 20v-5l5-2 4 4"/><path d="m14 8 4-4 3 3-4 4z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v5"/></symbol>
+  <symbol id="i-heat" viewBox="0 0 24 24"><path d="M3 4h18"/><path d="M7 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6M12 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6M17 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6"/></symbol>
+  <symbol id="i-smart" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M9.4 8.6a4 4 0 0 1 5.2 0M11.2 11.3a1.6 1.6 0 0 1 1.6 0"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-14.7 5.8"/><path d="M3.5 12a8.5 8.5 0 0 1 14.7-5.8"/><path d="m18.2 2.4.3 3.9-3.9.3M5.8 21.6l-.3-3.9 3.9-.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1"/><path d="m9.5 13 1.8 1.8L15 11"/></symbol>
+  <symbol id="i-switch" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="9" y="7" width="6" height="10" rx="1"/><path d="M12 7.5v4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3"/><path d="M6.5 10.5v3M10.5 10.5v3M14.5 10.5v3"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.6 17.5a9 9 0 1 1 16.8 0"/><path d="m12 14.5 3.6-3.9"/><circle cx="12" cy="15.5" r="1.3"/></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24"><path d="M18.5 5.5a8 8 0 1 0 0 13"/><path d="M3.5 10.5h9M3.5 14h9"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M20.4 5.2a4.8 4.8 0 0 1-6.2 6.2L5.6 20 4 18.4l8.6-8.6a4.8 4.8 0 0 1 6.2-6.2l-3 3 2 2z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="m9 3 6 3 5.5-2.4v15L15 21l-6-3-5.5 2.4v-15z"/><path d="M9 3v15M15 6v15"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.5 18h5M10.5 21h3"/><path d="M12 2a6 6 0 0 0-3.6 10.8c.7.5 1 1.3 1 2.2h5.2c0-.9.3-1.7 1-2.2A6 6 0 0 0 12 2z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2.5 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html" aria-label="IOL — domovská stránka"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"/><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"/><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"/></svg>IOL</a>
+    <nav class="nav desktop-nav" aria-label="Hlavná navigácia">
+      <a href="telekomunikacie-a-it.html" aria-current="page"><i class="dot dot-tele"></i>Telekomunikácie a IT</a>
+      <a href="energetika.html"><i class="dot dot-energy"></i>Energetika</a>
+      <a href="stavebne-prace.html"><i class="dot dot-build"></i>Stavebné práce</a>
+    </nav>
+    <button class="menu-button" type="button" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilná navigácia">
+  <a href="index.html"><svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>Domov</a>
+  <a href="telekomunikacie-a-it.html"><i class="dot dot-tele"></i>Telekomunikácie a IT</a>
+  <a href="energetika.html"><i class="dot dot-energy"></i>Energetika a elektroinštalácie</a>
+  <a href="stavebne-prace.html"><i class="dot dot-build"></i>Stavebné práce na mieru</a>
+</nav>
+
+<main id="obsah">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Spoj, ktorý drží linku aj tam, kde sa <span class="mark">nekope</span></h1>
+      <p class="lede">Mikrovlnné trasy, anténne systémy a stožiare. Spoj odovzdávame s nameranými hodnotami, nie s prísľubom, že to bude fungovať.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <div class="band-ico"><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg></div>
+      <div>
+        <h2>Rieka, diaľnica alebo tri mesiace povolení</h2>
+        <p>Rádio má zmysel všade tam, kde je výkop nemožný, príliš drahý alebo príliš pomalý. Spoj postavíme za dni namiesto mesiacov a viete ho neskôr presunúť inam.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sluzby">
+    <div class="container">
+      <div class="section-head">
+        <h2>Služby v rádiových sieťach</h2>
+        <p>Od jedného spoja medzi dvoma budovami po chrbticu s viacerými preskokmi a zálohou.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-wave"></use></svg></div>
+          <h3>Mikrovlnné spoje bod–bod</h3>
+          <p>Prepojenie dvoch lokalít bez kopania. Navrhneme frekvenčné pásmo, kapacitu aj zálohovanie podľa toho, čo cez trasu potečie.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-antenna"></use></svg></div>
+          <h3>Anténne systémy</h3>
+          <p>Parabolické aj sektorové antény, držiaky, prepäťové ochrany a zvody. Vrátane výpočtu zaťaženia konštrukcie.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-build"></use></svg></div>
+          <h3>Stožiare a nosné konštrukcie</h3>
+          <p>Dodanie a montáž stožiarov, príhradových konštrukcií a strešných držiakov vrátane ukotvenia a uzemnenia.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg></div>
+          <h3>Montáže vo výškach</h3>
+          <p>Práce z autoplošiny aj lezeckou technikou. Máme vybavenie aj školenia na to, aby sa nemuselo improvizovať.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-gauge"></use></svg></div>
+          <h3>Zameranie a naladenie trasy</h3>
+          <p>Overenie priamej viditeľnosti, výpočet rezervy na útlm a naladenie na maximálnu stabilitu, nie len na prvý signál.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-refresh"></use></svg></div>
+          <h3>Diagnostika rušenia</h3>
+          <p>Hľadanie príčin výpadkov a rušenia v existujúcich trasách, zmena kanálov, polarizácie alebo umiestnenia.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg></div>
+          <h3>Záložné a alternatívne trasy</h3>
+          <p>Rádiová záloha k optike alebo druhá nezávislá trasa. Ak spadne jedna cesta, prevádzka beží ďalej.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-smart"></use></svg></div>
+          <h3>Prístupové body a WiFi pokrytie</h3>
+          <p>Pokrytie areálov, hál a verejných priestranstiev vrátane návrhu rozmiestnenia a merania sily signálu.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-wrench"></use></svg></div>
+          <h3>Servis a poruchová služba</h3>
+          <p>Preventívne prehliadky, výmena prvkov po búrke a zásah na mieste. Reakčné časy podľa dohodnutej dostupnosti.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Od obhliadky po stabilný spoj</h2>
+      </div>
+      <div class="steps">
+        <article>
+          <h3>Obhliadka a viditeľnosť</h3>
+          <p>Overíme priamu viditeľnosť medzi lokalitami, prekážky a možnosti uchytenia.</p>
+        </article>
+        <article>
+          <h3>Návrh a povolenia</h3>
+          <p>Návrh technológie, výpočet rezervy trasy a vybavenie potrebných povolení či súhlasov.</p>
+        </article>
+        <article>
+          <h3>Montáž a nasmerovanie</h3>
+          <p>Osadenie konštrukcie, antén a technológie. Nasmerovanie na maximálnu stabilitu.</p>
+        </article>
+        <article>
+          <h3>Meranie a odovzdanie</h3>
+          <p>Zmeranie prevádzkových hodnôt, protokol a nastavenie dohľadu nad trasou.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-slim">
+    <div class="container">
+      <div>
+        <p class="who">Rádiové siete a spoje</p>
+        <strong><a href="tel:+421948073463">+421 948 073 463</a></strong>
+      </div>
+      <p style="margin:0;max-width:44ch;color:var(--muted);font-size:15px">Napíšte adresy oboch bodov a približnú kapacitu — overíme viditeľnosť trasy a ozveme sa s návrhom.</p>
+      <div class="links">
+        <a class="button button-primary" href="tel:+421948073463"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolať</a>
+        <a class="button button-ghost" href="mailto:obchod@iol.sk"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>Napísať</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="more">
+    <div class="container">
+      <h2>Ďalšie z tejto značky</h2>
+      <div class="more-grid two">
+        <a href="tk-optika-metalika-koax.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-wave"></use></svg>
+          <span><b>Optika, metalika, koaxiál</b><span>Telekomunikačná výstavba a káblové siete</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="tk-ikt-vyvoj-bezpecnost.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-server"></use></svg>
+          <span><b>IKT, vývoj a bezpečnosť</b><span>Serverovne, softvér na mieru, kyberbezpečnosť</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="index.html"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"/><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"/><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"/></svg>IOL</a>
+      <p class="footer-claim">Telekomunikácie a IT, energetika a elektroinštalácie, stavebné práce na mieru. Jeden partner pre celý projekt.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Značky</h4>
+        <a href="telekomunikacie-a-it.html">Telekomunikácie a IT</a>
+        <a href="energetika.html">Energetika a elektroinštalácie</a>
+        <a href="stavebne-prace.html">Stavebné práce na mieru</a>
+      </div>
+      <div>
+        <h4>Stránky</h4>
+        <a href="tk-radiove-spoje.html">Rádiové spoje</a>
+        <a href="tk-optika-metalika-koax.html">Optika, metalika, koaxiál</a>
+        <a href="tk-ikt-vyvoj-bezpecnost.html">IKT, vývoj a bezpečnosť</a>
+        <a href="energetika-domacnosti.html">Rodinné domy a bytovky</a>
+        <a href="energetika-priemysel.html">Prevádzky a priemysel</a>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:obchod@iol.sk">obchod@iol.sk</a>
+        <a href="tel:+421949119628">+421 949 119 628 — firmy</a>
+        <a href="tel:+421948609910">+421 948 609 910 — domácnosti</a>
+        <a href="tel:+421948073463">+421 948 073 463 — siete</a>
+        <span style="display:block;padding:12px 0 0;font-size:14px;color:var(--muted)">Námestie osloboditeľov 3/A<br>040 01 Košice</span>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 IOL Spol, s.r.o. · IČO 36 197 998 · IČ DPH SK2021505772</span>
+    <span>Košice · pôsobíme na celom Slovensku</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.menu-button');
+    var nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
