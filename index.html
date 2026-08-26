@@ -46,6 +46,10 @@
   <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.5 18h5M10.5 21h3"/><path d="M12 2a6 6 0 0 0-3.6 10.8c.7.5 1 1.3 1 2.2h5.2c0-.9.3-1.7 1-2.2A6 6 0 0 0 12 2z"/></symbol>
   <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2.5 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 19-7-7 7-7"/></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8.5 20.5h7M12 16.5v4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -71,7 +75,8 @@
 
 <main id="obsah">
 
-  <section class="hero center">
+  <section class="hero center hero-holding">
+    <svg class="hero-art" viewBox="0 0 1400 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g><rect x="40" y="40" width="39" height="39" rx="7.8" fill="#0f6fd1" opacity="0.13"/><rect x="40" y="88" width="39" height="39" rx="7.8" fill="#0f6fd1" opacity="0.13"/><rect x="88" y="88" width="39" height="39" rx="7.8" fill="#0f6fd1" opacity="0.13"/></g><g><rect x="150" y="300" width="22" height="22" rx="4.4" fill="#ffc400" opacity="0.34"/><rect x="150" y="327" width="22" height="22" rx="4.4" fill="#ffc400" opacity="0.34"/><rect x="177" y="327" width="22" height="22" rx="4.4" fill="#ffc400" opacity="0.34"/></g><g><rect x="20" y="380" width="29" height="29" rx="5.7" fill="#0e8a55" opacity="0.11"/><rect x="20" y="415" width="29" height="29" rx="5.7" fill="#0e8a55" opacity="0.11"/><rect x="55" y="415" width="29" height="29" rx="5.7" fill="#0e8a55" opacity="0.11"/></g><g><rect x="250" y="90" width="14" height="14" rx="2.9" fill="#cf4326" opacity="0.18"/><rect x="250" y="108" width="14" height="14" rx="2.9" fill="#cf4326" opacity="0.18"/><rect x="268" y="108" width="14" height="14" rx="2.9" fill="#cf4326" opacity="0.18"/></g><g><rect x="1180" y="50" width="34" height="34" rx="6.8" fill="#0e8a55" opacity="0.13"/><rect x="1180" y="92" width="34" height="34" rx="6.8" fill="#0e8a55" opacity="0.13"/><rect x="1222" y="92" width="34" height="34" rx="6.8" fill="#0e8a55" opacity="0.13"/></g><g><rect x="1290" y="300" width="26" height="26" rx="5.2" fill="#0f6fd1" opacity="0.11"/><rect x="1290" y="332" width="26" height="26" rx="5.2" fill="#0f6fd1" opacity="0.11"/><rect x="1322" y="332" width="26" height="26" rx="5.2" fill="#0f6fd1" opacity="0.11"/></g><g><rect x="1120" y="350" width="17" height="17" rx="3.4" fill="#ffc400" opacity="0.3"/><rect x="1120" y="371" width="17" height="17" rx="3.4" fill="#ffc400" opacity="0.3"/><rect x="1141" y="371" width="17" height="17" rx="3.4" fill="#ffc400" opacity="0.3"/></g><g><rect x="1010" y="110" width="13" height="13" rx="2.6" fill="#cf4326" opacity="0.16"/><rect x="1010" y="126" width="13" height="13" rx="2.6" fill="#cf4326" opacity="0.16"/><rect x="1026" y="126" width="13" height="13" rx="2.6" fill="#cf4326" opacity="0.16"/></g></svg>
     <div class="container hero-inner">
       <h1>Rastieme s technológiami už <span class="mark">25 rokov</span></h1>
       <p class="lede">IOL je tím odborníkov, ktorý vyrástol na telekomunikáciách a postupne rozširuje svoje pôsobenie. Dnes staviame siete, energetiku aj softvér na mieru.</p>
@@ -148,41 +153,49 @@
 
       <ol class="tl">
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-pc"></use></svg></span>
           <span class="rok">2001</span>
           <b>Počítače na mieru</b>
           <span class="txt">Skladanie, dodávky a opravy počítačov pre výpočtové strediská a firmy.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-globe"></use></svg></span>
           <span class="rok">2004</span>
           <b>Internet a prvé siete</b>
           <span class="txt">Pripojenie zákazníkov a budovanie vlastnej prenosovej infraštruktúry.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-code"></use></svg></span>
           <span class="rok">2008</span>
           <b>Vývoj aplikácií</b>
           <span class="txt">Vlastný tím programátorov a prvé informačné systémy na mieru.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-antenna"></use></svg></span>
           <span class="rok">2011</span>
           <b>Rádiové spoje</b>
           <span class="txt">Mikrovlnné trasy, antény a stožiare tam, kde sa kopať nedá.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-wave"></use></svg></span>
           <span class="rok">2014</span>
           <b>Optické siete a serverovne</b>
           <span class="txt">Telekomunikačná výstavba od výkopu po meraciu správu, dátové centrá a IKT.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-plug"></use></svg></span>
           <span class="rok">2016</span>
           <b>Elektrina pre domácnosti</b>
           <span class="txt">Elektroinštalácie rodinných domov a bytoviek, prípojky, kúrenie a revízie.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg></span>
           <span class="rok">2021</span>
           <b>Solárna energia a veľké riešenia</b>
           <span class="txt">Fotovoltika, batériové úložiská a energetický manažment pre priemysel.</span>
         </li>
         <li>
+          <span class="tl-ico"><svg class="ico" aria-hidden="true"><use href="#i-build"></use></svg></span>
           <span class="rok">2025</span>
           <b>Stavebné práce na mieru</b>
           <span class="txt">Doplnili sme si to, čo sme si pri vlastných zákazkách aj tak museli objednávať.</span>
@@ -221,6 +234,41 @@
           <h3>Digitalizácia a riešenia na mieru</h3>
           <p>Vlastný vývojový tím nám umožňuje digitalizovať tam, kde sa v našich odboroch stále používa papier.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="partneri">
+    <div class="container">
+      <div class="section-head">
+        <h2>Partneri a dodávatelia</h2>
+        <p>Dlhodobo spolupracujeme s dodávateľmi technológií a s firmami, ktoré s nami stavajú väčšie projekty.</p>
+      </div>
+      <div class="partners">
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13" fill="none" stroke="#5b6b7a" stroke-width="3"/><path d="M20 7v26" stroke="#5b6b7a" stroke-width="3"/></svg>
+          <span>Alfatech</span>
+        </div>
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="7" width="26" height="26" rx="6" fill="none" stroke="#5b6b7a" stroke-width="3"/><path d="M13 27 27 13" stroke="#5b6b7a" stroke-width="3"/></svg>
+          <span>Nordika</span>
+        </div>
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6 34 32H6z" fill="none" stroke="#5b6b7a" stroke-width="3" stroke-linejoin="round"/></svg>
+          <span>Vertex Energy</span>
+        </div>
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 32V16l14-9 14 9v16" fill="none" stroke="#5b6b7a" stroke-width="3" stroke-linejoin="round"/></svg>
+          <span>Stavos Group</span>
+        </div>
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="12" cy="20" r="5" fill="none" stroke="#5b6b7a" stroke-width="3"/><circle cx="28" cy="20" r="5" fill="none" stroke="#5b6b7a" stroke-width="3"/><path d="M17 20h6" stroke="#5b6b7a" stroke-width="3"/></svg>
+          <span>Datalink</span>
+        </div>
+        <div class="partner">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 28 14 16l6 8 6-12 8 16" fill="none" stroke="#5b6b7a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span>Meridian Tech</span>
+        </div>
       </div>
     </div>
   </section>
