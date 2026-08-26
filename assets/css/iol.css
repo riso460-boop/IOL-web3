@@ -289,24 +289,22 @@ p { margin: 0 0 18px; }
 
 /* úvodná stránka — výraznejší, vizuálne odlíšený hero */
 .hero-holding {
-  padding: 104px 0 96px;
+  padding: 108px 0 120px;
   overflow: hidden;
+  border-bottom: 0;
   background:
     radial-gradient(ellipse 46% 62% at 14% 4%,  rgba(15, 111, 209, .13), transparent 62%),
     radial-gradient(ellipse 42% 58% at 86% 8%,  rgba(14, 138, 85, .13), transparent 62%),
-    radial-gradient(ellipse 52% 46% at 50% 104%, rgba(255, 196, 0, .16), transparent 64%),
-    linear-gradient(180deg, #ffffff 0%, var(--paper-2) 100%);
+    linear-gradient(180deg, #ffffff 0%, var(--paper-2) 38%, var(--paper-2) 62%, #ffffff 100%);
 }
-.hero-holding::before {
+/* svetelná stopa, ktorá sleduje kurzor */
+.hero-holding::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 58px 58px;
-  mask-image: radial-gradient(ellipse 74% 76% at 50% 42%, #000 18%, transparent 78%);
-  -webkit-mask-image: radial-gradient(ellipse 74% 76% at 50% 42%, #000 18%, transparent 78%);
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 36%), rgba(255, 196, 0, .20), transparent 68%);
+  opacity: var(--glow, 0);
+  transition: opacity .45s ease;
   pointer-events: none;
 }
 .hero-art {
@@ -314,12 +312,44 @@ p { margin: 0 0 18px; }
   inset: 0;
   width: 100%; height: 100%;
   pointer-events: none;
+  mask-image: linear-gradient(180deg, #000 58%, transparent 94%);
+  -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 94%);
 }
+.hero-art g { transition: transform .55s cubic-bezier(.22, .8, .26, 1); }
 .hero-art rect { animation: plavanie 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .hero-art g:nth-child(2n) rect { animation-delay: -2.4s; }
 .hero-art g:nth-child(3n) rect { animation-delay: -4.8s; }
 @keyframes plavanie { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 .hero-holding .hero-inner { position: relative; z-index: 2; }
+.hero-holding + .section { padding-top: 24px; }
+.cue-wrap { display: flex; justify-content: center; margin-top: 46px; }
+.hero .cue-wrap { margin-top: 40px; }
+.scroll-cue {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: rgba(255, 255, 255, .78);
+  color: var(--muted);
+  transition: color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.scroll-cue .ico { width: 18px; height: 18px; }
+.scroll-cue:hover { color: var(--accent); border-color: var(--accent); transform: translateY(3px); }
+.hero .scroll-cue { animation: cue 2.6s ease-in-out infinite; }
+@keyframes cue { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+/* postupné odkrývanie obsahu pri scrollovaní */
+.js-reveal .reveal { opacity: 0; transform: translateY(20px); }
+.js-reveal .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity .7s cubic-bezier(.22, .8, .26, 1) var(--d, 0s),
+              transform .7s cubic-bezier(.22, .8, .26, 1) var(--d, 0s);
+}
 @media (max-width: 860px) { .hero-art { display: none; } .hero-holding { padding: 66px 0 60px; } }
 .hero.center .hero-inner { max-width: 780px; margin-inline: auto; }
 .hero.center .eyebrow { justify-content: center; }
@@ -950,6 +980,8 @@ p { margin: 0 0 18px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .js-reveal .reveal { opacity: 1; transform: none; }
+  .hero-holding::after { display: none; }
   *, *::before, *::after {
     animation-duration: .001ms !important;
     animation-iteration-count: 1 !important;

@@ -50,6 +50,7 @@
   <symbol id="i-pc" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8.5 20.5h7M12 16.5v4"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -75,20 +76,23 @@
 
 <main id="obsah">
 
-  <section class="emergency">
+  <section id="cast-1" class="emergency">
     <div class="container">
       <p><b>Havarijný stav?</b> Výpadok elektriny, iskrenie alebo poškodený rozvádzač — voláme prednostne.</p>
       <a class="button-alarm" href="tel:+421948609910"><svg class="ico" aria-hidden="true"><use href="#i-alert"></use></svg>+421 948 609 910</a>
     </div>
   </section>
 
-  <section class="hero">
+  <section id="cast-2" class="hero">
     <div class="container hero-inner">
       <a class="back-link" href="energetika.html"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"></use></svg>Späť na energetiku</a>
       <h1>Elektroinštalácia hotová <span class="mark">na kľúč</span></h1>
       <p class="lede">Rodinné domy, byty a bytové domy. Obhliadka, návrh, materiál, montáž a revízna správa od jedného tímu.</p>
       <div class="hero-actions">
         <a class="button button-primary" href="tel:+421948609910"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolajte pre cenovú ponuku</a>
+      </div>
+      <div class="cue-wrap">
+        <a class="scroll-cue" href="#co-robime" aria-label="Prejsť na ďalšiu sekciu"><svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg></a>
       </div>
     </div>
   </section>
@@ -157,10 +161,13 @@
         </article>
 
       </div>
+      <div class="cue-wrap">
+        <a class="scroll-cue" href="#cast-5" aria-label="Prejsť na ďalšiu sekciu"><svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg></a>
+      </div>
     </div>
   </section>
 
-  <section class="band">
+  <section id="cast-4" class="band">
     <div class="container">
       <div class="band-ico"><svg class="ico" aria-hidden="true"><use href="#i-doc"></use></svg></div>
       <div>
@@ -170,7 +177,7 @@
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section id="cast-5" class="section section-alt">
     <div class="container">
       <div class="section-head">
         <h2>Od telefonátu po revíznu správu</h2>
@@ -193,10 +200,13 @@
           <p>Odskúšame, vystavíme revíznu správu a vysvetlíme, čo kde je. Neskôr aj periodické prehliadky.</p>
         </article>
       </div>
+      <div class="cue-wrap">
+        <a class="scroll-cue" href="#cast-6" aria-label="Prejsť na ďalšiu sekciu"><svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg></a>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section id="cast-6" class="section">
     <div class="container">
       <div class="section-head">
         <h2>Domy, byty a bytovky</h2>
@@ -239,7 +249,7 @@
     </div>
   </section>
 
-  <section class="contact-slim">
+  <section id="cast-7" class="contact-slim">
     <div class="container">
       <div>
         <p class="who">Elektroinštalácie domácností a bytoviek</p>
@@ -253,7 +263,7 @@
     </div>
   </section>
 
-  <section class="more">
+  <section id="cast-8" class="more">
     <div class="container">
       <h2>Ďalšie z tejto značky</h2>
       <div class="more-grid two">
@@ -314,18 +324,69 @@
   (function () {
     var btn = document.querySelector('.menu-button');
     var nav = document.getElementById('mobile-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
+    if (btn && nav) {
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    var tichoZapnute = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* postupné odkrývanie obsahu */
+    var odkryvane = document.querySelectorAll('[data-reveal]');
+    if (odkryvane.length && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('js-reveal');
+      var sledovac = new IntersectionObserver(function (zaznamy) {
+        zaznamy.forEach(function (z) {
+          if (z.isIntersecting) {
+            z.target.classList.add('is-in');
+            sledovac.unobserve(z.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      odkryvane.forEach(function (el) { sledovac.observe(el); });
+    }
+
+    /* pozadie hero reaguje na pohyb kurzora */
+    var hero = document.querySelector('.hero-holding');
+    var art = hero && hero.querySelector('.hero-art');
+    if (hero && art && !tichoZapnute && window.matchMedia('(pointer: fine)').matches) {
+      var vrstvy = art.querySelectorAll('g');
+      var ciel = { x: 0, y: 0 }, ceka = false;
+
+      var vykresli = function () {
+        ceka = false;
+        hero.style.setProperty('--mx', (ciel.x * 100).toFixed(2) + '%');
+        hero.style.setProperty('--my', (ciel.y * 100).toFixed(2) + '%');
+        vrstvy.forEach(function (g) {
+          var h = parseFloat(g.getAttribute('data-depth')) || 1;
+          var dx = (ciel.x - 0.5) * h * -30;
+          var dy = (ciel.y - 0.5) * h * -20;
+          g.style.transform = 'translate(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px)';
+        });
+      };
+
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        ciel.x = (e.clientX - r.left) / r.width;
+        ciel.y = (e.clientY - r.top) / r.height;
+        hero.style.setProperty('--glow', '1');
+        if (!ceka) { ceka = true; requestAnimationFrame(vykresli); }
+      });
+
+      hero.addEventListener('pointerleave', function () {
+        hero.style.setProperty('--glow', '0');
+        vrstvy.forEach(function (g) { g.style.transform = 'translate(0,0)'; });
+      });
+    }
   })();
 </script>
 </body>
