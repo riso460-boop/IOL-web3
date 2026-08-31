@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Energetika pre prevádzky a priemysel — IOL.SK</title>
+<title>Energetika pre priemysel a verejnú správu — IOL.SK</title>
 <meta name="description" content="Fotovoltika, batériové úložiská, energetický manažment a audit, priemyselné elektroinštalácie, povinné revízie, financovanie a dotácie.">
-<link rel="icon" href="https://iol.sk/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -55,11 +55,23 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="wordmark" href="index.html" aria-label="IOL — domovská stránka"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"/><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"/><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"/></svg>IOL</a>
+    <div class="brandbar">
+      <a class="wordmark" href="index.html" aria-label="IOL — domovská stránka"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"/><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"/><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"/></svg>IOL</a>
+      <div class="brand-switch">
+        <a class="wordmark-sub" href="energetika.html">Energetika</a>
+        <button class="brand-switch-btn" type="button" aria-expanded="false" aria-controls="brand-switch-menu" aria-label="Zobraziť ostatné značky">
+          <svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+        </button>
+        <div class="brand-switch-menu" id="brand-switch-menu" hidden>
+          <a class="bs-tele" href="telekomunikacie-a-it.html">Telekomunikácie a IT</a>
+          <a class="bs-build" href="stavebne-prace.html">Stavebné práce</a>
+        </div>
+      </div>
+    </div>
     <nav class="nav desktop-nav" aria-label="Hlavná navigácia">
-      <a href="telekomunikacie-a-it.html"><i class="dot dot-tele"></i>Telekomunikácie a IT</a>
-      <a href="energetika.html" aria-current="page"><i class="dot dot-energy"></i>Energetika</a>
-      <a href="stavebne-prace.html"><i class="dot dot-build"></i>Stavebné práce</a>
+      <a href="energetika-havarijne-stavy.html">Havarijné stavy a poruchy</a>
+      <a href="energetika-domacnosti.html">Rodinné domy, byty a malé firmy</a>
+      <a href="energetika-priemysel.html" aria-current="page">Priemysel a verejná správa</a>
     </nav>
     <button class="menu-button" type="button" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
@@ -69,20 +81,25 @@
 
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobilná navigácia">
   <a href="index.html"><svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>Domov</a>
-  <a href="telekomunikacie-a-it.html"><i class="dot dot-tele"></i>Telekomunikácie a IT</a>
-  <a href="energetika.html"><i class="dot dot-energy"></i>Energetika a elektroinštalácie</a>
-  <a href="stavebne-prace.html"><i class="dot dot-build"></i>Stavebné práce na mieru</a>
+  <a href="energetika-havarijne-stavy.html">Havarijné stavy a poruchy</a>
+  <a href="energetika-domacnosti.html">Rodinné domy, byty a malé firmy</a>
+  <a href="energetika-priemysel.html">Priemysel a verejná správa</a>
+  <span class="mobile-nav-label">Ostatné značky</span>
+  <a href="telekomunikacie-a-it.html">Telekomunikácie a IT</a>
+  <a href="stavebne-prace.html">Stavebné práce na mieru</a>
 </nav>
 
 <main id="obsah">
 
-  <section id="cast-1" class="hero">
+  <section id="cast-1" class="hero center">
     <div class="container hero-inner">
-      <a class="back-link" href="energetika.html"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"></use></svg>Späť na energetiku</a>
       <h1>Elektrina ako položka, ktorú viete <span class="mark">riadiť</span></h1>
       <p class="lede">Výroba, sklady, predajne aj administratívne budovy. Znížime spotrebu, vyrobíme elektrinu priamo v mieste odberu a postrážime povinné revízie.</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="tel:+421949119628"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolajte pre nezáväznú kalkuláciu</a>
+        <div class="button-duo">
+          <a class="button button-primary" href="mailto:obchod@iol.sk"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>Napíšte nám pre cenovú ponuku</a>
+          <a class="button button-ghost" href="tel:+421949119628"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolajte nám pre viac informácií</a>
+        </div>
       </div>
       <div class="cue-wrap">
         <a class="scroll-cue" href="#co-robime" aria-label="Prejsť na ďalšiu sekciu"><svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg></a>
@@ -102,7 +119,7 @@
 
   <section class="section" id="co-robime">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <h2>Služby pre prevádzky a priemysel</h2>
         <p>Od jednorazovej revízie po kompletné riešenie s financovaním — aj po častiach.</p>
       </div>
@@ -162,7 +179,7 @@
 
   <section id="cast-4" class="section section-alt">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <h2>Od otázky po úspory</h2>
       </div>
       <div class="steps">
@@ -191,7 +208,7 @@
 
   <section id="cast-5" class="section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <h2>Projekty, ktoré už šetria</h2>
       </div>
       <div class="refs">
@@ -229,26 +246,26 @@
         <p class="who">Firmy, priemysel a verejná správa</p>
         <strong><a href="tel:+421949119628">+421 949 119 628</a></strong>
       </div>
-      <p style="margin:0;max-width:44ch;color:var(--muted);font-size:15px">Pošlite spotrebu za posledný rok alebo zavolajte. Ozveme sa s návrhom ďalšieho kroku.</p>
-      <div class="links">
-        <a class="button button-primary" href="tel:+421949119628"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolať</a>
-        <a class="button button-ghost" href="mailto:obchod@iol.sk"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>Napísať</a>
+      <p class="slim-note">Pošlite spotrebu za posledný rok alebo zavolajte. Ozveme sa s návrhom ďalšieho kroku.</p>
+      <div class="button-duo">
+        <a class="button button-primary" href="mailto:obchod@iol.sk"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>Napíšte nám pre cenovú ponuku</a>
+        <a class="button button-ghost" href="tel:+421949119628"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolajte nám pre viac informácií</a>
       </div>
     </div>
   </section>
 
   <section id="cast-7" class="more">
     <div class="container">
-      <h2>Ďalšie z tejto značky</h2>
+      <h2>Iné služby</h2>
       <div class="more-grid two">
         <a href="energetika-domacnosti.html">
           <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
-          <span><b>Rodinné domy a bytovky</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
           <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
         </a>
-        <a href="energetika.html">
-          <svg class="ico" aria-hidden="true"><use href="#i-bolt"></use></svg>
-          <span><b>Prehľad značky</b><span>Energetika a elektroinštalácie</span></span>
+        <a href="energetika-havarijne-stavy.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-alert"></use></svg>
+          <span><b>Havarijné stavy a poruchy</b><span>Poruchová služba 24 hodín denne</span></span>
           <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
         </a>
       </div>
@@ -265,26 +282,14 @@
     </div>
     <div class="footer-cols">
       <div>
-        <h4>Značky</h4>
+        <h4>Naša spoločnosť</h4>
+        <a href="index.html">IOL Spol, s.r.o.</a>
+      </div>
+      <div>
+        <h4>Naše značky</h4>
         <a href="telekomunikacie-a-it.html">Telekomunikácie a IT</a>
         <a href="energetika.html">Energetika a elektroinštalácie</a>
         <a href="stavebne-prace.html">Stavebné práce na mieru</a>
-      </div>
-      <div>
-        <h4>Stránky</h4>
-        <a href="tk-radiove-spoje.html">Rádiové spoje</a>
-        <a href="tk-optika-metalika-koax.html">Optika, metalika, koaxiál</a>
-        <a href="tk-ikt-vyvoj-bezpecnost.html">IKT, vývoj a bezpečnosť</a>
-        <a href="energetika-domacnosti.html">Rodinné domy a bytovky</a>
-        <a href="energetika-priemysel.html">Prevádzky a priemysel</a>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <a href="mailto:obchod@iol.sk">obchod@iol.sk</a>
-        <a href="tel:+421949119628">+421 949 119 628 — firmy</a>
-        <a href="tel:+421948609910">+421 948 609 910 — domácnosti</a>
-        <a href="tel:+421948073463">+421 948 073 463 — siete</a>
-        <span style="display:block;padding:12px 0 0;font-size:14px;color:var(--muted)">Námestie osloboditeľov 3/A<br>040 01 Košice</span>
       </div>
     </div>
   </div>
@@ -296,8 +301,12 @@
 
 <script>
   (function () {
-    var btn = document.querySelector('.menu-button');
-    var nav = document.getElementById('mobile-nav');
+    'use strict';
+    var d = document, w = window;
+
+    /* ---------- mobilné menu ---------- */
+    var btn = d.querySelector('.menu-button');
+    var nav = d.getElementById('mobile-nav');
     if (btn && nav) {
       btn.addEventListener('click', function () {
         var open = nav.classList.toggle('open');
@@ -312,56 +321,183 @@
       });
     }
 
-    var tichoZapnute = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* ---------- prepínač na ostatné značky ---------- */
+    var prepinac = d.querySelector('.brand-switch-btn');
+    var ponuka = d.getElementById('brand-switch-menu');
+    if (prepinac && ponuka) {
+      var zavriPonuku = function () {
+        ponuka.hidden = true;
+        prepinac.setAttribute('aria-expanded', 'false');
+      };
+      prepinac.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var otvor = ponuka.hidden;
+        ponuka.hidden = !otvor;
+        prepinac.setAttribute('aria-expanded', otvor ? 'true' : 'false');
+      });
+      d.addEventListener('click', function (e) {
+        if (!ponuka.hidden && !e.target.closest('.brand-switch')) { zavriPonuku(); }
+      });
+      d.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !ponuka.hidden) { zavriPonuku(); prepinac.focus(); }
+      });
+    }
 
-    /* postupné odkrývanie obsahu */
-    var odkryvane = document.querySelectorAll('[data-reveal]');
-    if (odkryvane.length && 'IntersectionObserver' in window) {
-      document.documentElement.classList.add('js-reveal');
+    var ticho = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- postupné odkrývanie obsahu ---------- */
+    var odkryvane = d.querySelectorAll('[data-reveal]');
+    if (odkryvane.length && 'IntersectionObserver' in w) {
+      d.documentElement.classList.add('js-reveal');
       var sledovac = new IntersectionObserver(function (zaznamy) {
         zaznamy.forEach(function (z) {
-          if (z.isIntersecting) {
-            z.target.classList.add('is-in');
-            sledovac.unobserve(z.target);
-          }
+          if (z.isIntersecting) { z.target.classList.add('is-in'); sledovac.unobserve(z.target); }
         });
       }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
-      odkryvane.forEach(function (el) { sledovac.observe(el); });
+      [].forEach.call(odkryvane, function (el) { sledovac.observe(el); });
     }
 
-    /* pozadie hero reaguje na pohyb kurzora */
-    var hero = document.querySelector('.hero-holding');
-    var art = hero && hero.querySelector('.hero-art');
-    if (hero && art && !tichoZapnute && window.matchMedia('(pointer: fine)').matches) {
-      var vrstvy = art.querySelectorAll('g');
-      var ciel = { x: 0, y: 0 }, ceka = false;
+    /* ---------- pomocné ikony ---------- */
+    function ikona(cesta) {
+      return '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">' + cesta + '</svg>';
+    }
+    var I_KRIZ   = '<path d="M6 6l12 12M18 6 6 18"/>';
+    var I_VLAVO  = '<path d="m15 5-7 7 7 7"/>';
+    var I_VPRAVO = '<path d="m9 5 7 7-7 7"/>';
 
-      var vykresli = function () {
-        ceka = false;
-        hero.style.setProperty('--mx', (ciel.x * 100).toFixed(2) + '%');
-        hero.style.setProperty('--my', (ciel.y * 100).toFixed(2) + '%');
-        vrstvy.forEach(function (g) {
-          var h = parseFloat(g.getAttribute('data-depth')) || 1;
-          var dx = (ciel.x - 0.5) * h * -30;
-          var dy = (ciel.y - 0.5) * h * -20;
-          g.style.transform = 'translate(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px)';
+    /* ---------- zväčšenie obrázka v okne cez stránku ---------- */
+    var polozky = [].slice.call(d.querySelectorAll('[data-lb]'));
+    if (polozky.length) {
+      var skupiny = {};
+      polozky.forEach(function (el) {
+        var s = el.getAttribute('data-lb') || 'default';
+        (skupiny[s] = skupiny[s] || []).push(el);
+      });
+
+      var okno = d.createElement('div');
+      okno.className = 'lb';
+      okno.setAttribute('role', 'dialog');
+      okno.setAttribute('aria-modal', 'true');
+      okno.setAttribute('aria-label', 'Zväčšený obrázok');
+      okno.innerHTML =
+        '<div class="lb-backdrop" data-zavri></div>' +
+        '<div class="lb-box">' +
+          '<span class="lb-count"></span>' +
+          '<button class="lb-btn lb-close" type="button" aria-label="Zavrieť">' + ikona(I_KRIZ) + '</button>' +
+          '<button class="lb-btn lb-prev" type="button" aria-label="Predchádzajúci obrázok">' + ikona(I_VLAVO) + '</button>' +
+          '<button class="lb-btn lb-next" type="button" aria-label="Nasledujúci obrázok">' + ikona(I_VPRAVO) + '</button>' +
+          '<img alt="">' +
+          '<div class="lb-cap"></div>' +
+        '</div>';
+      d.body.appendChild(okno);
+
+      var lbObraz = okno.querySelector('img');
+      var lbPopis = okno.querySelector('.lb-cap');
+      var lbPocet = okno.querySelector('.lb-count');
+      var lbZavri = okno.querySelector('.lb-close');
+      var aktivna = [];
+      var index = 0;
+      var vratFokus = null;
+
+      function udaje(el) {
+        var obr = el.matches('img') ? el : el.querySelector('img');
+        var nadpis = el.getAttribute('data-lb-title') || (el.querySelector('h4') ? el.querySelector('h4').textContent : '');
+        var text = el.getAttribute('data-lb-text') || (el.querySelector('p') ? el.querySelector('p').textContent : '');
+        return {
+          src: el.getAttribute('data-lb-src') || (obr ? obr.currentSrc || obr.src : ''),
+          alt: obr ? obr.alt : '',
+          nadpis: nadpis,
+          text: text
+        };
+      }
+
+      function ukaz(i) {
+        index = (i + aktivna.length) % aktivna.length;
+        var u = udaje(aktivna[index]);
+        lbObraz.src = u.src;
+        lbObraz.alt = u.alt;
+        lbPopis.innerHTML = (u.nadpis ? '<h4></h4>' : '') + (u.text ? '<p></p>' : '');
+        if (u.nadpis) { lbPopis.querySelector('h4').textContent = u.nadpis; }
+        if (u.text) { lbPopis.querySelector('p').textContent = u.text; }
+        lbPocet.textContent = (index + 1) + ' / ' + aktivna.length;
+        okno.classList.toggle('lb-single', aktivna.length < 2);
+      }
+
+      function otvor(el) {
+        aktivna = skupiny[el.getAttribute('data-lb') || 'default'];
+        vratFokus = d.activeElement;
+        ukaz(aktivna.indexOf(el));
+        okno.classList.add('is-open');
+        d.body.style.overflow = 'hidden';
+        lbZavri.focus();
+      }
+
+      function zavri() {
+        okno.classList.remove('is-open');
+        d.body.style.overflow = '';
+        if (vratFokus && vratFokus.focus) { vratFokus.focus(); }
+      }
+
+      polozky.forEach(function (el) {
+        if (!el.hasAttribute('tabindex') && !el.matches('a, button')) { el.setAttribute('tabindex', '0'); }
+        if (!el.hasAttribute('role') && !el.matches('a, button')) { el.setAttribute('role', 'button'); }
+        el.addEventListener('click', function (e) { e.preventDefault(); otvor(el); });
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); otvor(el); }
         });
-      };
-
-      hero.addEventListener('pointermove', function (e) {
-        var r = hero.getBoundingClientRect();
-        ciel.x = (e.clientX - r.left) / r.width;
-        ciel.y = (e.clientY - r.top) / r.height;
-        hero.style.setProperty('--glow', '1');
-        if (!ceka) { ceka = true; requestAnimationFrame(vykresli); }
       });
 
-      hero.addEventListener('pointerleave', function () {
-        hero.style.setProperty('--glow', '0');
-        vrstvy.forEach(function (g) { g.style.transform = 'translate(0,0)'; });
+      okno.addEventListener('click', function (e) {
+        if (e.target.hasAttribute('data-zavri') || e.target.closest('.lb-close')) { zavri(); }
+        else if (e.target.closest('.lb-prev')) { ukaz(index - 1); }
+        else if (e.target.closest('.lb-next')) { ukaz(index + 1); }
+      });
+
+      d.addEventListener('keydown', function (e) {
+        if (!okno.classList.contains('is-open')) { return; }
+        if (e.key === 'Escape') { zavri(); }
+        else if (e.key === 'ArrowLeft') { ukaz(index - 1); }
+        else if (e.key === 'ArrowRight') { ukaz(index + 1); }
       });
     }
-  })();
+
+    /* ---------- posuvník obrázkov ---------- */
+    [].forEach.call(d.querySelectorAll('.carousel'), function (posuvnik) {
+      var pas = posuvnik.querySelector('.carousel-track');
+      if (!pas) { return; }
+
+      var spat = d.createElement('button');
+      spat.type = 'button';
+      spat.className = 'carousel-nav prev';
+      spat.setAttribute('aria-label', 'Predchádzajúce obrázky');
+      spat.innerHTML = ikona(I_VLAVO);
+
+      var dalej = d.createElement('button');
+      dalej.type = 'button';
+      dalej.className = 'carousel-nav next';
+      dalej.setAttribute('aria-label', 'Ďalšie obrázky');
+      dalej.innerHTML = ikona(I_VPRAVO);
+
+      posuvnik.appendChild(spat);
+      posuvnik.appendChild(dalej);
+
+      function krok() { return Math.max(pas.clientWidth * 0.8, 180); }
+      spat.addEventListener('click', function () { pas.scrollBy({ left: -krok(), behavior: 'smooth' }); });
+      dalej.addEventListener('click', function () { pas.scrollBy({ left: krok(), behavior: 'smooth' }); });
+
+      function stav() {
+        spat.disabled = pas.scrollLeft < 8;
+        dalej.disabled = pas.scrollLeft > pas.scrollWidth - pas.clientWidth - 8;
+      }
+      pas.addEventListener('scroll', stav, { passive: true });
+      w.addEventListener('resize', stav);
+      stav();
+    });
+
+    if (ticho || !w.matchMedia('(pointer: fine)').matches) { return; }
+
+    })();
 </script>
+<script src="assets/js/cursor.js"></script>
 </body>
 </html>
