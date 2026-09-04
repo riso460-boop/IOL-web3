@@ -1,0 +1,406 @@
+LEGENDA FOTOGRAFIÍ — iol.sk
+==========================================================================
+
+Všetky fotografie patria do priečinka:  assets/images/
+Názvy súborov musia sedieť presne: 1.jpg, 2.jpg, … 27.jpg
+
+Formát:      .jpg (pri fotografiách je menší než .png)
+Kvalita:     80–85 %, aby súbor ostal pod ~400 kB
+Farebnosť:   Cez fotku ide poloprehľadný prekryv vo farbe značky.
+             Fungujú preto lepšie fotky so stredným jasom a bez
+             výrazných farebných plôch, ktoré by s prekryvom bojovali.
+
+Poznámka:    Fotografie v kartách na stránke Energetika sa načítavajú
+             priamo z iol.sk a tento zoznam sa ich netýka.
+
+==========================================================================
+
+RÝCHLY PREHĽAD
+--------------------------------------------------------------------------
+SÚBOR   STRÁNKA                        UMIESTNENIE
+--------------------------------------------------------------------------
+1.jpg   Úvodná stránka                 hlavička stránky (hero)
+2.jpg   Úvodná stránka                 pás cez celú šírku uprostred stránky
+3.jpg   Telekomunikácie a IT           hlavička stránky (hero)
+4.jpg   Telekomunikácie a IT           pás cez celú šírku uprostred stránky
+5.jpg   Energetika                     hlavička stránky (hero)
+6.jpg   Energetika                     pás cez celú šírku uprostred stránky
+7.jpg   Stavebné práce                 hlavička stránky (hero)
+8.jpg   Energetika — rodinné domy      hlavička stránky (hero)
+9.jpg   Energetika — rodinné domy      pás cez celú šírku uprostred stránky
+10.jpg  Energetika — priemysel         hlavička stránky (hero)
+11.jpg  Energetika — havarijné stavy   hlavička stránky (hero)
+12.jpg  Energetika — havarijné stavy   pás cez celú šírku uprostred stránky
+13.jpg  Naša história                  hlavička karty znacky - rodinne domy
+14.jpg  Energetika                     hlavička stránky (hero)
+15.jpg  Náš cieľ                       pás cez celú šírku uprostred stránky
+16.jpg  Referencie                     hlavička stránky (hero)
+17.jpg  Referencie                     pás cez celú šírku uprostred stránky
+18.jpg  TK — rádiové spoje             hlavička stránky (hero)
+19.jpg  TK — optika a metalika         hlavička stránky (hero)
+20.jpg  TK — IKT a bezpečnosť          hlavička stránky (hero)
+21.jpg  TK — IKT a bezpečnosť          pás cez celú šírku uprostred stránky
+22.jpg  Úvodná stránka                 hlavička karty značky - IKT a IT
+23.jpg  Úvodná stránka                 hlavička karty značky - Elektro
+24.jpg  Úvodná stránka                 hlavička karty značky - Stavba
+25.jpg  Telekomunikácie a IT           hlavička karty značky - RR
+26.jpg  Telekomunikácie a IT           hlavička karty značky - Zemne
+27.jpg  Telekomunikácie a IT           hlavička karty značky - IKT a bezpecnost
+
+==========================================================================
+
+PODROBNE
+
+1.jpg
+--------------------------------------------------------------------------
+  Stránka:      Úvodná stránka
+  Súbor:        index.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Rastieme s technológiami už 25 rokov"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Celkový záber, ktorý zastupuje firmu ako celok. Pokojnejšia kompozícia, nie detail.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+2.jpg
+--------------------------------------------------------------------------
+  Stránka:      Úvodná stránka
+  Súbor:        index.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Jeden partner pre celý projekt"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Spolupráca viacerých profesií na jednej stavbe — sieť, elektrina aj stavebná časť.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+3.jpg
+--------------------------------------------------------------------------
+  Stránka:      Telekomunikácie a IT
+  Súbor:        telekomunikacie-a-it.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Postavíme sieť aj systém, ktorý po nej beží"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Telekomunikačná výstavba v teréne — zvárač vlákien, meracia technika, rozvádzač siete.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+4.jpg
+--------------------------------------------------------------------------
+  Stránka:      Telekomunikácie a IT
+  Súbor:        telekomunikacie-a-it.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Od výkopu po meraciu správu"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Optická trasa od výkopu po meranie — chránička, zvar alebo OTDR merací prístroj.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+5.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika
+  Súbor:        energetika.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Elektrina, na ktorú nemusíte myslieť"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Elektroinštalačné práce, ktoré zastupujú celú značku — rozvádzač, rozvody, montáž.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+6.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika
+  Súbor:        energetika.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Revíznu správu odovzdávame spolu s dielom"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Odovzdávanie diela — technik s dokumentáciou, revízna správa, hotový rozvádzač.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+7.jpg
+--------------------------------------------------------------------------
+  Stránka:      Stavebné práce
+  Súbor:        stavebne-prace.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Stavebné práce na mieru"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Zemné a stavebné práce — výkop, ukladanie chráničiek, technika na stavbe.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+8.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Elektroinštalácie na kľúč"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Elektroinštalácia v rodinnom dome alebo byte — rozvody v hrubej stavbe.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+9.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Papiere, ktoré obstoja pri kontrole"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Revízny technik pri práci alebo meranie, ktoré končí revíznou správou.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+10.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Elektrina ako položka, ktorú viete riadiť"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Priemyselná prevádzka — hala, rozvodňa alebo fotovoltika na streche firmy.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+11.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — havarijné stavy
+  Súbor:        energetika-havarijne-stavy.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Problém s elektrinou?"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Poruchová služba v teréne — zásah pri rozvádzači, práca s baterkou, večerná situácia.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+12.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — havarijné stavy
+  Súbor:        energetika-havarijne-stavy.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Odbornosť aj dodržané termíny"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Technik dodržiavajúci termín — príchod na stavbu, odovzdanie hotovej práce.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+13.jpg
+--------------------------------------------------------------------------
+  Stránka:      Naša história
+  Súbor:        historia.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Ako sme sa dostali od počítačov k solárnym elektrárňam"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Historizujúci alebo nadčasový záber k príbehu firmy — technika, dielňa, archív.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+14.jpg
+--------------------------------------------------------------------------
+  Stránka:      Náš cieľ
+  Súbor:        nas-ciel.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Spoločne budovať technológie"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Tím pri spoločnej práci — vyjadruje smerovanie a spoluprácu naprieč odbormi.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+15.jpg
+--------------------------------------------------------------------------
+  Stránka:      Náš cieľ
+  Súbor:        nas-ciel.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Typové riešenie berieme len vtedy, keď sedí"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Riešenie navrhnuté na mieru — projektant nad výkresom, meranie na mieste.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+16.jpg
+--------------------------------------------------------------------------
+  Stránka:      Referencie
+  Súbor:        referencie.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Referencie a certifikácie"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Hotová realizácia, na ktorú sa dá odkázať — reprezentatívny záber diela.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+17.jpg
+--------------------------------------------------------------------------
+  Stránka:      Referencie
+  Súbor:        referencie.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Podklady do výberového konania pošleme obratom"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Dokumentácia a papiere — zložka s certifikátmi, podpis, odovzdávací protokol.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+18.jpg
+--------------------------------------------------------------------------
+  Stránka:      TK — rádiové spoje
+  Súbor:        tk-radiove-spoje.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Spoj, ktorý drží linku aj tam, kde sa nekope"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Rádiový spoj — anténa, stožiar, montáž vo výškach, výhľad do krajiny.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+19.jpg
+--------------------------------------------------------------------------
+  Stránka:      TK — optika a metalika
+  Súbor:        tk-optika-metalika-koax.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „Od výkopu po meraciu správu"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Optika, metalika, koaxiál — zvar vlákna, kabeláž, meracia technika.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+20.jpg
+--------------------------------------------------------------------------
+  Stránka:      TK — IKT a bezpečnosť
+  Súbor:        tk-ikt-vyvoj-bezpecnost.html
+  Umiestnenie:  hlavička stránky (hero)
+  Nájdete pri:  nadpis „IKT, vývoj aplikácií a kybernetická bezpečnosť"
+  Rozmer:       2000 × 1200 px (minimum), na šírku
+  Čo na nej má byť:
+      Serverovňa alebo dátové centrum — racky, štruktúrovaná kabeláž, monitoring.
+  Na čo myslieť pri výbere:
+      Cez fotku ide farebný prekryv značky a v strede je nadpis —
+      stred nechajte pokojný, hlavný motív radšej do strán.
+
+21.jpg
+--------------------------------------------------------------------------
+  Stránka:      TK — IKT a bezpečnosť
+  Súbor:        tk-ikt-vyvoj-bezpecnost.html
+  Umiestnenie:  pás cez celú šírku uprostred stránky
+  Nájdete pri:  nadpis „Bezpečnosť sa nedá dolepiť na hotový systém"
+  Rozmer:       2000 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Kybernetická bezpečnosť — dohľadové pracovisko, obrazovky, práca s dátami.
+  Na čo myslieť pri výbere:
+      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
+      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
+
+22.jpg
+--------------------------------------------------------------------------
+  Stránka:      Úvodná stránka
+  Súbor:        index.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na telekomunikacie-a-it.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta Telekomunikácie a IT — sieť, serverovňa alebo práca s vláknom.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+23.jpg
+--------------------------------------------------------------------------
+  Stránka:      Úvodná stránka
+  Súbor:        index.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na energetika.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta Energetika — rozvádzač, elektroinštalácia alebo fotovoltika.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+24.jpg
+--------------------------------------------------------------------------
+  Stránka:      Úvodná stránka
+  Súbor:        index.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na stavebne-prace.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta Stavebné práce — výkop, prípojka alebo stavebná príprava.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+25.jpg
+--------------------------------------------------------------------------
+  Stránka:      Telekomunikácie a IT
+  Súbor:        telekomunikacie-a-it.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na tk-radiove-spoje.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta Rádiové spoje — anténny systém, stožiar, mikrovlnná jednotka.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+26.jpg
+--------------------------------------------------------------------------
+  Stránka:      Telekomunikácie a IT
+  Súbor:        telekomunikacie-a-it.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na tk-optika-metalika-koax.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta Optika, metalika, koaxiál — zvárací prístroj, optické vlákna, trasa.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+27.jpg
+--------------------------------------------------------------------------
+  Stránka:      Telekomunikácie a IT
+  Súbor:        telekomunikacie-a-it.html
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na tk-ikt-vyvoj-bezpecnost.html
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Karta IKT, vývoj a bezpečnosť — serverovňa, monitory, vývojárske pracovisko.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+==========================================================================
+Spolu 27 fotografií.
