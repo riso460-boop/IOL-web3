@@ -31,9 +31,13 @@
 
   --logo:         #0f6fd1;
 
-  --tele:         #0f6fd1;
-  --energy:       #0e8a55;
-  --build:        #cf4326;
+  --tele:         #0b6ddd;
+  --energy:       #07935a;
+  --build:        #e0431c;
+
+  --tele-ink:     #0a56ad;
+  --energy-ink:   #066f44;
+  --build-ink:    #b23315;
 
   --container:    1140px;
   --header-h:     70px;
@@ -48,9 +52,9 @@
   --mono:    "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 }
 
-[data-theme="tele"]   { --accent: #0f6fd1; --accent-ink: #0b599f; --accent-soft: #edf5fd; --logo: #0f6fd1; }
-[data-theme="energy"] { --accent: #0e8a55; --accent-ink: #0a6b42; --accent-soft: #ecf7f1; --logo: #0e8a55; }
-[data-theme="build"]  { --accent: #cf4326; --accent-ink: #a8341c; --accent-soft: #fdf1ed; --logo: #cf4326; }
+[data-theme="tele"]   { --accent: #0b6ddd; --accent-ink: #0a56ad; --accent-soft: #e9f3ff; --logo: #0b6ddd; }
+[data-theme="energy"] { --accent: #07935a; --accent-ink: #066f44; --accent-soft: #e7f8ef; --logo: #07935a; }
+[data-theme="build"]  { --accent: #e0431c; --accent-ink: #b23315; --accent-soft: #fdefea; --logo: #e0431c; }
 
 /* ---------- základ ---------- */
 
@@ -234,9 +238,9 @@ p { margin: 0 0 18px; }
   white-space: nowrap;
   transition: background .16s ease;
 }
-.brand-switch-menu .bs-tele   { color: var(--tele); }
-.brand-switch-menu .bs-energy { color: var(--energy); }
-.brand-switch-menu .bs-build  { color: var(--build); }
+.brand-switch-menu .bs-tele   { color: var(--tele-ink); }
+.brand-switch-menu .bs-energy { color: var(--energy-ink); }
+.brand-switch-menu .bs-build  { color: var(--build-ink); }
 .brand-switch-menu a:hover { background: color-mix(in srgb, currentColor 11%, #fff); }
 
 .nav {
@@ -456,6 +460,16 @@ p { margin: 0 0 18px; }
   text-align: center;
 }
 .section-head h2 { margin-bottom: 14px; }
+
+/* žltá linka z loga — jediný, ale pravidelný žltý motív na každej stránke */
+.section-head.center h2::after {
+  content: "";
+  display: block;
+  width: 46px; height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  background: var(--signal);
+}
 .section-head p:last-child { margin-bottom: 0; }
 
 /* ---------- časová os ---------- */
@@ -512,14 +526,19 @@ p { margin: 0 0 18px; }
 
 /* ---------- pás s číslami ---------- */
 
-.facts { background: var(--paper-2); border-block: 1px solid var(--line); }
+/* dosť sýty na to, aby sa oddelil od plôch nad ním aj pod ním,
+   ale stále svetlý — nie tmavý blok */
+.facts {
+  background: color-mix(in srgb, var(--accent) 14%, #fff);
+  border-block: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line));
+}
 .facts .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
 }
 .facts div { padding: 30px 26px 30px 0; }
-.facts div + div { border-left: 1px solid var(--line-2); padding-left: 26px; }
+.facts div + div { border-left: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); padding-left: 26px; }
 .facts b {
   display: block;
   font-family: var(--display);
@@ -562,7 +581,7 @@ p { margin: 0 0 18px; }
 .brand-media {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 168px;
   object-fit: cover;
   background: var(--paper-3);
   transition: transform .45s cubic-bezier(.22, .8, .26, 1);
@@ -1177,6 +1196,180 @@ p { margin: 0 0 18px; }
     opacity: 0;
   }
 }
+/* =========================================================
+   Fotografie na pozadí
+   Fotka sa vkladá cez premennú --foto priamo v HTML:
+     <section class="hero center has-foto" style="--foto:url('assets/images/3.jpg')">
+   Cez ňu leží prekryv vo farbe segmentu, takže modrá sa
+   na energetike neobjaví ani cez fotografiu.
+   ========================================================= */
+
+.has-foto {
+  position: relative;
+  isolation: isolate;
+  background: var(--accent-ink);
+}
+/* Fotografia je skutočný <img>, nie CSS premenná — relatívna cesta sa
+   tak vyhodnotí voči stránke, nie voči súboru so štýlmi. */
+.has-foto > .foto {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.has-foto > .container { position: relative; z-index: 1; }
+.has-foto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 58% 86% at 86% 6%, color-mix(in srgb, var(--signal) 15%, transparent), transparent 62%),
+    linear-gradient(158deg,
+      color-mix(in srgb, var(--accent) 46%, transparent) 0%,
+      color-mix(in srgb, var(--accent-ink) 66%, transparent) 58%,
+      color-mix(in srgb, var(--ink) 58%, transparent) 100%),
+    linear-gradient(180deg, rgba(8, 16, 24, .08) 0%, rgba(8, 16, 24, .36) 100%);
+}
+
+/* ---------- hero s fotografiou ---------- */
+
+.hero.has-foto .hero-art { display: none; }
+
+.hero.has-foto {
+  border-bottom: 0;
+  color: #fff;
+  padding: 104px 0 92px;
+}
+.hero.has-foto h1 { color: #fff; }
+.hero.has-foto .lede { color: rgba(255, 255, 255, .92); }
+.hero.has-foto h1,
+.hero.has-foto .lede { text-shadow: 0 1px 18px rgba(8, 16, 24, .35); }
+/* na fotografii je čitateľnejší žltý text než žltý podklad */
+.hero.has-foto .mark { color: var(--signal); background: none; }
+.hero.has-foto .scroll-cue {
+  background: rgba(255, 255, 255, .14);
+  border-color: rgba(255, 255, 255, .45);
+  color: #fff;
+}
+.hero.has-foto .scroll-cue:hover {
+  background: rgba(255, 255, 255, .24);
+  border-color: #fff;
+  color: #fff;
+}
+.hero.has-foto .button-ghost {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .5);
+  color: #fff;
+}
+.hero.has-foto .button-ghost:hover {
+  background: rgba(255, 255, 255, .2);
+  border-color: #fff;
+  color: #fff;
+}
+.hero.has-foto .pulse-badge {
+  background: rgba(255, 255, 255, .14);
+  border-color: rgba(255, 255, 255, .4);
+  color: #fff;
+}
+.hero.has-foto .pulse-badge i { background: var(--signal); }
+
+/* ---------- pás s fotografiou uprostred stránky ---------- */
+
+.photo-band {
+  position: relative;
+  padding: 84px 0;
+  text-align: center;
+  color: #fff;
+  border-top: 4px solid var(--signal);
+}
+.photo-band h2 { color: #fff; margin-bottom: 14px; }
+.photo-band p {
+  color: rgba(255, 255, 255, .88);
+  max-width: 62ch;
+  margin-inline: auto;
+  font-size: 16.5px;
+}
+.photo-band .button-duo { margin-top: 26px; max-width: 720px; margin-inline: auto; }
+.photo-band .chips { justify-content: center; margin-top: 24px; }
+.photo-band .chips li {
+  background: rgba(255, 255, 255, .12);
+  border-color: rgba(255, 255, 255, .3);
+  color: #fff;
+}
+.photo-band .button-ghost {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .5);
+  color: #fff;
+}
+.photo-band .button-ghost:hover { background: rgba(255, 255, 255, .2); border-color: #fff; color: #fff; }
+
+@media (max-width: 860px) {
+  .hero.has-foto { padding: 72px 0 64px; }
+  .photo-band { padding: 62px 0; }
+}
+
+/* =========================================================
+   Prechody
+   Všetky idú z farby segmentu do jej tmavšieho tónu, so
+   žltým dosvitom z loga v jednom rohu. Smer je jednotný
+   (zhora nadol v svetlých plochách, uhlopriečne v tmavých),
+   aby sa pri scrollovaní nestriedali rušivo.
+   ========================================================= */
+
+/* ---------- napojenie hero fotografie na stránku ---------- */
+
+/* Na švíku je len ostrá žltá linka, bez žiarenia. */
+.hero.has-foto { border-bottom: 4px solid var(--signal); }
+
+/* bez žiarenia — na švíku je len samotná linka */
+
+/* ---------- pás s fotografiou ---------- */
+
+.photo-band.has-foto::after {
+  background:
+    radial-gradient(ellipse 54% 90% at 90% 10%, color-mix(in srgb, var(--signal) 17%, transparent), transparent 60%),
+    linear-gradient(158deg,
+      color-mix(in srgb, var(--accent-ink) 62%, transparent) 0%,
+      color-mix(in srgb, var(--ink) 72%, transparent) 100%),
+    linear-gradient(180deg, rgba(8, 16, 24, .18), rgba(8, 16, 24, .38));
+}
+
+/* ---------- pás s ikonou na fotografii ---------- */
+
+.band.has-foto {
+  color: #fff;
+  border-block: 0;
+  border-top: 3px solid var(--signal);
+  padding: 46px 0;
+}
+.band.has-foto::after {
+  background:
+    radial-gradient(ellipse 50% 130% at 88% 0%, color-mix(in srgb, var(--signal) 16%, transparent), transparent 62%),
+    linear-gradient(150deg,
+      color-mix(in srgb, var(--accent-ink) 66%, transparent) 0%,
+      color-mix(in srgb, var(--ink) 74%, transparent) 100%),
+    linear-gradient(180deg, rgba(8, 16, 24, .22), rgba(8, 16, 24, .4));
+}
+.band.has-foto h2 { color: #fff; }
+.band.has-foto p { color: rgba(255, 255, 255, .88); }
+.band.has-foto .band-ico {
+  background: rgba(255, 255, 255, .16);
+  border: 1px solid rgba(255, 255, 255, .34);
+  box-shadow: none;
+  color: #fff;
+}
+
+/* fotografické plochy nepustia L-ká von */
+.has-foto { overflow: hidden; }
+
+/* mriežka kariet značiek stojí na svetlom podklade, aby karty
+   s fotografiou vystúpili */
+.section:has(> .container > .brands) { background: var(--paper-2); }
+
 /* ---------- responzívne ---------- */
 
 @media (max-width: 1020px) {
