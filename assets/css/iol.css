@@ -693,12 +693,15 @@ p { margin: 0 0 18px; }
 /* ---------- partneri ---------- */
 
 .partners {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 48px;
   align-items: center;
 }
 .partner {
+  flex: 0 0 auto;
+  min-width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -731,8 +734,7 @@ p { margin: 0 0 18px; }
   color: var(--ink); 
 }
 
-@media (max-width: 1020px) { .partners { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 520px)  { .partners { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .partners { gap: 24px 32px; } }
 
 /* ---------- návrat na prehľad značky ---------- */
 
@@ -1015,6 +1017,58 @@ p { margin: 0 0 18px; }
 .more-grid span { display: block; font-size: 13.5px; color: var(--muted); }
 .more-grid .go { margin-left: auto; color: var(--muted); }
 
+/* ---------- dlaždice s fotografiou ----------
+   Vľavo výrez hlavnej fotografie cieľovej stránky, oddelený
+   prúžkom vo farbe segmentu. Zvyšok ostáva biely, aby text
+   ostal čitateľný. */
+
+.more-grid a {
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
+  min-height: 104px;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 8px 22px rgba(15, 27, 38, .07);
+  transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.more-grid a:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 14px 30px rgba(15, 27, 38, .12);
+}
+
+/* Fotka sa vykresľuje absolútne — percentuálna výška sa v natiahnutej
+   flex položke inak nedopočíta a obrázok by ostal nízky. */
+.more-grid .dl-foto {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 128px;
+  align-self: stretch;
+  overflow: hidden;
+  background: var(--paper-3);
+  border-right: 3px solid var(--accent);
+}
+.more-grid .dl-foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s cubic-bezier(.22, .8, .26, 1);
+}
+.more-grid a:hover .dl-foto img { transform: scale(1.06); }
+
+.more-grid > a > span { align-self: center; padding: 18px 6px 18px 18px; }
+.more-grid .go { align-self: center; margin-right: 18px; }
+
+@media (max-width: 520px) {
+  .more-grid .dl-foto { width: 96px; }
+  .more-grid > a > span { padding: 14px 4px 14px 14px; }
+}
+
 /* ---------- kontakt ---------- */
 
 .contact { padding: 78px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
@@ -1291,6 +1345,36 @@ p { margin: 0 0 18px; }
 }
 .hero.has-foto .pulse-badge i { background: var(--signal); }
 
+/* ---------- odznak „sme online" (len havarijná služba) ----------
+   Zelený stavový bod ako pri četovacích aplikáciách: svieti,
+   dýcha a jemne bliká, aby bolo vidieť, že služba naozaj beží. */
+
+.pulse-badge.je-aktivny,
+.hero.has-foto .pulse-badge.je-aktivny {
+  gap: 11px;
+  color: #fff;
+  /* len jemný závoj — bodka má byť to hlavné, čo je vidieť */
+  background: rgba(8, 32, 24, .26);
+  border: 1px solid rgba(60, 232, 148, .42);
+  box-shadow: 0 0 18px rgba(60, 232, 148, .14);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.pulse-badge.je-aktivny i,
+.hero.has-foto .pulse-badge.je-aktivny i {
+  width: 10px; height: 10px;
+  background: #3ce894;
+  animation: tep-online 2.4s ease-out infinite, blink-online 2.4s ease-in-out infinite;
+}
+
+@keyframes tep-online {
+  0%   { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 0 rgba(60, 232, 148, .55); }
+  70%  { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 11px transparent; }
+  100% { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 0 transparent; }
+}
+@keyframes blink-online { 0%, 100% { opacity: 1; } 55% { opacity: .38; } }
+
 /* ---------- pás s fotografiou uprostred stránky ---------- */
 
 .photo-band {
@@ -1301,6 +1385,8 @@ p { margin: 0 0 18px; }
   border-top: 4px solid var(--signal);
 }
 .photo-band h2 { color: #fff; margin-bottom: 14px; }
+/* na tmavom podklade je čitateľnejší žltý text než žltý podklad */
+.photo-band .mark { color: var(--signal); background: none; }
 .photo-band p {
   color: rgba(255, 255, 255, .88);
   max-width: 62ch;
@@ -1375,6 +1461,25 @@ p { margin: 0 0 18px; }
   border: 1px solid rgba(255, 255, 255, .34);
   box-shadow: none;
   color: #fff;
+}
+
+/* štítok na karte, ktorej stránka sa ešte pripravuje */
+.brand-tag.je-praca {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, .94);
+  border-color: rgba(255, 255, 255, .9);
+  color: var(--ink);
+  box-shadow: 0 4px 14px rgba(15, 27, 38, .2);
+}
+/* bodka vo farbe značky, ktorej karta patrí */
+.brand-tag.je-praca i {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--c);
+  animation: blink 1.8s ease-in-out infinite;
 }
 
 /* fotografické plochy nepustia L-ká von */

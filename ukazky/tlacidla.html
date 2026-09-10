@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="energy"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varianty dlaždíc — ukážka</title>
+<meta name="description" content="Nejde elektrina? Výpadok elektriny alebo prúdu, vyhodené ističe, porucha elektriny v byte či dome — havarijná služba elektro Košice a okolie, nonstop 24/7. Zavolajte +421 915 932 157.">
+<meta name="keywords" content="nejde mi elektrina, nejde elektrina, výpadok elektriny, výpadok prúdu, výpadok, porucha elektrina, porucha elektriny, ističe, vyhodené ističe, elektrina, elektrina dom, elektrikár Košice, havarijná služba elektro, pohotovosť elektrikár">
+<link rel="canonical" href="https://iol.sk/energetika-havarijne-stavy.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:title" content="Nejde vám elektrina? Havarijná služba elektro Košice — nonstop">
+<meta property="og:description" content="Výpadok elektriny, vyhodené ističe, porucha v byte či dome. Prídeme do hodiny, 24 hodín denne. +421 915 932 157">
+<meta property="og:url" content="https://iol.sk/energetika-havarijne-stavy.html">
+<meta property="og:image" content="https://iol.sk/assets/images/11.jpg">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/iol.css">
+  <style>
+    /* ---------- ukážková stránka ---------- */
+    .dl-nadpis { font-size: 21px; margin-bottom: 6px; }
+    .dl-popis { color: var(--muted); font-size: 14.5px; margin-bottom: 20px; max-width: 72ch; }
+    .more-grid a { text-decoration: none; }
+
+    /* ---------- A: karta so zeleným pásikom navrchu ---------- */
+    .more-grid.v-a a {
+      position: relative;
+      flex-direction: row;
+      padding: 20px 20px 20px 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 8px 22px rgba(15, 27, 38, .07);
+      overflow: hidden;
+    }
+    .more-grid.v-a a::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3px;
+      background: var(--accent);
+    }
+    .more-grid.v-a .ico:not(.go) {
+      width: 38px; height: 38px;
+      padding: 9px;
+      border-radius: 11px;
+      background: color-mix(in srgb, var(--accent) 12%, #fff);
+      color: var(--accent);
+      flex: none;
+    }
+    .more-grid.v-a a:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 14px 30px rgba(15, 27, 38, .12);
+    }
+
+    /* ---------- B: s fotografiou ---------- */
+    .more-grid.v-b a {
+      padding: 0;
+      gap: 0;
+      align-items: stretch;   /* fotka musí vyplniť celú výšku dlaždice */
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 8px 22px rgba(15, 27, 38, .07);
+    }
+    /* fotka sa vykresľuje absolútne — percentuálna výška sa v natiahnutej
+       flex položke inak nedopočíta a obrázok by ostal nízky */
+    .more-grid.v-b .dl-foto {
+      position: relative;
+      display: block;
+      flex: none;
+      width: 128px;
+      align-self: stretch;
+      overflow: hidden;
+      background: var(--paper-3);
+      border-right: 3px solid var(--accent);
+    }
+    .more-grid.v-b .dl-foto img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s cubic-bezier(.22, .8, .26, 1);
+    }
+    .more-grid.v-b a { min-height: 104px; }
+    .more-grid.v-b a:hover .dl-foto img { transform: scale(1.06); }
+    .more-grid.v-b > a > span {
+      align-self: center;
+      padding: 18px 6px 18px 18px;
+    }
+    .more-grid.v-b .go { align-self: center; margin-right: 18px; }
+    .more-grid.v-b a:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    /* ---------- C: sýta zelená bez prechodu ---------- */
+    .more-grid.v-c a {
+      background: var(--accent);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+    .more-grid.v-c .ico, .more-grid.v-c .go, .more-grid.v-c b { color: #fff; }
+    .more-grid.v-c span span { color: rgba(255, 255, 255, .84); }
+    .more-grid.v-c a:hover {
+      background: color-mix(in srgb, var(--accent) 86%, #fff);
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- D: jemná zelená výplň ---------- */
+    .more-grid.v-d a {
+      background: color-mix(in srgb, var(--accent) 9%, #fff);
+      border: 1px solid color-mix(in srgb, var(--accent) 34%, #fff);
+    }
+    .more-grid.v-d .ico, .more-grid.v-d .go { color: var(--accent); }
+    .more-grid.v-d a:hover {
+      background: color-mix(in srgb, var(--accent) 15%, #fff);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- E: biela výplň, zelený rám a prvky ---------- */
+    .more-grid.v-e a {
+      background: var(--paper);
+      border: 2px solid var(--accent);
+      box-shadow: none;
+    }
+    .more-grid.v-e .ico, .more-grid.v-e .go { color: var(--accent); }
+    .more-grid.v-e b { color: var(--accent-ink); }
+    .more-grid.v-e a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .more-grid.v-e a:hover .ico,
+    .more-grid.v-e a:hover .go,
+    .more-grid.v-e a:hover b { color: #fff; }
+    .more-grid.v-e a:hover span span { color: rgba(255, 255, 255, .84); }
+
+    /* ---------- F: zelený pás zľava ---------- */
+    .more-grid.v-f a {
+      position: relative;
+      padding-left: 26px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(15, 27, 38, .05), 0 8px 22px rgba(15, 27, 38, .06);
+    }
+    .more-grid.v-f a::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      background: var(--accent);
+    }
+    .more-grid.v-f .ico:not(.go) { color: var(--accent); }
+    .more-grid.v-f .go {
+      width: 34px; height: 34px;
+      padding: 8px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--accent) 12%, #fff);
+      color: var(--accent);
+      flex: none;
+    }
+    .more-grid.v-f a:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .more-grid.v-f a:hover .go { background: var(--accent); color: #fff; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="m22 6-10 7L2 6"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1.5"></rect><path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01"></path><path d="M10 22v-3h4v3"></path></symbol>
+  <symbol id="i-antenna" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M7.8 16.2a6 6 0 0 1 0-8.4M16.2 7.8a6 6 0 0 1 0 8.4M4.9 19.1a10 10 0 0 1 0-14.2M19.1 4.9a10 10 0 0 1 0 14.2"></path></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 16c4 0 4-8 8-8s4 8 8 8"></path><path d="M18 16h4M2 8h2"></path></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1"></rect><rect x="3" y="14" width="18" height="6" rx="1"></rect><path d="M7 7h.01M7 17h.01"></path></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></symbol>
+  <symbol id="i-build" viewBox="0 0 24 24"><path d="M4 17a8 8 0 0 1 16 0"></path><rect x="2" y="17" width="20" height="4" rx="1"></rect><path d="M9.5 9.5V4.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5"></path></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5M9 13h6M9 17h4"></path></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="3.5"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.9"></path></symbol>
+  <symbol id="i-dig" viewBox="0 0 24 24"><path d="M3 20h18"></path><path d="M5 20v-5l5-2 4 4"></path><path d="m14 8 4-4 3 3-4 4z"></path></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6"></path><path d="M6 8h12v3a6 6 0 0 1-12 0z"></path><path d="M12 17v5"></path></symbol>
+  <symbol id="i-heat" viewBox="0 0 24 24"><path d="M3 4h18"></path><path d="M7 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6M12 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6M17 20c1.4-1.8 1.4-2.8 0-4.6s-1.4-2.8 0-4.6"></path></symbol>
+  <symbol id="i-smart" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path><path d="M9.4 8.6a4 4 0 0 1 5.2 0M11.2 11.3a1.6 1.6 0 0 1 1.6 0"></path></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-14.7 5.8"></path><path d="M3.5 12a8.5 8.5 0 0 1 14.7-5.8"></path><path d="m18.2 2.4.3 3.9-3.9.3M5.8 21.6l-.3-3.9 3.9-.3"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9.5 4V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1"></path><path d="m9.5 13 1.8 1.8L15 11"></path></symbol>
+  <symbol id="i-switch" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"></rect><rect x="9" y="7" width="6" height="10" rx="1"></rect><path d="M12 7.5v4"></path></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"></path></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2"></rect><path d="M22 10.5v3"></path><path d="M6.5 10.5v3M10.5 10.5v3M14.5 10.5v3"></path></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.6 17.5a9 9 0 1 1 16.8 0"></path><path d="m12 14.5 3.6-3.9"></path><circle cx="12" cy="15.5" r="1.3"></circle></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24"><path d="M18.5 5.5a8 8 0 1 0 0 13"></path><path d="M3.5 10.5h9M3.5 14h9"></path></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M20.4 5.2a4.8 4.8 0 0 1-6.2 6.2L5.6 20 4 18.4l8.6-8.6a4.8 4.8 0 0 1 6.2-6.2l-3 3 2 2z"></path></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="m9 3 6 3 5.5-2.4v15L15 21l-6-3-5.5 2.4v-15z"></path><path d="M9 3v15M15 6v15"></path></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.5 18h5M10.5 21h3"></path><path d="M12 2a6 6 0 0 0-3.6 10.8c.7.5 1 1.3 1 2.2h5.2c0-.9.3-1.7 1-2.2A6 6 0 0 0 12 2z"></path></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2.5 9 5-9 5-9-5z"></path><path d="m3 12.5 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"></path><path d="m11 19-7-7 7-7"></path></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"></rect><path d="M8.5 20.5h7M12 16.5v4"></path></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3.2 9.5h17.6M3.2 14.5h17.6"></path><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brandbar">
+      <a class="wordmark" href="index.html" aria-label="IOL — domovská stránka"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"></rect><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"></rect><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"></rect></svg>IOL</a>
+      <div class="brand-switch">
+        <a class="wordmark-sub" href="energetika.html">Energetika</a>
+        <button class="brand-switch-btn" type="button" aria-expanded="false" aria-controls="brand-switch-menu" aria-label="Zobraziť ostatné značky">
+          <svg class="ico" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+        </button>
+        <div class="brand-switch-menu" id="brand-switch-menu" hidden="">
+          <a class="bs-tele" href="telekomunikacie-a-it-pripravujeme.html">Telekomunikácie a IT</a>
+          <a class="bs-build" href="stavebne-prace-pripravujeme.html">Stavebné práce</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav desktop-nav" aria-label="Hlavná navigácia">
+      <a href="energetika-havarijne-stavy.html" aria-current="page">Havarijné stavy a poruchy</a>
+      <a href="energetika-domacnosti.html">Rodinné domy, byty a malé firmy</a>
+      <a href="energetika-priemysel.html">Priemysel a verejná správa</a>
+    </nav>
+    <button class="menu-button" type="button" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilná navigácia">
+  <a href="index.html"><svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>Domov</a>
+  <a href="energetika-havarijne-stavy.html">Havarijné stavy a poruchy</a>
+  <a href="energetika-domacnosti.html">Rodinné domy, byty a malé firmy</a>
+  <a href="energetika-priemysel.html">Priemysel a verejná správa</a>
+  <span class="mobile-nav-label">Ostatné značky</span>
+  <a href="telekomunikacie-a-it-pripravujeme.html">Telekomunikácie a IT</a>
+  <a href="stavebne-prace-pripravujeme.html">Stavebné práce na mieru</a>
+</nav>
+
+<main id="obsah">
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Varianty dlaždíc</h2>
+        <p>Vyberte si jeden variant, ktorý potom nasadím na spodok všetkých stránok.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="dl-nadpis">A — karta so zeleným pásikom navrchu</h2>
+      <p class="dl-popis">Menšia obdoba kariet služieb: biela výplň, zelený pásik navrchu, ikona v zelenom štvorčeku.</p>
+      <div class="more-grid two v-a">
+        <a href="energetika-domacnosti.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="dl-nadpis">B — s fotografiou</h2>
+      <p class="dl-popis">Vľavo malý výrez fotografie, zvyšok biely. Najviac priťahuje pozornosť, ale je vyšší.</p>
+      <div class="more-grid two v-b">
+        <a href="energetika-domacnosti.html">
+          <span class="dl-foto"><img src="https://iol.sk/assets/images/gallery-elektro-prace.jpg" alt="" loading="lazy"></span>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <span class="dl-foto"><img src="https://iol.sk/assets/images/service-fotovoltika.webp" alt="" loading="lazy"></span>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="dl-nadpis">C — sýta zelená bez prechodu</h2>
+      <p class="dl-popis">Jedna plná farba značky, biely text. Najvýraznejšia a najpokojnejšia zároveň.</p>
+      <div class="more-grid two v-c">
+        <a href="energetika-domacnosti.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="dl-nadpis">D — jemná zelená výplň</h2>
+      <p class="dl-popis">Svetlozelený podklad so zeleným rámom a tmavým textom. Nekričí, ale je jasne odlíšená.</p>
+      <div class="more-grid two v-d">
+        <a href="energetika-domacnosti.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="dl-nadpis">E — biela výplň, zelený rám a prvky</h2>
+      <p class="dl-popis">Obrysový štýl: biela plocha, zelený rám, zelená ikona aj šípka. Po prejdení myšou sa vyplní.</p>
+      <div class="more-grid two v-e">
+        <a href="energetika-domacnosti.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="dl-nadpis">F — zelený pás zľava</h2>
+      <p class="dl-popis">Biela dlaždica so zvislým zeleným pásom vľavo a šípkou v zelenom krúžku.</p>
+      <div class="more-grid two v-f">
+        <a href="energetika-domacnosti.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg>
+          <span><b>Rodinné domy, byty a malé firmy</b><span>Rozvody, prípojky, kúrenie, revízie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+        <a href="energetika-priemysel.html">
+          <svg class="ico" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span><b>Priemysel a verejná správa</b><span>Fotovoltika, batérie, revízie, financovanie</span></span>
+          <svg class="ico go" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="faktura">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="index.html"><svg class="logo-mark" viewBox="0 0 29 29" aria-hidden="true" focusable="false"><rect class="lm-brand" x="0" y="0" width="13" height="13" rx="2.6"></rect><rect class="lm-signal" x="0" y="16" width="13" height="13" rx="2.6"></rect><rect class="lm-brand" x="16" y="16" width="13" height="13" rx="2.6"></rect></svg>IOL</a>
+      <p class="footer-claim">Telekomunikácie a IT, energetika a elektroinštalácie, stavebné práce na mieru. Jeden partner pre celý projekt.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Naša spoločnosť</h4>
+        <a href="index.html">IOL Spol, s.r.o.</a>
+      </div>
+      <div>
+        <h4>Naše značky</h4>
+        <a href="telekomunikacie-a-it-pripravujeme.html">Telekomunikácie a IT</a>
+        <a href="energetika.html">Energetika a elektroinštalácie</a>
+        <a href="stavebne-prace-pripravujeme.html">Stavebné práce na mieru</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 IOL Spol, s.r.o. · IČO 36 197 998 · IČ DPH SK2021505772</span>
+    <span>Košice · pôsobíme na celom Slovensku</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    'use strict';
+    var d = document, w = window;
+
+    /* ---------- mobilné menu ---------- */
+    var btn = d.querySelector('.menu-button');
+    var nav = d.getElementById('mobile-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    /* ---------- prepínač na ostatné značky ---------- */
+    var prepinac = d.querySelector('.brand-switch-btn');
+    var ponuka = d.getElementById('brand-switch-menu');
+    if (prepinac && ponuka) {
+      var zavriPonuku = function () {
+        ponuka.hidden = true;
+        prepinac.setAttribute('aria-expanded', 'false');
+      };
+      prepinac.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var otvor = ponuka.hidden;
+        ponuka.hidden = !otvor;
+        prepinac.setAttribute('aria-expanded', otvor ? 'true' : 'false');
+      });
+      d.addEventListener('click', function (e) {
+        if (!ponuka.hidden && !e.target.closest('.brand-switch')) { zavriPonuku(); }
+      });
+      d.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !ponuka.hidden) { zavriPonuku(); prepinac.focus(); }
+      });
+    }
+
+    var ticho = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- postupné odkrývanie obsahu ---------- */
+    var odkryvane = d.querySelectorAll('[data-reveal]');
+    if (odkryvane.length && 'IntersectionObserver' in w) {
+      d.documentElement.classList.add('js-reveal');
+      var sledovac = new IntersectionObserver(function (zaznamy) {
+        zaznamy.forEach(function (z) {
+          if (z.isIntersecting) { z.target.classList.add('is-in'); sledovac.unobserve(z.target); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      [].forEach.call(odkryvane, function (el) { sledovac.observe(el); });
+    }
+
+    /* ---------- pomocné ikony ---------- */
+    function ikona(cesta) {
+      return '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">' + cesta + '</svg>';
+    }
+    var I_KRIZ   = '<path d="M6 6l12 12M18 6 6 18"/>';
+    var I_VLAVO  = '<path d="m15 5-7 7 7 7"/>';
+    var I_VPRAVO = '<path d="m9 5 7 7-7 7"/>';
+
+    /* ---------- zväčšenie obrázka v okne cez stránku ---------- */
+    var polozky = [].slice.call(d.querySelectorAll('[data-lb]'));
+    if (polozky.length) {
+      var skupiny = {};
+      polozky.forEach(function (el) {
+        var s = el.getAttribute('data-lb') || 'default';
+        (skupiny[s] = skupiny[s] || []).push(el);
+      });
+
+      var okno = d.createElement('div');
+      okno.className = 'lb';
+      okno.setAttribute('role', 'dialog');
+      okno.setAttribute('aria-modal', 'true');
+      okno.setAttribute('aria-label', 'Zväčšený obrázok');
+      okno.innerHTML =
+        '<div class="lb-backdrop" data-zavri></div>' +
+        '<div class="lb-box">' +
+          '<span class="lb-count"></span>' +
+          '<button class="lb-btn lb-close" type="button" aria-label="Zavrieť">' + ikona(I_KRIZ) + '</button>' +
+          '<button class="lb-btn lb-prev" type="button" aria-label="Predchádzajúci obrázok">' + ikona(I_VLAVO) + '</button>' +
+          '<button class="lb-btn lb-next" type="button" aria-label="Nasledujúci obrázok">' + ikona(I_VPRAVO) + '</button>' +
+          '<img alt="">' +
+          '<div class="lb-cap"></div>' +
+        '</div>';
+      d.body.appendChild(okno);
+
+      var lbObraz = okno.querySelector('img');
+      var lbPopis = okno.querySelector('.lb-cap');
+      var lbPocet = okno.querySelector('.lb-count');
+      var lbZavri = okno.querySelector('.lb-close');
+      var aktivna = [];
+      var index = 0;
+      var vratFokus = null;
+
+      function udaje(el) {
+        var obr = el.matches('img') ? el : el.querySelector('img');
+        var nadpis = el.getAttribute('data-lb-title') || (el.querySelector('h4') ? el.querySelector('h4').textContent : '');
+        var text = el.getAttribute('data-lb-text') || (el.querySelector('p') ? el.querySelector('p').textContent : '');
+        return {
+          src: el.getAttribute('data-lb-src') || (obr ? obr.currentSrc || obr.src : ''),
+          alt: obr ? obr.alt : '',
+          nadpis: nadpis,
+          text: text
+        };
+      }
+
+      function ukaz(i) {
+        index = (i + aktivna.length) % aktivna.length;
+        var u = udaje(aktivna[index]);
+        lbObraz.src = u.src;
+        lbObraz.alt = u.alt;
+        lbPopis.innerHTML = (u.nadpis ? '<h4></h4>' : '') + (u.text ? '<p></p>' : '');
+        if (u.nadpis) { lbPopis.querySelector('h4').textContent = u.nadpis; }
+        if (u.text) { lbPopis.querySelector('p').textContent = u.text; }
+        lbPocet.textContent = (index + 1) + ' / ' + aktivna.length;
+        okno.classList.toggle('lb-single', aktivna.length < 2);
+      }
+
+      function otvor(el) {
+        aktivna = skupiny[el.getAttribute('data-lb') || 'default'];
+        vratFokus = d.activeElement;
+        ukaz(aktivna.indexOf(el));
+        okno.classList.add('is-open');
+        d.body.style.overflow = 'hidden';
+        lbZavri.focus();
+      }
+
+      function zavri() {
+        okno.classList.remove('is-open');
+        d.body.style.overflow = '';
+        if (vratFokus && vratFokus.focus) { vratFokus.focus(); }
+      }
+
+      polozky.forEach(function (el) {
+        if (!el.hasAttribute('tabindex') && !el.matches('a, button')) { el.setAttribute('tabindex', '0'); }
+        if (!el.hasAttribute('role') && !el.matches('a, button')) { el.setAttribute('role', 'button'); }
+        el.addEventListener('click', function (e) { e.preventDefault(); otvor(el); });
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); otvor(el); }
+        });
+      });
+
+      okno.addEventListener('click', function (e) {
+        if (e.target.hasAttribute('data-zavri') || e.target.closest('.lb-close')) { zavri(); }
+        else if (e.target.closest('.lb-prev')) { ukaz(index - 1); }
+        else if (e.target.closest('.lb-next')) { ukaz(index + 1); }
+      });
+
+      d.addEventListener('keydown', function (e) {
+        if (!okno.classList.contains('is-open')) { return; }
+        if (e.key === 'Escape') { zavri(); }
+        else if (e.key === 'ArrowLeft') { ukaz(index - 1); }
+        else if (e.key === 'ArrowRight') { ukaz(index + 1); }
+      });
+    }
+
+    /* ---------- posuvník obrázkov ---------- */
+    [].forEach.call(d.querySelectorAll('.carousel'), function (posuvnik) {
+      var pas = posuvnik.querySelector('.carousel-track');
+      if (!pas) { return; }
+
+      var spat = d.createElement('button');
+      spat.type = 'button';
+      spat.className = 'carousel-nav prev';
+      spat.setAttribute('aria-label', 'Predchádzajúce obrázky');
+      spat.innerHTML = ikona(I_VLAVO);
+
+      var dalej = d.createElement('button');
+      dalej.type = 'button';
+      dalej.className = 'carousel-nav next';
+      dalej.setAttribute('aria-label', 'Ďalšie obrázky');
+      dalej.innerHTML = ikona(I_VPRAVO);
+
+      posuvnik.appendChild(spat);
+      posuvnik.appendChild(dalej);
+
+      function krok() { return Math.max(pas.clientWidth * 0.8, 180); }
+      spat.addEventListener('click', function () { pas.scrollBy({ left: -krok(), behavior: 'smooth' }); });
+      dalej.addEventListener('click', function () { pas.scrollBy({ left: krok(), behavior: 'smooth' }); });
+
+      function stav() {
+        spat.disabled = pas.scrollLeft < 8;
+        dalej.disabled = pas.scrollLeft > pas.scrollWidth - pas.clientWidth - 8;
+      }
+      pas.addEventListener('scroll', stav, { passive: true });
+      w.addEventListener('resize', stav);
+      stav();
+    });
+
+    if (ticho || !w.matchMedia('(pointer: fine)').matches) { return; }
+
+    })();
+</script>
+<script src="../assets/js/cursor.js"></script>
+
+
+</body></html>
