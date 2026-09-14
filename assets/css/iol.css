@@ -1463,6 +1463,15 @@ p { margin: 0 0 18px; }
   color: #fff;
 }
 
+/* karta bez odkazu — stránka sa ešte pripravuje */
+.brand.je-pripravuje { cursor: default; }
+.brand.je-pripravuje:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+.brand.je-pripravuje:hover .brand-media { transform: none; }
+
 /* štítok na karte, ktorej stránka sa ešte pripravuje */
 .brand-tag.je-praca {
   display: inline-flex;
