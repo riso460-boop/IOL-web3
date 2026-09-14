@@ -1,0 +1,76 @@
+EXTERNÉ ODKAZY — iol.sk
+======================================================================
+Stav k poslednej verzii webu (13 stránok + CSS, JS, robots, sitemap).
+Vlastná doména iol.sk sa v tomto súpise neuvádza.
+
+
+1. NAČÍTAVANÉ Z CUDZÍCH SERVEROV (načítajú sa pri každom zobrazení)
+----------------------------------------------------------------------
+
+  fonts.googleapis.com      Písma Archivo, IBM Plex Mono, IBM Plex Sans
+  fonts.gstatic.com         Súbory samotných písiem
+    Kde:      všetkých 13 stránok, v hlavičke
+    Poznámka: Bez nich sa web zobrazí náhradným systémovým písmom.
+              Zároveň to znamená, že pri každom načítaní ide
+              požiadavka na Google (téma GDPR — viď nižšie).
+
+  www.google.com/s2/favicons   Záložné logá partnerov
+    Kde:      referencie.html, 4× v atribúte onerror
+    Poznámka: Použije sa LEN vtedy, keď sa nenačíta miestne logo.
+              Momentálne sa použije vždy — viď bod 4.
+
+
+2. ODKAZY, NA KTORÉ SA DÁ KLIKNÚŤ (otvoria cudziu stránku)
+----------------------------------------------------------------------
+
+  https://www.swan.sk        SWAN        referencie.html
+  https://www.4ka.sk         4ka         referencie.html
+  https://www.rsdata.sk      RS Data     referencie.html
+  https://www.qamaq.sk       QAMAQ       referencie.html
+    Poznámka: Logá partnerov v sekcii „S kým spolupracujeme".
+              Inde na webe žiadny odkaz mimo iol.sk nie je.
+
+
+3. ADRESY, KTORÉ SA NENAČÍTAVAJÚ (len identifikátory)
+----------------------------------------------------------------------
+
+  schema.org                 slovník štruktúrovaných dát
+    Kde:      energetika-havarijne-stavy.html, v JSON-LD
+  www.sitemaps.org           menný priestor XML
+    Kde:      sitemap.xml
+    Poznámka: Nejde o sťahovanie. Sú to len texty, ktoré hovoria,
+              podľa akej normy je súbor napísaný. Netreba riešiť.
+
+
+4. POZOR — CHÝBAJÚCE SÚBORY
+----------------------------------------------------------------------
+
+  V assets/icons/ chýbajú štyri logá partnerov:
+
+      partner-swan.png
+      partner-4ka.png
+      partner-rsdata.png
+      QAMAQ.png
+
+  Kým tam nie sú, zobrazí sa náhrada z www.google.com/s2/favicons,
+  teda malá ikona webu partnera. Po doplnení súborov sa cudzí server
+  prestane volať úplne.
+
+
+5. ČO S TÝM
+----------------------------------------------------------------------
+
+  Doplniť štyri logá         Odstráni volania na google.com/s2/favicons.
+
+  Zvážiť miestne písma       Ak stiahnete súbory písiem k sebe do
+                             assets/fonts/, web prestane komunikovať
+                             s Google úplne. Zrýchli to načítanie
+                             a odpadne otázka súhlasu podľa GDPR —
+                             pri načítaní z fonts.googleapis.com sa
+                             totiž na Google prenáša IP adresa
+                             návštevníka. Nemecké súdy to už riešili.
+
+  Odkazy na partnerov        V poriadku, netreba meniť. Všetky štyri
+                             už majú target="_blank" (otvoria sa v novom
+                             okne) aj rel="noopener noreferrer", čo je
+                             správne z hľadiska bezpečnosti.

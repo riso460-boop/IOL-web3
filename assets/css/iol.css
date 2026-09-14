@@ -431,6 +431,9 @@ p { margin: 0 0 18px; }
   gap: 12px;
 }
 .button-duo .button { width: 100%; }
+/* dvojica, v ktorej ostalo jediné tlačidlo — nemá sa naťahovať na polovicu */
+.button-duo.jedno { grid-template-columns: auto; justify-content: start; }
+.button-duo.jedno .button { width: auto; }
 .hero-actions .button-duo { width: 100%; max-width: 760px; margin-inline: auto; }
 
 .button-primary { background: var(--signal); color: var(--signal-ink); }
