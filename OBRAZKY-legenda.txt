@@ -2,7 +2,7 @@ LEGENDA FOTOGRAFIÍ — iol.sk
 ==========================================================================
 
 Všetky fotografie patria do priečinka:  assets/images/
-Názvy súborov musia sedieť presne: 1.jpg, 2.jpg, … 27.jpg
+Názvy súborov musia sedieť presne: 1.jpg, 2.jpg, … 47.jpg
 
 Formát:      .jpg (pri fotografiách je menší než .png)
 Kvalita:     80–85 %, aby súbor ostal pod ~400 kB
@@ -10,8 +10,10 @@ Farebnosť:   Cez fotku ide poloprehľadný prekryv vo farbe značky.
              Fungujú preto lepšie fotky so stredným jasom a bez
              výrazných farebných plôch, ktoré by s prekryvom bojovali.
 
-Poznámka:    Časť fotografií sa načítava priamo z iol.sk a tento
-             zoznam sa ich netýka.
+Logá:        Logá partnerov nie sú fotografie a patria do
+             assets/icons/ ako partner-swan.png, partner-4ka.png
+             a partner-rsdata.png (predtým sa ťahali z cudzích
+             serverov, čo je krehké — uložte si ich k sebe).
 
 Voľné čísla: 15.jpg — momentálne sa nepoužívajú.
 
@@ -60,6 +62,33 @@ SÚBOR   STRÁNKA                        UMIESTNENIE
         Referencie                     malý výrez v odkaze na spodku stránky
         TK — optika a metalika         malý výrez v odkaze na spodku stránky
         TK — rádiové spoje             malý výrez v odkaze na spodku stránky
+28.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+29.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+30.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+31.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+32.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+33.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
+34.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+        Energetika                     hlavička karty značky
+        Energetika — havarijné stavy   malý výrez v odkaze na spodku stránky
+        Energetika — priemysel         malý výrez v odkaze na spodku stránky
+        Referencie                     malý výrez v odkaze na spodku stránky
+35.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+36.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+37.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+38.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+39.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
+40.jpg  Energetika                     hlavička karty značky
+        Energetika — rodinné domy      malý výrez v odkaze na spodku stránky
+        Energetika — havarijné stavy   malý výrez v odkaze na spodku stránky
+        Referencie                     malý výrez v odkaze na spodku stránky
+41.jpg  Energetika — priemysel         karta konkrétnej realizácie
+42.jpg  Energetika — priemysel         karta konkrétnej realizácie
+43.jpg  Energetika — priemysel         karta konkrétnej realizácie
+44.jpg  Energetika — priemysel         karta konkrétnej realizácie
+45.jpg  Energetika — priemysel         karta konkrétnej realizácie
+46.jpg  Energetika — priemysel         karta konkrétnej realizácie
+47.jpg  TK — IKT a bezpečnosť          veľký obrazový blok v texte
 
 ==========================================================================
 
@@ -416,5 +445,303 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
+28.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-drevodom-velky-folkmar.jpg (z iol.sk — premenujte na 28.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Drevodom Veľký Folkmar"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Realizácia Drevodom Veľký Folkmar — elektroinštalácia drevostavby.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+29.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-hlavne-domove-vedenie.jpg (z iol.sk — premenujte na 29.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Bytový dom, Košice"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Rekonštrukcia hlavného domového vedenia v bytovom dome.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+30.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-bleskozvod.jpg (z iol.sk — premenujte na 30.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Bleskozvod, okolie Košíc"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Bleskozvod na rodinnom dome.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+31.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-rozvody-byt.jpg (z iol.sk — premenujte na 31.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Trojizbový byt, Košice"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Nové rozvody v trojizbovom byte.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+32.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-podlahove-vykurovanie.jpg (z iol.sk — premenujte na 32.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Podlahové kúrenie, novostavba"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Elektrické podlahové vykurovanie v novostavbe.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+33.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: reference-elektricke-pripojky.jpg (z iol.sk — premenujte na 33.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  realizácia „Prípojky pre rodinné domy"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Elektromerový rozvádzač a prípojka rodinného domu.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+34.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-elektro-prace.jpg (z iol.sk — premenujte na 34.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Používa sa aj: Energetika — hlavička karty značky (karta odkazujúca na energetika-domacnosti.html)
+  Používa sa aj: Energetika — havarijné stavy — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html)
+  Používa sa aj: Energetika — priemysel — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html)
+  Používa sa aj: Referencie — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html#cast-5)
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Elektroinštalačné práce — používa sa aj ako hlavná fotka rodinných domov.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+35.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-novostavba.jpg (z iol.sk — premenujte na 35.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Novostavba rodinného domu.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+36.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-kablove-vykurovanie.jpg (z iol.sk — premenujte na 36.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Káblové vykurovanie počas montáže.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+37.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-rozvadzac.jpg (z iol.sk — premenujte na 37.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Rozvádzač.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+38.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-rodinny-dom-stropkov.jpg (z iol.sk — premenujte na 38.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Rodinný dom v Stropkove.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+39.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — rodinné domy
+  Súbor:        energetika-domacnosti.html
+  Pôvodný súbor: gallery-drevodom-velka-kamenica.jpg (z iol.sk — premenujte na 39.jpg)
+  Umiestnenie:  posuvník fotografií zo stavieb
+  Nájdete pri:  posuvník „Zo stavieb"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Drevodom Veľká Kamenica.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
+      posuvníka sa dá pridať ľubovoľný počet ďalších.
+
+40.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika
+  Súbor:        energetika.html
+  Pôvodný súbor: service-fotovoltika.webp (z iol.sk — premenujte na 40.jpg)
+  Umiestnenie:  hlavička karty značky
+  Nájdete pri:  karta odkazujúca na energetika-priemysel.html
+  Používa sa aj: Energetika — rodinné domy — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html)
+  Používa sa aj: Energetika — havarijné stavy — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html)
+  Používa sa aj: Referencie — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html#cast-5)
+  Rozmer:       1200 × 700 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltický systém na streche prevádzky — aj hlavná fotka priemyslu.
+  Na čo myslieť pri výbere:
+      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
+      lepšie než široký celok.
+
+41.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-topolcany.webp (z iol.sk — premenujte na 41.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Topoľčany.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+42.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-zvolen.webp (z iol.sk — premenujte na 42.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Zvolen.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+43.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-kosice.webp (z iol.sk — premenujte na 43.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Košice.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+44.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-nove-zamky.webp (z iol.sk — premenujte na 44.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Nové Zámky.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+45.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-sala.webp (z iol.sk — premenujte na 45.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Šaľa.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+46.jpg
+--------------------------------------------------------------------------
+  Stránka:      Energetika — priemysel
+  Súbor:        energetika-priemysel.html
+  Pôvodný súbor: reference-bratislava.webp (z iol.sk — premenujte na 46.jpg)
+  Umiestnenie:  karta konkrétnej realizácie
+  Nájdete pri:  karta realizácie
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Čo na nej má byť:
+      Fotovoltika Bratislava.
+  Na čo myslieť pri výbere:
+      Zobrazí sa v pomere 4:3 nad popisom realizácie a po kliknutí
+      sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
+      karta hovorí.
+
+47.jpg
+--------------------------------------------------------------------------
+  Stránka:      TK — IKT a bezpečnosť
+  Súbor:        tk-ikt-vyvoj-bezpecnost.html
+  Pôvodný súbor: iol-hero-cloud-security.webp (z iol.sk — premenujte na 47.jpg)
+  Umiestnenie:  veľký obrazový blok v texte
+  Nájdete pri:  blok „Správa serverovní"
+  Rozmer:       1600 × 1000 px (minimum), na šírku
+  Čo na nej má byť:
+      Dohľadové pracovisko — IKT a kybernetická bezpečnosť.
+  Na čo myslieť pri výbere:
+      Vypĺňa polovicu bloku vedľa textu. Znesie aj širší záber.
+
 ==========================================================================
-Spolu 26 fotografií.
+Spolu 46 fotografií.

@@ -1,0 +1,41 @@
+# robots.txt — iol.sk
+# Celý web je verejný a určený na indexovanie.
+
+User-agent: *
+Allow: /
+
+# --- Reklamné roboty Google -------------------------------------------
+# AdsBot sa zámerne NERIADI pravidlom "User-agent: *". Ak tu nie je
+# uvedený samostatne, Google nedokáže overiť cieľovú stránku reklamy
+# a zníži skóre kvality alebo reklamu úplne zamietne.
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: AdsBot-Google-Mobile-Apps
+Allow: /
+
+# reklamy vo vyhľadávacej sieti pre partnerov
+User-agent: Mediapartners-Google
+Allow: /
+
+# --- Obrázky ----------------------------------------------------------
+# Bez prístupu k obrázkom sa vo výsledkoch hľadania nezobrazí ikona webu.
+
+User-agent: Googlebot-Image
+Allow: /
+
+# --- Ostatné vyhľadávače ----------------------------------------------
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Seznam
+Allow: /
+
+# --- Mapa stránok -----------------------------------------------------
+
+Sitemap: https://iol.sk/sitemap.xml
