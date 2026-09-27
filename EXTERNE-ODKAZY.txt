@@ -20,6 +20,13 @@ Vlastná doména iol.sk sa v tomto súpise neuvádza.
               Momentálne sa použije vždy — viď bod 4.
 
 
+  www.googletagmanager.com   Google Analytics 4 a Google Ads (gtag.js)
+    Kde:      všetky stránky, cez assets/js/analytika.js
+    Poznámka: Načíta sa AŽ po súhlase návštevníka v lište cookies.
+              Kým v analytika.js nie sú doplnené ID (G-… a AW-…),
+              nenačíta sa nič a lišta sa nezobrazí.
+
+
 2. ODKAZY, NA KTORÉ SA DÁ KLIKNÚŤ (otvoria cudziu stránku)
 ----------------------------------------------------------------------
 

@@ -745,3 +745,23 @@ PODROBNE
 
 ==========================================================================
 Spolu 46 fotografií.
+
+==========================================================================
+HAVARIJNÉ STAVY — PRÍPADY (havaria-1.jpg … havaria-6.jpg)
+--------------------------------------------------------------------------
+  Stránka:      Energetika — havarijné stavy
+  Súbor:        energetika-havarijne-stavy.html
+  Umiestnenie:  sekcia „Prípady, ktoré sme riešili" — 6 kariet
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Súbory:
+      havaria-1.jpg   Vyhorená zásuvka v kuchyni
+      havaria-2.jpg   Chránič vypadáva po daždi
+      havaria-3.jpg   Prekopaný kábel k garáži
+      havaria-4.jpg   Výpadok v celom byte
+      havaria-5.jpg   Istič, ktorý sa nedá nahodiť
+      havaria-6.jpg   Poškodený rozvádzač po búrke
+  Na čo myslieť pri výbere:
+      Kým súbor chýba, karta ukáže sivú plochu s ikonou blesku
+      a nedá sa zväčšiť. Stačí nahrať fotku s presným názvom.
+      Nadpis a text karty upravíte priamo v HTML (atribúty
+      data-lb-title a data-lb-text + text pod obrázkom).
