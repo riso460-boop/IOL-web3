@@ -1270,7 +1270,7 @@ p { margin: 0 0 18px; }
 /* =========================================================
    Fotografie na pozadí
    Fotka sa vkladá cez premennú --foto priamo v HTML:
-     <section class="hero center has-foto" style="--foto:url('assets/images/3.jpg')">
+     <section class="hero center has-foto" style="--foto:url('assets/images/telekomunikacie/telekomunikacie-hero.jpg')">
    Cez ňu leží prekryv vo farbe segmentu, takže modrá sa
    na energetike neobjaví ani cez fotografiu.
    ========================================================= */
