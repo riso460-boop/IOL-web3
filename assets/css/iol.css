@@ -1558,18 +1558,21 @@ p { margin: 0 0 18px; }
   }
 }
 
-/* ---------- cenník havarijnej služby — v hlavičke stránky ---------- */
+/* ---------- cenník havarijnej služby — tmavá karta v hlavičke stránky ---------- */
 
 .sadzba {
+  --s-text: #c9d5de;
+  --s-muted: #8fa3b3;
+  --s-line: rgba(255, 255, 255, .12);
   max-width: 620px;
   margin: 34px auto 0;
   padding: 22px 22px 18px;
   text-align: left;
-  color: var(--ink);
-  background: var(--paper);
+  color: #fff;
+  background: var(--ink);
   border-radius: var(--r);
   border-top: 3px solid var(--signal);
-  box-shadow: var(--shadow-hi);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
 }
 .sadzba-hlava { margin-bottom: 14px; }
 .sadzba-nadpis {
@@ -1579,10 +1582,10 @@ p { margin: 0 0 18px; }
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--s-muted);
 }
-.sadzba-teraz { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
-.sadzba-teraz b { color: var(--ink); font-weight: 600; }
+.sadzba-teraz { margin: 0; font-size: 14.5px; color: var(--s-text); line-height: 1.5; }
+.sadzba-teraz b { color: #fff; font-weight: 600; }
 
 .sadzba-taby {
   display: grid;
@@ -1591,7 +1594,7 @@ p { margin: 0 0 18px; }
   padding: 5px;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: var(--paper-3);
+  background: rgba(255, 255, 255, .07);
 }
 .sadzba-taby button {
   appearance: none;
@@ -1604,7 +1607,7 @@ p { margin: 0 0 18px; }
   border: 0;
   border-radius: 999px;
   background: transparent;
-  color: var(--ink-2);
+  color: var(--s-text);
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 600;
@@ -1613,9 +1616,9 @@ p { margin: 0 0 18px; }
   cursor: pointer;
   transition: background .18s ease, color .18s ease;
 }
-.sadzba-taby button:hover { color: var(--ink); }
-.sadzba-taby button[aria-selected="true"] { background: var(--signal); color: var(--signal-ink); box-shadow: 0 1px 3px rgba(15, 27, 38, .12); }
-.sadzba-taby button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sadzba-taby button:hover { color: #fff; }
+.sadzba-taby button[aria-selected="true"] { background: var(--signal); color: var(--signal-ink); }
+.sadzba-taby button:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
 
 /* bodka: zelená bliká = sadzba práve platí, červená = neplatí */
 .sadzba-taby i,
@@ -1623,18 +1626,18 @@ p { margin: 0 0 18px; }
   flex: none;
   width: 9px; height: 9px;
   border-radius: 50%;
-  background: var(--line-2);
+  background: var(--s-muted);
 }
 .sadzba-taby button:not(.plati) i,
-.sadzba-stav:not(.plati) i { background: #d93a2b; }
+.sadzba-stav:not(.plati) i { background: #ef4444; }
 .sadzba-taby button.plati i,
-.sadzba-stav.plati i { background: #16a34a; animation: tep-zelena 1.8s ease-out infinite; }
+.sadzba-stav.plati i { background: #22c55e; animation: tep-zelena 1.8s ease-out infinite; }
 @keyframes tep-zelena {
-  0%   { box-shadow: 0 0 0 0 rgba(22, 163, 74, .55); }
-  70%  { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, .6); }
+  70%  { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
-.sadzba-taby:not(:has(.plati)) i { background: var(--line-2); }
+.sadzba-taby:not(:has(.plati)) i { background: var(--s-muted); }
 
 .sadzba-stav {
   display: inline-flex;
@@ -1646,45 +1649,81 @@ p { margin: 0 0 18px; }
   font-weight: 600;
   letter-spacing: .07em;
   text-transform: uppercase;
-  color: #b42318;
+  color: #ff8a7a;
 }
-.sadzba-stav.plati { color: #15803d; }
-.sadzba-kedy { margin: 0; font-size: 14.5px; color: var(--muted); }
-.sadzba-suma { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 6px 0 14px; }
+.sadzba-stav.plati { color: #4ade80; }
+.sadzba-kedy { margin: 0; font-size: 14.5px; color: var(--s-muted); }
+
+/* cena a príplatky */
+.sadzba-suma { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 6px 0 12px; }
 .sadzba-suma b {
   font-family: var(--display);
-  font-size: clamp(40px, 5vw, 52px);
+  font-size: clamp(48px, 6vw, 60px);
   font-weight: 800;
   line-height: 1.05;
+  color: var(--signal);
 }
-.sadzba-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; }
+.sadzba-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--s-muted); letter-spacing: .04em; }
 
-.sadzba-bubliny { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
-.sadzba-bubliny li {
-  padding: 7px 13px;
+.sadzba-priplatky {
+  list-style: none;
+  display: grid;
+  gap: 3px;
+  padding: 0 0 0 16px;
+  margin: 0 0 20px;
+  border-left: 3px solid var(--signal);
+}
+.sadzba-priplatky li { font-size: 15px; line-height: 1.45; color: var(--s-text); }
+.sadzba-priplatky b { color: #fff; font-weight: 700; margin-right: 4px; white-space: nowrap; }
+
+/* čo je v cene výjazdu */
+.sadzba-vcene-nadpis {
+  margin: 0 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--s-line);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+}
+.sadzba-vcene { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
+.sadzba-vcene li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 196, 0, .45);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--signal) 26%, #fff);
-  border: 1px solid color-mix(in srgb, var(--signal) 70%, #fff);
-  color: var(--signal-ink);
   font-size: 14px;
-  font-weight: 500;
+  color: #fff;
   line-height: 1.35;
+}
+.sadzba-vcene li::before {
+  content: "";
+  flex: none;
+  width: 9px; height: 5px;
+  border-left: 2px solid var(--signal);
+  border-bottom: 2px solid var(--signal);
+  transform: rotate(-45deg) translateY(-2px);
 }
 
 .sadzba-pozn {
-  margin: 16px 0 0;
+  margin: 18px 0 0;
   padding-top: 14px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--s-line);
   font-size: 13px;
   line-height: 1.55;
-  color: var(--muted);
+  color: var(--s-muted);
 }
 
 @media (max-width: 520px) {
   .sadzba { padding: 18px 16px 16px; margin-top: 28px; }
   .sadzba-taby { border-radius: var(--r-sm); }
   .sadzba-taby button { border-radius: 8px; font-size: 11px; letter-spacing: .03em; padding: 6px 8px; line-height: 1.3; }
-  .sadzba-bubliny li { font-size: 13.5px; }
+  .sadzba-priplatky li { font-size: 14.5px; }
+  .sadzba-vcene li { font-size: 13.5px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sadzba-taby i, .sadzba-stav i { animation: none !important; }
