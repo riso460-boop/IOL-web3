@@ -2,14 +2,14 @@
 <html lang="sk" data-theme="energy"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nejde vám elektrina? Výpadok elektriny, ističe, porucha — havarijná služba Košice nonstop | IOL.SK</title>
-<meta name="description" content="Nejde elektrina? Výpadok elektriny alebo prúdu, vyhodené ističe, porucha elektriny v byte či dome — havarijná služba elektro Košice a okolie, nonstop 24/7. Zavolajte +421 915 932 304.">
+<title>Nejde vám elektrina? Výpadky riešime nonstop | IOL.SK</title>
+<meta name="description" content="Výpadky elektriny riešime nonstop — do hodiny sme u vás. Vyhodené ističe, porucha v byte, dome či firme. Havarijná služba elektro Košice a okolie 24/7. Výjazd od 75 €. Volajte +421 915 932 304.">
 <meta name="keywords" content="nejde mi elektrina, nejde elektrina, výpadok elektriny, výpadok prúdu, výpadok, porucha elektrina, porucha elektriny, ističe, vyhodené ističe, elektrina, elektrina dom, elektrikár Košice, havarijná služba elektro, pohotovosť elektrikár">
 <link rel="canonical" href="https://iol.sk/energetika-havarijne-stavy.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:title" content="Nejde vám elektrina? Havarijná služba elektro Košice — nonstop">
-<meta property="og:description" content="Výpadok elektriny, vyhodené ističe, porucha v byte či dome. Prídeme do hodiny, 24 hodín denne. +421 915 932 304">
+<meta property="og:title" content="Nejde vám elektrina? Výpadky riešime nonstop">
+<meta property="og:description" content="Do hodiny sme u vás. Poruchy elektriny v domácnostiach, malých aj väčších firmách — 24/7. +421 915 932 304">
 <meta property="og:url" content="https://iol.sk/energetika-havarijne-stavy.html">
 <meta property="og:image" content="https://iol.sk/assets/images/11.jpg">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -180,9 +180,45 @@
     <div class="container hero-inner">
       <p class="pulse-badge je-aktivny"><i aria-hidden="true"></i>K dispozícii</p>
       <h1>Nejde vám elektrina? <span class="mark">Výpadky riešime nonstop</span></h1>
-      <p class="lede">Výpadok elektriny v byte alebo dome, vyhodené ističe, porucha zásuvky či celého rozvádzača. Havarijná služba elektro pre Košice a okolie — 24 hodín denne, aj cez víkend a sviatky.</p>
+      <p class="lede"><strong>Do hodiny sme u vás.</strong> Riešime poruchy elektriny v domácnostiach, malých aj väčších firmách — výpadok prúdu, vyhodené ističe, porucha zásuvky či celého rozvádzača. Náš tím skúsených technikov je pripravený pomôcť 24/7, aj cez víkendy a sviatky.</p>
       <div class="hero-actions">
         <a class="button button-primary" href="tel:+421915932304"><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg>Zavolať +421 915 932 304</a>
+      </div>
+
+      <div class="sadzba" id="cennik" aria-labelledby="sadzba-nadpis">
+        <div class="sadzba-hlava">
+          <p class="sadzba-nadpis" id="sadzba-nadpis">Cena havarijného výjazdu</p>
+          <p class="sadzba-teraz" hidden>Na Slovensku je <b data-sadzba-cas></b> — platí sadzba <b data-sadzba-aktualna></b></p>
+        </div>
+        <div class="sadzba-taby" role="tablist" aria-label="Cenové sadzby">
+          <button type="button" role="tab" id="tab-pracovny" aria-controls="sadzba-pracovny" aria-selected="true" data-sadzba="pracovny"><i aria-hidden="true"></i>Pracovný čas</button>
+          <button type="button" role="tab" id="tab-mimo" aria-controls="sadzba-mimo" aria-selected="false" tabindex="-1" data-sadzba="mimo"><i aria-hidden="true"></i>Mimo pracovného času</button>
+        </div>
+
+        <div class="sadzba-panel" role="tabpanel" id="sadzba-pracovny" aria-labelledby="tab-pracovny">
+          <p class="sadzba-stav" hidden><i aria-hidden="true"></i><span></span></p>
+          <p class="sadzba-kedy">Pondelok – piatok, 8:00 – 16:30</p>
+          <p class="sadzba-suma"><b>75&nbsp;€</b><span>základný výjazd</span></p>
+          <ul class="sadzba-bubliny">
+            <li>Doprava tam aj späť</li>
+            <li>1 hodina práce v cene</li>
+            <li>+25&nbsp;€ každá ďalšia začatá hodina</li>
+            <li>Materiál osobitne</li>
+          </ul>
+        </div>
+        <div class="sadzba-panel" role="tabpanel" id="sadzba-mimo" aria-labelledby="tab-mimo" hidden>
+          <p class="sadzba-stav" hidden><i aria-hidden="true"></i><span></span></p>
+          <p class="sadzba-kedy">Večer, v noci, cez víkendy a sviatky</p>
+          <p class="sadzba-suma"><b>100&nbsp;€</b><span>základný výjazd</span></p>
+          <ul class="sadzba-bubliny">
+            <li>Doprava tam aj späť</li>
+            <li>1 hodina práce v cene</li>
+            <li>+30&nbsp;€ každá ďalšia začatá hodina</li>
+            <li>Materiál osobitne</li>
+          </ul>
+        </div>
+
+        <p class="sadzba-pozn">Doprava je v cene v rámci Košického a Prešovského kraja. Ak cesta k vám trvá viac ako hodinu, čas navyše účtujeme hodinovou sadzbou technika. Materiál sa platí osobitne podľa skutočnej spotreby.</p>
       </div>
       <div class="cue-wrap">
 
@@ -249,45 +285,6 @@
     </div>
   </section>
 
-  <section class="section" id="cennik">
-    <div class="container">
-      <div class="section-head center">
-        <h2>Koľko stojí havarijný výjazd</h2>
-        <p>Cenu vám povieme vopred po telefóne, nie až pri faktúre. Základný výjazd zahŕňa cestu k vám aj späť a prvú hodinu práce.</p>
-      </div>
-      <div class="cennik">
-        <article class="cena">
-          <p class="cena-stitok"><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg>Pracovné dni 8:00 – 16:30</p>
-          <h3>Výjazd v pracovnom čase</h3>
-          <p class="cena-kedy">Pondelok až piatok, okrem sviatkov</p>
-          <div class="cena-suma"><b>75&nbsp;€</b><span>základný výjazd</span></div>
-          <ul>
-            <li>Doprava na miesto a späť v rámci Košického a Prešovského kraja</li>
-            <li>1 hodina práce technika</li>
-            <li class="navyse"><b>25&nbsp;€</b> za každú ďalšiu začatú hodinu</li>
-            <li class="navyse">Materiál sa účtuje osobitne</li>
-          </ul>
-        </article>
-        <article class="cena cena-mimo">
-          <p class="cena-stitok"><svg class="ico" aria-hidden="true"><use href="#i-alert"></use></svg>Nonstop</p>
-          <h3>Mimo pracovného času</h3>
-          <p class="cena-kedy">Večer, v noci, cez víkendy a sviatky</p>
-          <div class="cena-suma"><b>100&nbsp;€</b><span>základný výjazd</span></div>
-          <ul>
-            <li>Doprava na miesto a späť v rámci Košického a Prešovského kraja</li>
-            <li>1 hodina práce technika</li>
-            <li class="navyse"><b>30&nbsp;€</b> za každú ďalšiu začatú hodinu</li>
-            <li class="navyse">Materiál sa účtuje osobitne</li>
-          </ul>
-        </article>
-      </div>
-      <div class="cennik-pozn">
-        <p><b>Doprava</b>V cene výjazdu v celom Košickom a Prešovskom kraji.</p>
-        <p><b>Dlhšia cesta</b>Ak cesta k vám trvá viac ako hodinu, čas navyše účtujeme hodinovou sadzbou technika.</p>
-        <p><b>Materiál</b>Platí sa osobitne podľa skutočnej spotreby — ističe, káble, zásuvky a pod.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="section section-alt" id="pripady">
     <div class="container">
@@ -609,6 +606,105 @@
       w.addEventListener('resize', stav);
       stav();
     });
+
+    /* ---------- cenník: sadzba podľa aktuálneho času na Slovensku ---------- */
+    var sadzba = d.querySelector('.sadzba');
+    if (sadzba) {
+      var PRACOVNY_OD = 8 * 60, PRACOVNY_DO = 16 * 60 + 30;
+      /* dni pracovného pokoja v SR (MM-DD); Veľký piatok a Veľkonočný
+         pondelok sa počítajú samostatne. Pri zmene zákona upravte zoznam. */
+      var SVIATKY = ['01-01', '01-06', '05-01', '05-08', '07-05', '08-29', '09-01',
+                     '09-15', '11-01', '11-17', '12-24', '12-25', '12-26'];
+
+      var taby = [].slice.call(sadzba.querySelectorAll('[role="tab"]'));
+      var teraz = sadzba.querySelector('.sadzba-teraz');
+      var nazvy = { pracovny: 'pracovného času', mimo: 'mimo pracovného času' };
+      var aktualna = null;
+
+      function dvaMiesta(n) { return (n < 10 ? '0' : '') + n; }
+
+      function velkaNoc(rok) {
+        /* nedeľa Veľkej noci — gregoriánsky výpočet (Meeus/Jones/Butcher) */
+        var a = rok % 19, b = Math.floor(rok / 100), c = rok % 100,
+            e = Math.floor(b / 4), f = b % 4, g = Math.floor((b + 8) / 25),
+            h = Math.floor((b - g + 1) / 3), i = (19 * a + b - e - h + 15) % 30,
+            k = Math.floor(c / 4), l = c % 4, m = (32 + 2 * f + 2 * k - i - l) % 7,
+            n = Math.floor((a + 11 * i + 22 * m) / 451),
+            mesiac = Math.floor((i + m - 7 * n + 114) / 31),
+            den = ((i + m - 7 * n + 114) % 31) + 1;
+        return Date.UTC(rok, mesiac - 1, den);
+      }
+
+      function casNaSlovensku() {
+        var casti = {};
+        new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/Bratislava', hourCycle: 'h23',
+          year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', weekday: 'short'
+        }).formatToParts(new Date()).forEach(function (p) { casti[p.type] = p.value; });
+        return {
+          rok: +casti.year, mesiac: +casti.month, den: +casti.day,
+          hod: +casti.hour, min: +casti.minute,
+          tyzden: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(casti.weekday)
+        };
+      }
+
+      function jeSviatok(t) {
+        if (SVIATKY.indexOf(dvaMiesta(t.mesiac) + '-' + dvaMiesta(t.den)) !== -1) { return true; }
+        var dnes = Date.UTC(t.rok, t.mesiac - 1, t.den), vn = velkaNoc(t.rok), DEN = 864e5;
+        return dnes === vn - 2 * DEN || dnes === vn + DEN;
+      }
+
+      function vyberTab(tab, fokus) {
+        taby.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          d.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+        if (fokus) { tab.focus(); }
+      }
+
+      function obnov() {
+        var t = casNaSlovensku();
+        var minuty = t.hod * 60 + t.min;
+        var pracovny = t.tyzden >= 1 && t.tyzden <= 5 && !jeSviatok(t) &&
+                       minuty >= PRACOVNY_OD && minuty < PRACOVNY_DO;
+        var nova = pracovny ? 'pracovny' : 'mimo';
+        var dni = ['nedeľa', 'pondelok', 'utorok', 'streda', 'štvrtok', 'piatok', 'sobota'];
+
+        teraz.hidden = false;
+        teraz.querySelector('[data-sadzba-cas]').textContent =
+          (jeSviatok(t) ? 'sviatok' : dni[t.tyzden]) + ' ' + t.hod + ':' + dvaMiesta(t.min);
+        teraz.querySelector('[data-sadzba-aktualna]').textContent = nazvy[nova];
+
+        taby.forEach(function (tab) {
+          var plati = tab.getAttribute('data-sadzba') === nova;
+          tab.classList.toggle('plati', plati);
+          var stav = d.getElementById(tab.getAttribute('aria-controls')).querySelector('.sadzba-stav');
+          stav.hidden = false;
+          stav.classList.toggle('plati', plati);
+          stav.querySelector('span').textContent = plati ? 'Práve platí' : 'Teraz neplatí';
+        });
+
+        /* pri prvom načítaní a pri zmene sadzby prepneme na aktuálnu */
+        if (nova !== aktualna) {
+          aktualna = nova;
+          vyberTab(sadzba.querySelector('[data-sadzba="' + nova + '"]'));
+        }
+      }
+
+      taby.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { vyberTab(tab); });
+        tab.addEventListener('keydown', function (e) {
+          var smer = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+          if (smer) { e.preventDefault(); vyberTab(taby[(i + smer + taby.length) % taby.length], true); }
+        });
+      });
+
+      obnov();
+      w.setInterval(obnov, 30000);
+    }
 
     if (ticho || !w.matchMedia('(pointer: fine)').matches) { return; }
 

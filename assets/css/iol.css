@@ -1558,90 +1558,136 @@ p { margin: 0 0 18px; }
   }
 }
 
-/* ---------- cenník havarijnej služby ---------- */
+/* ---------- cenník havarijnej služby — v hlavičke stránky ---------- */
 
-.cennik { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-.cena {
-  display: flex;
-  flex-direction: column;
-  padding: 28px 26px 26px;
+.sadzba {
+  max-width: 620px;
+  margin: 34px auto 0;
+  padding: 22px 22px 18px;
+  text-align: left;
+  color: var(--ink);
   background: var(--paper);
-  border: 1px solid var(--line);
   border-radius: var(--r);
-  transition: transform .2s ease, box-shadow .2s ease;
+  border-top: 3px solid var(--signal);
+  box-shadow: var(--shadow-hi);
 }
-.cena:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-.cena-stitok {
-  align-self: flex-start;
+.sadzba-hlava { margin-bottom: 14px; }
+.sadzba-nadpis {
+  margin: 0 0 4px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sadzba-teraz { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+.sadzba-teraz b { color: var(--ink); font-weight: 600; }
+
+.sadzba-taby {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--paper-3);
+}
+.sadzba-taby button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease;
+}
+.sadzba-taby button:hover { color: var(--ink); }
+.sadzba-taby button[aria-selected="true"] { background: var(--signal); color: var(--signal-ink); box-shadow: 0 1px 3px rgba(15, 27, 38, .12); }
+.sadzba-taby button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* bodka: zelená bliká = sadzba práve platí, červená = neplatí */
+.sadzba-taby i,
+.sadzba-stav i {
+  flex: none;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--line-2);
+}
+.sadzba-taby button:not(.plati) i,
+.sadzba-stav:not(.plati) i { background: #d93a2b; }
+.sadzba-taby button.plati i,
+.sadzba-stav.plati i { background: #16a34a; animation: tep-zelena 1.8s ease-out infinite; }
+@keyframes tep-zelena {
+  0%   { box-shadow: 0 0 0 0 rgba(22, 163, 74, .55); }
+  70%  { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+.sadzba-taby:not(:has(.plati)) i { background: var(--line-2); }
+
+.sadzba-stav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent-ink);
+  margin: 0 0 6px;
   font-family: var(--mono);
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .07em;
   text-transform: uppercase;
-  margin: 0 0 16px;
+  color: #b42318;
 }
-.cena-stitok .ico { width: 14px; height: 14px; }
-.cena h3 { margin-bottom: 4px; font-size: 18.5px; }
-.cena-kedy { color: var(--muted); font-size: 14.5px; margin: 0 0 22px; }
-.cena-suma {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 18px 0;
-  border-block: 1px solid var(--line);
-  margin-bottom: 18px;
-}
-.cena-suma b {
+.sadzba-stav.plati { color: #15803d; }
+.sadzba-kedy { margin: 0; font-size: 14.5px; color: var(--muted); }
+.sadzba-suma { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 6px 0 14px; }
+.sadzba-suma b {
   font-family: var(--display);
-  font-size: clamp(38px, 4.4vw, 50px);
+  font-size: clamp(40px, 5vw, 52px);
   font-weight: 800;
-  line-height: 1;
-  color: var(--ink);
+  line-height: 1.05;
 }
-.cena-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; }
-.cena ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-.cena li { position: relative; padding-left: 26px; font-size: 15px; color: var(--ink-2); }
-.cena li::before {
-  content: "";
-  position: absolute;
-  left: 2px; top: .55em;
-  width: 12px; height: 7px;
-  border-left: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-  transform: rotate(-45deg);
-}
-.cena li.navyse::before { width: 11px; height: 2px; border: 0; background: var(--muted); transform: none; top: .8em; }
-.cena li b { color: var(--ink); }
-.cena-mimo { border-color: var(--line-2); background: var(--paper-2); }
-.cena-mimo .cena-stitok { background: rgba(255, 196, 0, .22); color: var(--signal-ink); }
+.sadzba-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; }
 
-.cennik-pozn {
-  margin-top: 22px;
-  padding: 20px 24px;
-  border: 1px dashed var(--line-2);
-  border-radius: var(--r);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px 26px;
+.sadzba-bubliny { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
+.sadzba-bubliny li {
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--signal) 26%, #fff);
+  border: 1px solid color-mix(in srgb, var(--signal) 70%, #fff);
+  color: var(--signal-ink);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
 }
-.cennik-pozn p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
-.cennik-pozn b {
-  display: block;
-  font-family: var(--mono);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: .07em;
-  text-transform: uppercase;
+
+.sadzba-pozn {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.55;
   color: var(--muted);
-  margin-bottom: 4px;
+}
+
+@media (max-width: 520px) {
+  .sadzba { padding: 18px 16px 16px; margin-top: 28px; }
+  .sadzba-taby { border-radius: var(--r-sm); }
+  .sadzba-taby button { border-radius: 8px; font-size: 11px; letter-spacing: .03em; padding: 6px 8px; line-height: 1.3; }
+  .sadzba-bubliny li { font-size: 13.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sadzba-taby i, .sadzba-stav i { animation: none !important; }
 }
 
 /* obrázok, ktorý ešte nie je nahratý — namiesto rozbitej ikony
@@ -1656,11 +1702,6 @@ p { margin: 0 0 18px; }
     var(--paper-3);
 }
 .ref.bez-foto { cursor: default; }
-
-@media (max-width: 860px) {
-  .cennik { grid-template-columns: 1fr; }
-  .cennik-pozn { grid-template-columns: 1fr; }
-}
 
 /* ---------- lišta so súhlasom s cookies ---------- */
 
