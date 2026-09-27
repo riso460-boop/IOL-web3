@@ -1771,7 +1771,7 @@ p { margin: 0 0 18px; }
 }
 .ref-ico h4 { font-size: 17px; }
 
-/* ---------- lišta so súhlasom s cookies ---------- */
+/* ---------- lišta so súhlasom s cookies — tmavé matné sklo ako cenník ---------- */
 
 .cookie-lista {
   position: fixed;
@@ -1785,30 +1785,85 @@ p { margin: 0 0 18px; }
 .cookie-in {
   pointer-events: auto;
   width: 100%;
-  max-width: 760px;
-  padding: 22px 24px;
-  background: var(--paper);
-  border: 1px solid var(--line-2);
+  max-width: 720px;
+  padding: 22px 24px 20px;
+  color: #fff;
+  background: rgba(6, 58, 38, .86);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, .22);
   border-top: 3px solid var(--signal);
   border-radius: var(--r);
-  box-shadow: var(--shadow-hi);
+  box-shadow: 0 18px 44px rgba(8, 16, 24, .28);
+  animation: cookie-in .35s cubic-bezier(.22, .8, .26, 1);
+}
+@keyframes cookie-in { from { opacity: 0; transform: translateY(14px); } }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .cookie-in { background: #0e3d2c; }
 }
 .cookie-nadpis {
+  margin: 0 0 8px;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #cfe6da;
+}
+.cookie-text {
+  margin: 0 0 12px;
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #eef7f2;
+}
+.cookie-detail { margin: 0 0 18px; font-family: var(--body); font-size: 14.5px; }
+.cookie-detail summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .07em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 8px;
+  color: var(--signal);
 }
-.cookie-text { font-size: 14.5px; color: var(--ink-2); margin: 0 0 12px; }
-.cookie-detail { margin: 0 0 16px; font-size: 14px; }
-.cookie-detail summary { cursor: pointer; color: var(--accent); font-weight: 500; }
-.cookie-detail label { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0 0; color: var(--ink-2); }
-.cookie-detail input { margin-top: 4px; accent-color: var(--accent); }
+.cookie-detail summary::-webkit-details-marker { display: none; }
+.cookie-detail summary::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .18s ease;
+}
+.cookie-detail[open] summary::before { transform: rotate(45deg) translate(-2px, -1px); }
+.cookie-detail label { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0 0; color: #eef7f2; line-height: 1.5; }
+.cookie-detail label b { color: #fff; font-weight: 600; }
+.cookie-detail input { margin-top: 4px; accent-color: var(--signal); }
+
 .cookie-akcie { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
-.cookie-akcie .button { min-height: 44px; }
+/* <button> nemá prevziať predvolený rámik a tieň prehliadača */
+.cookie-akcie .button {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 44px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+.cookie-akcie .button-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, .35);
+  color: #fff;
+}
+.cookie-akcie .button-ghost:hover { border-color: var(--signal); color: var(--signal); }
+.cookie-akcie .button-primary { border-color: var(--signal); }
+.cookie-akcie .button:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
 .cookie-odkaz {
   appearance: none;
   background: none;
@@ -1824,6 +1879,9 @@ p { margin: 0 0 18px; }
 
 @media (max-width: 520px) {
   .cookie-lista { left: 10px; right: 10px; bottom: 10px; }
-  .cookie-in { padding: 18px; }
-  .cookie-akcie .button { flex: 1 1 100%; }
+  .cookie-in { padding: 18px 16px 16px; }
+  .cookie-text { font-size: 14px; line-height: 1.55; }
+  .cookie-akcie { gap: 8px; }
+  .cookie-akcie .button { flex: 1 1 calc(50% - 4px); padding: 0 10px; }
+  .cookie-akcie .button-primary { flex-basis: 100%; }
 }

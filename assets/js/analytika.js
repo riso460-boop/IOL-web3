@@ -10,9 +10,17 @@
     // nastavujú sa ako značky vnútri Tag Managera.
     gtm: 'GTM-5Q7PMC5D',
 
-    // Kľúč, pod ktorým si prehliadač pamätá voľbu návštevníka.
-    // Zmena názvu (napr. …-v2) vynúti novú otázku u všetkých.
-    kluc: 'iol-suhlas-v1'
+    // Cookie, v ktorej si prehliadač pamätá voľbu návštevníka.
+    // Zmazaním cookies v prehliadači sa lišta zobrazí znova.
+    cookie: 'iol_suhlas',
+
+    // Verzia lišty. Zvýšte ju (2, 3, …) vždy, keď zmeníte text lišty
+    // alebo pridáte nový nástroj — všetkým sa lišta zobrazí znova.
+    // Pri zmene zapíšte do Git histórie aj nové znenie (dôkaz súhlasu).
+    verzia: 1,
+
+    // Po koľkých dňoch sa súhlas pýta znova (odporúčanie: 12 mesiacov)
+    platnostDni: 365
   };
   // =====================================================================
   //
@@ -41,12 +49,28 @@
     wait_for_update: 500
   });
 
+  /* voľba sa ukladá do cookie: {v: verzia lišty, a: analytika, r: reklama, t: dátum} */
   function nacitajVolbu() {
-    try { return JSON.parse(w.localStorage.getItem(NASTAVENIA.kluc)); } catch (e) { return null; }
+    var m = d.cookie.match(new RegExp('(?:^|; )' + NASTAVENIA.cookie + '=([^;]*)'));
+    if (!m) { return null; }
+    try {
+      var v = JSON.parse(decodeURIComponent(m[1]));
+      var vek = (Date.now() - new Date(v.t).getTime()) / 864e5;
+      // iná verzia lišty alebo starší súhlas než platnosť = pýtame sa znova
+      if (v.v !== NASTAVENIA.verzia || !(vek < NASTAVENIA.platnostDni)) { return null; }
+      return { analytika: !!v.a, reklama: !!v.r, datum: v.t };
+    } catch (e) { return null; }
   }
-  function ulozVolbu(v) {
-    try { w.localStorage.setItem(NASTAVENIA.kluc, JSON.stringify(v)); } catch (e) { /* súkromné okno */ }
+  function ulozVolbu(volba) {
+    var hodnota = encodeURIComponent(JSON.stringify({
+      v: NASTAVENIA.verzia, a: !!volba.analytika, r: !!volba.reklama, t: new Date().toISOString()
+    }));
+    d.cookie = NASTAVENIA.cookie + '=' + hodnota +
+      '; max-age=' + (NASTAVENIA.platnostDni * 86400) + '; path=/; SameSite=Lax' +
+      (w.location.protocol === 'https:' ? '; Secure' : '');
   }
+  // upratanie po staršej verzii, ktorá voľbu držala v localStorage
+  try { w.localStorage.removeItem('iol-suhlas-v1'); } catch (e) { /* nič */ }
 
   var nacitane = false;
   function spustiMeranie(volba) {
@@ -56,7 +80,7 @@
       ad_user_data: volba.reklama ? 'granted' : 'denied',
       ad_personalization: volba.reklama ? 'granted' : 'denied'
     });
-    w.dataLayer.push({ event: 'suhlas_aktualizovany', suhlas_analytika: !!volba.analytika, suhlas_reklama: !!volba.reklama });
+    w.dataLayer.push({ event: 'suhlas_aktualizovany', suhlas_analytika: !!volba.analytika, suhlas_reklama: !!volba.reklama, suhlas_verzia: NASTAVENIA.verzia });
 
     // Tag Manager načítame až po súhlase — do vtedy nejde na Google nič
     if (nacitane || (!volba.analytika && !volba.reklama)) { return; }
