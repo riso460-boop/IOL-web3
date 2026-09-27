@@ -17,7 +17,7 @@
     // Verzia lišty. Zvýšte ju (2, 3, …) vždy, keď zmeníte text lišty
     // alebo pridáte nový nástroj — všetkým sa lišta zobrazí znova.
     // Pri zmene zapíšte do Git histórie aj nové znenie (dôkaz súhlasu).
-    verzia: 1,
+    verzia: 2,
 
     // Po koľkých dňoch sa súhlas pýta znova (odporúčanie: 12 mesiacov)
     platnostDni: 365
@@ -133,21 +133,18 @@
     lista.setAttribute('aria-label', 'Súhlas s cookies');
     lista.innerHTML =
       '<div class="cookie-in">' +
-        '<p class="cookie-nadpis">Súbory cookies</p>' +
-        '<p class="cookie-text">Web funguje aj bez nich. So súhlasom použijeme Google Analytics na meranie návštevnosti ' +
-        'a Google Ads na vyhodnotenie reklamy — napríklad koľko ľudí nám po kliknutí na reklamu zavolalo. ' +
-        'Voľbu môžete kedykoľvek zmeniť odkazom „Nastavenia cookies" v pätičke.</p>' +
-        '<details class="cookie-detail">' +
-          '<summary>Podrobné nastavenie</summary>' +
-          '<label><input type="checkbox" checked disabled> <span><b>Nevyhnutné</b> — zapamätanie tejto voľby</span></label>' +
-          '<label><input type="checkbox" name="analytika"> <span><b>Analytické</b> — Google Analytics, anonymná štatistika návštevnosti</span></label>' +
-          '<label><input type="checkbox" name="reklama"> <span><b>Reklamné</b> — Google Ads, meranie konverzií z reklamy</span></label>' +
-        '</details>' +
+        '<p class="cookie-text"><b class="cookie-stitok">Cookies</b> — <strong>Súkromie je vaša voľba, ktorú rešpektujeme.</strong> Kliknutím na Povoliť nám pomôžete zlepšiť web pre vás aj ďalších.</p>' +
         '<div class="cookie-akcie">' +
-          '<button type="button" class="button button-ghost cookie-btn-none">Odmietnuť</button>' +
-          '<button type="button" class="button button-ghost cookie-btn-save">Uložiť výber</button>' +
-          '<button type="button" class="button button-primary cookie-btn-all">Prijať všetko</button>' +
+          '<button type="button" class="cookie-btn cookie-btn-all">Povoliť</button>' +
+          '<button type="button" class="cookie-btn cookie-btn-none">Nie, ďakujem</button>' +
         '</div>' +
+        '<details class="cookie-detail">' +
+          '<summary>Nastavenie</summary>' +
+          '<label><input type="checkbox" checked disabled> <span><b>Nevyhnutné</b> — zapamätanie tejto voľby</span></label>' +
+          '<label><input type="checkbox" name="analytika"> <span><b>Štatistiky</b> — Google Analytics, návštevnosť webu</span></label>' +
+          '<label><input type="checkbox" name="reklama"> <span><b>Reklama</b> — Google Ads, meranie účinnosti reklamy</span></label>' +
+          '<button type="button" class="cookie-btn cookie-btn-save">Uložiť výber</button>' +
+        '</details>' +
       '</div>';
     d.body.appendChild(lista);
 

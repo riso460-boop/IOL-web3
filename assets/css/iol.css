@@ -1771,98 +1771,101 @@ p { margin: 0 0 18px; }
 }
 .ref-ico h4 { font-size: 17px; }
 
-/* ---------- lišta so súhlasom s cookies — tmavé matné sklo ako cenník ---------- */
+/* ---------- lišta so súhlasom s cookies — malá karta z matného skla ----------
+   Farba sa riadi značkou stránky (data-theme): zelená energetika,
+   modrá telekomunikácie, tehlová stavebné práce. Lišta nič neblokuje. */
 
 .cookie-lista {
   position: fixed;
-  left: 16px; right: 16px; bottom: 16px;
+  left: 16px; bottom: 16px;
   z-index: 200;
-  display: flex;
-  justify-content: center;
+  width: min(380px, calc(100vw - 32px));
   pointer-events: none;
 }
 .cookie-lista[hidden] { display: none; }
 .cookie-in {
   pointer-events: auto;
-  width: 100%;
-  max-width: 720px;
-  padding: 22px 24px 20px;
+  padding: 16px 18px 14px;
   color: #fff;
-  background: rgba(6, 58, 38, .86);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, .22);
+  /* tmavý „lesný" odtieň farby značky, ako cenník na havarijných stavoch */
+  background: color-mix(in srgb, color-mix(in srgb, var(--accent-ink) 55%, #06120d) 88%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, .2);
   border-top: 3px solid var(--signal);
   border-radius: var(--r);
-  box-shadow: 0 18px 44px rgba(8, 16, 24, .28);
+  box-shadow: 0 12px 32px rgba(8, 16, 24, .22);
+  font-family: var(--body);
   animation: cookie-in .35s cubic-bezier(.22, .8, .26, 1);
 }
-@keyframes cookie-in { from { opacity: 0; transform: translateY(14px); } }
+@keyframes cookie-in { from { opacity: 0; transform: translateY(12px); } }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .cookie-in { background: #0e3d2c; }
+  .cookie-in { background: color-mix(in srgb, var(--accent-ink) 55%, #06120d); }
 }
-.cookie-nadpis {
-  margin: 0 0 8px;
+.cookie-text { margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; color: rgba(255, 255, 255, .92); }
+.cookie-text strong { color: #fff; font-weight: 600; }
+.cookie-stitok {
   font-family: var(--mono);
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #cfe6da;
+  color: var(--signal);
 }
-.cookie-text {
-  margin: 0 0 12px;
-  font-family: var(--body);
-  font-size: 15px;
-  line-height: 1.6;
-  color: #eef7f2;
+
+.cookie-akcie { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+/* nenásilné tlačidlá: rovnaká veľkosť, žiadna krikľavá farba */
+.cookie-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
-.cookie-detail { margin: 0 0 18px; font-family: var(--body); font-size: 14.5px; }
+/* obe voľby vyzerajú rovnako — ani jedna nie je vnucovaná */
+.cookie-btn:hover { background: rgba(255, 255, 255, .17); border-color: rgba(255, 255, 255, .28); }
+.cookie-btn:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
+.cookie-detail { margin-top: 10px; font-size: 13.5px; }
 .cookie-detail summary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   cursor: pointer;
   list-style: none;
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: .07em;
   text-transform: uppercase;
-  color: var(--signal);
+  color: rgba(255, 255, 255, .7);
 }
+.cookie-detail summary:hover { color: #fff; }
 .cookie-detail summary::-webkit-details-marker { display: none; }
 .cookie-detail summary::before {
   content: "";
-  width: 6px; height: 6px;
+  width: 5px; height: 5px;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(-45deg);
   transition: transform .18s ease;
 }
 .cookie-detail[open] summary::before { transform: rotate(45deg) translate(-2px, -1px); }
-.cookie-detail label { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0 0; color: #eef7f2; line-height: 1.5; }
+.cookie-detail label { display: flex; gap: 9px; align-items: flex-start; padding: 8px 0 0; line-height: 1.45; color: rgba(255, 255, 255, .88); }
 .cookie-detail label b { color: #fff; font-weight: 600; }
-.cookie-detail input { margin-top: 4px; accent-color: var(--signal); }
-
-.cookie-akcie { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
-/* <button> nemá prevziať predvolený rámik a tieň prehliadača */
-.cookie-akcie .button {
-  -webkit-appearance: none;
-  appearance: none;
-  min-height: 44px;
-  border: 1px solid transparent;
-  box-shadow: none;
-  cursor: pointer;
-}
-.cookie-akcie .button-ghost {
-  background: transparent;
-  border-color: rgba(255, 255, 255, .35);
-  color: #fff;
-}
-.cookie-akcie .button-ghost:hover { border-color: var(--signal); color: var(--signal); }
-.cookie-akcie .button-primary { border-color: var(--signal); }
-.cookie-akcie .button:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.cookie-detail input { margin-top: 3px; accent-color: var(--signal); }
+.cookie-btn-save { width: 100%; margin-top: 12px; }
 
 .cookie-odkaz {
   appearance: none;
@@ -1878,10 +1881,7 @@ p { margin: 0 0 18px; }
 .cookie-odkaz:hover { color: var(--accent); }
 
 @media (max-width: 520px) {
-  .cookie-lista { left: 10px; right: 10px; bottom: 10px; }
-  .cookie-in { padding: 18px 16px 16px; }
-  .cookie-text { font-size: 14px; line-height: 1.55; }
-  .cookie-akcie { gap: 8px; }
-  .cookie-akcie .button { flex: 1 1 calc(50% - 4px); padding: 0 10px; }
-  .cookie-akcie .button-primary { flex-basis: 100%; }
+  .cookie-lista { left: 10px; bottom: 10px; width: calc(100vw - 20px); }
+  .cookie-in { padding: 14px 14px 12px; }
+  .cookie-text { font-size: 14px; margin-bottom: 10px; }
 }
