@@ -1674,7 +1674,7 @@ p { margin: 0 0 18px; }
   border-left: 3px solid var(--signal);
 }
 .sadzba-priplatky li { font-size: 15px; line-height: 1.45; color: var(--s-text); }
-.sadzba-priplatky b { color: #fff; font-weight: 700; margin-right: 4px; white-space: nowrap; }
+.sadzba-priplatky b { color: var(--signal); font-weight: 700; margin-right: 4px; white-space: nowrap; }
 
 /* čo je v cene výjazdu */
 .sadzba-vcene-nadpis {
