@@ -2,41 +2,33 @@
   'use strict';
 
   // =====================================================================
-  // NASTAVENIA — sem doplňte vlastné identifikátory
+  // NASTAVENIA
   // =====================================================================
   var NASTAVENIA = {
-    // Google Analytics 4 → Správca → Toky údajov → ID merania (G-…)
-    ga4: 'G-XXXXXXXXXX',
-
-    // Google Ads → Nástroje → Konverzie → značka (AW-…)
-    ads: 'AW-XXXXXXXXXX',
-
-    // Google Ads → konverzná akcia → „štítok konverzie" (časť za lomkou)
-    // Prázdny štítok = konverzia sa do Google Ads neposiela, len do GA4.
-    konverzie: {
-      telefon: '',   // klik na telefónne číslo
-      email:   ''    // klik na e-mailovú adresu
-    },
+    // Google Tag Manager → ID kontajnera (GTM-…)
+    // Google Analytics (G-…) a Google Ads (AW-…) sa NEvkladajú sem,
+    // nastavujú sa ako značky vnútri Tag Managera.
+    gtm: 'GTM-5Q7PMC5D',
 
     // Kľúč, pod ktorým si prehliadač pamätá voľbu návštevníka.
     // Zmena názvu (napr. …-v2) vynúti novú otázku u všetkých.
     kluc: 'iol-suhlas-v1'
   };
   // =====================================================================
+  //
+  // Udalosti, ktoré stránka posiela do Tag Managera (dataLayer):
+  //   suhlas_aktualizovany  — návštevník potvrdil voľbu v lište
+  //   klik_telefon          — klik na telefónne číslo (tel:)
+  //   klik_email            — klik na e-mailovú adresu (mailto:)
+  // V GTM sa na ne naviažu spúšťače typu „Vlastná udalosť".
 
   var w = window, d = document;
 
-  function nastavene(id) { return id && id.indexOf('XXXX') === -1; }
-  var maGa4 = nastavene(NASTAVENIA.ga4);
-  var maAds = nastavene(NASTAVENIA.ads);
-
-  // bez identifikátorov nič nenačítavame a lištu nezobrazujeme
-  if (!maGa4 && !maAds) { return; }
+  if (!NASTAVENIA.gtm || NASTAVENIA.gtm.indexOf('XXXX') !== -1) { return; }
 
   /* ---------- režim súhlasu Google (Consent Mode v2) ---------- */
   w.dataLayer = w.dataLayer || [];
   function gtag() { w.dataLayer.push(arguments); }
-  w.gtag = gtag;
 
   // kým návštevník nerozhodne, je všetko zakázané
   gtag('consent', 'default', {
@@ -64,31 +56,28 @@
       ad_user_data: volba.reklama ? 'granted' : 'denied',
       ad_personalization: volba.reklama ? 'granted' : 'denied'
     });
-    // Google skript načítame až po súhlase — do vtedy nejde na Google nič
+    w.dataLayer.push({ event: 'suhlas_aktualizovany', suhlas_analytika: !!volba.analytika, suhlas_reklama: !!volba.reklama });
+
+    // Tag Manager načítame až po súhlase — do vtedy nejde na Google nič
     if (nacitane || (!volba.analytika && !volba.reklama)) { return; }
     nacitane = true;
+    w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
     var s = d.createElement('script');
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + (maGa4 ? NASTAVENIA.ga4 : NASTAVENIA.ads);
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + NASTAVENIA.gtm;
     d.head.appendChild(s);
-    gtag('js', new Date());
-    if (maGa4) { gtag('config', NASTAVENIA.ga4); }
-    if (maAds) { gtag('config', NASTAVENIA.ads); }
   }
 
-  /* ---------- meranie konverzií: klik na telefón a e-mail ---------- */
+  /* ---------- kliky na telefón a e-mail ---------- */
   d.addEventListener('click', function (e) {
     var odkaz = e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
     if (!odkaz || !nacitane) { return; }
     var jeTelefon = odkaz.getAttribute('href').indexOf('tel:') === 0;
-    gtag('event', jeTelefon ? 'klik_telefon' : 'klik_email', {
+    w.dataLayer.push({
+      event: jeTelefon ? 'klik_telefon' : 'klik_email',
       odkaz: odkaz.getAttribute('href'),
       stranka: w.location.pathname
     });
-    var stitok = jeTelefon ? NASTAVENIA.konverzie.telefon : NASTAVENIA.konverzie.email;
-    if (maAds && stitok) {
-      gtag('event', 'conversion', { send_to: NASTAVENIA.ads + '/' + stitok });
-    }
   });
 
   /* ---------- lišta so súhlasom ---------- */
