@@ -1558,18 +1558,18 @@ p { margin: 0 0 18px; }
   }
 }
 
-/* ---------- cenník havarijnej služby — tmavá karta v hlavičke stránky ---------- */
+/* ---------- cenník havarijnej služby — smaragdová karta v hlavičke stránky ---------- */
 
 .sadzba {
-  --s-text: #c9d5de;
-  --s-muted: #8fa3b3;
-  --s-line: rgba(255, 255, 255, .12);
+  --s-text: #e3f3ea;
+  --s-muted: #a9d3bd;
+  --s-line: rgba(255, 255, 255, .18);
   max-width: 620px;
   margin: 34px auto 0;
   padding: 22px 22px 18px;
   text-align: left;
   color: #fff;
-  background: var(--ink);
+  background: #07935a;
   border-radius: var(--r);
   border-top: 3px solid var(--signal);
   box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
@@ -1594,7 +1594,7 @@ p { margin: 0 0 18px; }
   padding: 5px;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .07);
+  background: rgba(0, 0, 0, .18);
 }
 .sadzba-taby button {
   appearance: none;
@@ -1651,7 +1651,10 @@ p { margin: 0 0 18px; }
   text-transform: uppercase;
   color: #ff8a7a;
 }
-.sadzba-stav.plati { color: #4ade80; }
+.sadzba-stav.plati { color: #fff; }
+/* na smaragdovom podklade potrebuje zelená bodka biely lem */
+.sadzba-taby button.plati i,
+.sadzba-stav i { outline: 2px solid rgba(255, 255, 255, .85); }
 .sadzba-kedy { margin: 0; font-size: 14.5px; color: var(--s-muted); }
 
 /* cena a príplatky */
@@ -1665,13 +1668,20 @@ p { margin: 0 0 18px; }
 }
 .sadzba-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--s-muted); letter-spacing: .04em; }
 
+/* cena a príplatky spolu v jednom rámčeku */
+.sadzba-cenablok {
+  margin: 8px 0 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .16);
+}
+.sadzba-cenablok .sadzba-suma { margin: 0 0 10px; }
 .sadzba-priplatky {
   list-style: none;
   display: grid;
   gap: 3px;
-  padding: 0 0 0 16px;
-  margin: 0 0 20px;
-  border-left: 3px solid var(--signal);
+  padding: 0;
+  margin: 0;
 }
 .sadzba-priplatky li { font-size: 15px; line-height: 1.45; color: var(--s-text); }
 .sadzba-priplatky b { color: var(--signal); font-weight: 700; margin-right: 4px; white-space: nowrap; }
