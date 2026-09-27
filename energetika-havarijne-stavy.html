@@ -230,31 +230,36 @@
     <div class="container">
       <div class="section-head center">
         <h2>Poruchy elektriny, s&nbsp;ktorými voláte najčastejšie</h2>
-        <p>Ak je vaša situácia iná, zavolajte tiež. Po telefóne zvyčajne vieme povedať, či to počká do rána.</p>
+        <p>Takto vyzerajú zásahy, ktoré riešime. Ak je vaša situácia iná, zavolajte tiež — po telefóne zvyčajne vieme povedať, či to počká do rána. Kliknutím fotku zväčšíte.</p>
       </div>
-      <div class="cards two">
-        <article class="card">
-          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-plug"></use></svg></div>
-          <h3>Nejde zásuvka, vypínač alebo svetlo</h3>
-          <p>Nájdeme príčinu, opravíme spoj alebo vymeníme poškodený prvok a odskúšame okruh.</p>
+      <!-- fotografie patria do assets/images/ ako havaria-1.jpg … havaria-6.jpg;
+           kým súbor chýba, zobrazí sa namiesto neho sivá plocha s ikonou -->
+      <div class="refs">
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Výpadok elektriny v byte či dome" data-lb-text="Byt alebo dom je bez elektriny, hoci v rozvádzači je často všetko nahodené. Častou príčinou je prepálený spoj na prívode k rozvádzaču. Spoj opravíme, vymeníme poškodenú svorkovnicu a obnovíme dodávku.">
+          <img loading="lazy" src="assets/images/havaria-1.jpg" alt="Výpadok elektriny v byte či dome" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-bolt"></use></svg></span><h4>Výpadok elektriny v byte či dome</h4><p>Preveríme rozvádzač, ističe, chrániče aj prívod a zistíme, kde je skrat alebo prerušenie.</p></div>
         </article>
-        <article class="card">
-          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-dig"></use></svg></div>
-          <h3>Prekopaný alebo prevŕtaný kábel</h3>
-          <p>Vyhľadáme miesto poruchy, kábel opravíme alebo nahradíme a obnovíme dodávku.</p>
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Vyhodené ističe alebo chránič" data-lb-text="Istič, ktorý po nahodení okamžite vypadne, signalizuje skrat. Často je v krabici za svietidlom, kde sa pri montáži poškodila izolácia vodiča. Poškodený úsek vymeníme a okruh odskúšame.">
+          <img loading="lazy" src="assets/images/havaria-2.jpg" alt="Vyhodené ističe alebo chránič" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-wrench"></use></svg></span><h4>Vyhodené ističe alebo chránič</h4><p>Istič, ktorý sa nedá nahodiť alebo hneď vypadne, znamená skrat či preťaženie. Nájdeme okruh s poruchou a opravíme ju.</p></div>
         </article>
-        <article class="card">
-          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-bolt"></use></svg></div>
-          <h3>Výpadok elektriny v celom byte alebo dome</h3>
-          <p>Preveríme rozvádzač, ističe, chrániče aj prívod a zistíme, kde je skrat alebo prerušenie.</p>
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Nejde zásuvka, vypínač alebo svetlo" data-lb-text="Uvoľnený spoj v zásuvke sa pri veľkej záťaži, napríklad pod rýchlovarnou kanvicou, prehrieva, až zásuvka zuhoľnatie. Vymeníme zásuvku aj prepálený koniec vodiča, dotiahneme spoje na celom okruhu a odmeriame izolačný stav.">
+          <img loading="lazy" src="assets/images/havaria-3.jpg" alt="Nejde zásuvka, vypínač alebo svetlo" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-plug"></use></svg></span><h4>Nejde zásuvka, vypínač alebo svetlo</h4><p>Nájdeme príčinu, opravíme spoj alebo vymeníme poškodený prvok a odskúšame okruh.</p></div>
         </article>
-        <article class="card">
-          <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-wrench"></use></svg></div>
-          <h3>Vyhodené ističe alebo chránič</h3>
-          <p>Istič, ktorý sa nedá nahodiť alebo hneď vypadne, znamená skrat či preťaženie. Nájdeme okruh, v ktorom je porucha, a opravíme ju.</p>
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Prekopaný alebo prevŕtaný kábel" data-lb-text="Pri výkope pre plot či prípojku sa ľahko preruší zemný kábel, napríklad k garáži alebo záhradnému domčeku. Pri vŕtaní do steny zasa kábel v omietke. Miesto poruchy vyhľadáme, kábel spojíme alebo nahradíme, odskúšame a obnovíme dodávku.">
+          <img loading="lazy" src="assets/images/havaria-4.jpg" alt="Prekopaný alebo prevŕtaný kábel" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-dig"></use></svg></span><h4>Prekopaný alebo prevŕtaný kábel</h4><p>Vyhľadáme miesto poruchy, kábel opravíme alebo nahradíme a obnovíme dodávku.</p></div>
+        </article>
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Chránič vypadáva po daždi" data-lb-text="Ak chránič vypína pri každom daždi, príčinou býva zatečená vonkajšia zásuvka, svietidlo alebo krabica. Meraním nájdeme miesto úniku, poškodený prvok nahradíme vhodným s vyšším krytím a chránič znovu drží.">
+          <img loading="lazy" src="assets/images/havaria-5.jpg" alt="Chránič vypadáva po daždi" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-alert"></use></svg></span><h4>Chránič vypadáva po daždi</h4><p>Príčinou býva zatečená vonkajšia zásuvka, svietidlo alebo krabica. Nájdeme miesto úniku a opravíme ho.</p></div>
+        </article>
+        <article class="ref ref-ico" data-lb="poruchy" data-lb-title="Poškodený rozvádzač po búrke" data-lb-text="Úder blesku v okolí dokáže poškodiť prístroje v rozvádzači a vyradiť elektrinu v celom dome. Vymeníme poškodené ističe a chránič, doplníme prepäťovú ochranu a dom vrátime do prevádzky.">
+          <img loading="lazy" src="assets/images/havaria-6.jpg" alt="Poškodený rozvádzač po búrke" onerror="this.parentNode.classList.add('bez-foto')">
+          <div><span class="card-ico"><svg class="ico" aria-hidden="true"><use href="#i-switch"></use></svg></span><h4>Poškodený rozvádzač po búrke</h4><p>Vymeníme poškodené ističe a chrániče a doplníme prepäťovú ochranu.</p></div>
         </article>
       </div>
-      
     </div>
   </section>
 
@@ -286,42 +291,6 @@
   </section>
 
 
-  <section class="section section-alt" id="pripady">
-    <div class="container">
-      <div class="section-head center">
-        <h2>Prípady, ktoré sme riešili</h2>
-        <p>Ukážky typických zásahov havarijnej služby. Kliknutím obrázok zväčšíte.</p>
-      </div>
-      <!-- fotografie patria do assets/images/ ako havaria-1.jpg … havaria-6.jpg;
-           kým súbor chýba, zobrazí sa namiesto neho sivá plocha s ikonou -->
-      <div class="refs">
-        <article class="ref" data-lb="pripady" data-lb-title="Vyhorená zásuvka v kuchyni" data-lb-text="Uvoľnený spoj v zásuvke sa pri veľkej záťaži, napríklad pod rýchlovarnou kanvicou, prehrieva, až zásuvka zuhoľnatie. Vymeníme zásuvku aj prepálený koniec vodiča, dotiahneme spoje na celom okruhu a odmeriame izolačný stav.">
-          <img loading="lazy" src="assets/images/havaria-1.jpg" alt="Vyhorená zásuvka v kuchyni" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Vyhorená zásuvka v kuchyni</h4><p>Prehriaty spoj, výmena zásuvky a kontrola okruhu.</p></div>
-        </article>
-        <article class="ref" data-lb="pripady" data-lb-title="Chránič vypadáva po daždi" data-lb-text="Ak chránič vypína pri každom daždi, príčinou býva zatečená vonkajšia zásuvka, svietidlo alebo krabica. Meraním nájdeme miesto úniku, poškodený prvok nahradíme vhodným s vyšším krytím a chránič znovu drží.">
-          <img loading="lazy" src="assets/images/havaria-2.jpg" alt="Chránič vypadáva po daždi" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Chránič vypadáva po daždi</h4><p>Zatečená vonkajšia zásuvka alebo svietidlo.</p></div>
-        </article>
-        <article class="ref" data-lb="pripady" data-lb-title="Prekopaný kábel k garáži" data-lb-text="Pri výkope pre plot či prípojku sa ľahko preruší zemný kábel, napríklad k garáži alebo záhradnému domčeku. Miesto poruchy vyhľadáme, kábel spojíme káblovou spojkou, odskúšame a obnovíme dodávku.">
-          <img loading="lazy" src="assets/images/havaria-3.jpg" alt="Prekopaný kábel k garáži" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Prekopaný kábel k garáži</h4><p>Vyhľadanie poruchy a oprava zemného kábla spojkou.</p></div>
-        </article>
-        <article class="ref" data-lb="pripady" data-lb-title="Výpadok v celom byte" data-lb-text="Byt je bez elektriny, hoci v rozvádzači je všetko nahodené. Častou príčinou je prepálený spoj na prívode k bytovému rozvádzaču. Spoj opravíme, vymeníme poškodenú svorkovnicu a obnovíme dodávku.">
-          <img loading="lazy" src="assets/images/havaria-4.jpg" alt="Výpadok elektriny v celom byte" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Výpadok v celom byte</h4><p>Prepálený spoj na prívode k bytovému rozvádzaču.</p></div>
-        </article>
-        <article class="ref" data-lb="pripady" data-lb-title="Istič, ktorý sa nedá nahodiť" data-lb-text="Istič, ktorý po nahodení okamžite vypadne, signalizuje skrat. Často je v krabici za svietidlom, kde sa pri montáži poškodila izolácia vodiča. Poškodený úsek vymeníme a okruh odskúšame.">
-          <img loading="lazy" src="assets/images/havaria-5.jpg" alt="Istič, ktorý sa nedá nahodiť" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Istič, ktorý sa nedá nahodiť</h4><p>Skrat v krabici za svietidlom po neodbornej montáži.</p></div>
-        </article>
-        <article class="ref" data-lb="pripady" data-lb-title="Poškodený rozvádzač po búrke" data-lb-text="Úder blesku v okolí dokáže poškodiť prístroje v rozvádzači a vyradiť elektrinu v celom dome. Vymeníme poškodené ističe a chránič, doplníme prepäťovú ochranu a dom vrátime do prevádzky.">
-          <img loading="lazy" src="assets/images/havaria-6.jpg" alt="Poškodený rozvádzač po búrke" onerror="this.parentNode.classList.add('bez-foto')">
-          <div><h4>Poškodený rozvádzač po búrke</h4><p>Výmena prístrojov a doplnenie prepäťovej ochrany.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="otazky">
     <div class="container">

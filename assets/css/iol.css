@@ -1703,6 +1703,17 @@ p { margin: 0 0 18px; }
 }
 .ref.bez-foto { cursor: default; }
 
+/* karta poruchy — ikona v rožku, prekrýva spodný okraj fotografie */
+.ref-ico > div { position: relative; padding-top: 34px; }
+.ref-ico .card-ico {
+  position: absolute;
+  top: -22px; left: 20px;
+  margin: 0;
+  border: 3px solid var(--paper);
+  box-sizing: content-box;
+}
+.ref-ico h4 { font-size: 17px; }
+
 /* ---------- lišta so súhlasom s cookies ---------- */
 
 .cookie-lista {
