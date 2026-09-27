@@ -37,7 +37,6 @@ Logá:        Logá partnerov nie sú fotografie a patria do
 
 CHÝBAJÚCE SÚBORY (miesto na webe je pripravené, fotka ešte nie je):
   telekomunikacie/telekomunikacie-pas.jpg
-  energetika/havarijne-porucha-*.jpg  (6 súborov, viď koniec legendy)
 
 ==========================================================================
 
@@ -67,7 +66,7 @@ energetika/energetika-karta.jpg              Úvodná stránka — karta značky
 energetika/havarijne-hero.jpg                Havarijné stavy — hlavička (aj náhľad pri zdieľaní)
 energetika/havarijne-pas.jpg                 Havarijné stavy — pás uprostred
 energetika/havarijne-karta.jpg               karty a odkazy na Havarijné stavy (Energetika, Domácnosti, Priemysel)
-energetika/havarijne-porucha-*.jpg           Havarijné stavy — 6 kariet porúch  [CHÝBAJÚ]
+energetika/havarijne-porucha-*.jpg           Havarijné stavy — 6 kariet porúch
 energetika/domacnosti-hero.jpg               Rodinné domy — hlavička
 energetika/domacnosti-pas.jpg                Rodinné domy — pás uprostred
 energetika/domacnosti-karta.jpg              karty a odkazy na Rodinné domy + 1. fotka v posuvníku
@@ -734,7 +733,7 @@ telekomunikacie/ikt-serverovna.jpg
       Vypĺňa polovicu bloku vedľa textu. Znesie aj širší záber.
 
 ==========================================================================
-Spolu 46 používaných fotografií (+ 7 pripravených miest bez fotky).
+Spolu 52 používaných fotografií (+ 1 pripravené miesto bez fotky).
 
 ==========================================================================
 HAVARIJNÉ STAVY — PORUCHY (energetika/havarijne-porucha-*.jpg)
@@ -751,7 +750,8 @@ HAVARIJNÉ STAVY — PORUCHY (energetika/havarijne-porucha-*.jpg)
       energetika/havarijne-porucha-chranic-dazd.jpg     Chránič vypadáva po daždi
       energetika/havarijne-porucha-rozvadzac-burka.jpg  Poškodený rozvádzač po búrke
   Na čo myslieť pri výbere:
-      Kým súbor chýba, karta ukáže sivú plochu s ikonou blesku
-      a nedá sa zväčšiť. Stačí nahrať fotku s presným názvom.
+      Poradie kariet: 1. rad vypadok, istice, zasuvka;
+      2. rad kabel, chranic-dazd, rozvadzac-burka.
+      Keby súbor chýbal, karta ukáže sivú plochu s ikonou blesku.
       Nadpis a text karty upravíte priamo v HTML (atribúty
       data-lb-title a data-lb-text + text pod obrázkom).
