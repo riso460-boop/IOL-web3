@@ -1558,21 +1558,29 @@ p { margin: 0 0 18px; }
   }
 }
 
-/* ---------- cenník havarijnej služby — smaragdová karta v hlavičke stránky ---------- */
+/* ---------- cenník havarijnej služby — karta z tmavého matného skla v hlavičke ---------- */
 
 .sadzba {
-  --s-text: #e3f3ea;
-  --s-muted: #a9d3bd;
-  --s-line: rgba(255, 255, 255, .18);
+  --s-text: #eef7f2;
+  --s-muted: #cfe6da;
+  --s-line: rgba(255, 255, 255, .22);
   max-width: 620px;
   margin: 34px auto 0;
   padding: 22px 22px 18px;
   text-align: left;
   color: #fff;
-  background: #07935a;
-  border-radius: var(--r);
+  /* matné sklo: cez kartu rozmazane presvitá fotografia z hlavičky */
+  background: rgba(6, 30, 20, .38);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, .28);
   border-top: 3px solid var(--signal);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+  border-radius: var(--r);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+/* prehliadač bez podpory rozmazania dostane plnú tmavozelenú */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .sadzba { background: #0e3d2c; }
 }
 .sadzba-hlava { margin-bottom: 14px; }
 .sadzba-nadpis {
@@ -1673,7 +1681,7 @@ p { margin: 0 0 18px; }
   margin: 8px 0 20px;
   padding: 16px 18px;
   border-radius: 12px;
-  background: rgba(0, 0, 0, .16);
+  background: rgba(0, 0, 0, .25);
 }
 .sadzba-cenablok .sadzba-suma { margin: 0 0 10px; }
 .sadzba-priplatky {
