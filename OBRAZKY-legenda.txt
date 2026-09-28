@@ -1,8 +1,29 @@
 LEGENDA FOTOGRAFIÍ — iol.sk
 ==========================================================================
 
-Všetky fotografie patria do priečinka:  assets/images/
-Názvy súborov musia sedieť presne: 1.jpg, 2.jpg, … 47.jpg
+ŠTRUKTÚRA
+--------------------------------------------------------------------------
+Fotografie sú v priečinku assets/images/, rozdelené podľa oblasti webu:
+
+  spolocnost/        úvodná stránka, história, referencie
+  telekomunikacie/   Telekomunikácie a IT a jej podstránky
+  energetika/        Energetika a jej podstránky
+  stavebne-prace/    Stavebné práce
+  nepouzite/         súbory, ktoré web momentálne nepoužíva
+                     (pôvodné názvy, vrátane placeholder/ a photos/)
+
+Názov súboru = STRÁNKA-UMIESTNENIE[-POPIS].jpg
+
+  …-hero       veľká fotka v hlavičke stránky
+  …-pas        pás cez celú šírku uprostred stránky
+  …-karta      fotka, ktorá stránku zastupuje v kartách a odkazoch
+               na iných stránkach (napr. havarijne-karta.jpg sa
+               zobrazuje všade, kde je odkaz na Havarijné stavy)
+  …-ref-…      karta konkrétnej realizácie / referencie
+  …-galeria-…  posuvník fotografií
+  …-porucha-…  karta typickej poruchy (havarijné stavy)
+
+Novú fotku vymeníte tak, že súbor nahradíte iným s rovnakým názvom.
 
 Formát:      .jpg (pri fotografiách je menší než .png)
 Kvalita:     80–85 %, aby súbor ostal pod ~400 kB
@@ -12,89 +33,57 @@ Farebnosť:   Cez fotku ide poloprehľadný prekryv vo farbe značky.
 
 Logá:        Logá partnerov nie sú fotografie a patria do
              assets/icons/ ako partner-swan.png, partner-4ka.png
-             a partner-rsdata.png (predtým sa ťahali z cudzích
-             serverov, čo je krehké — uložte si ich k sebe).
+             a partner-rsdata.png.
 
-Voľné čísla: 15.jpg — momentálne sa nepoužívajú.
+CHÝBAJÚCE SÚBORY (miesto na webe je pripravené, fotka ešte nie je):
+  telekomunikacie/telekomunikacie-pas.jpg
 
 ==========================================================================
 
 RÝCHLY PREHĽAD
 --------------------------------------------------------------------------
-SÚBOR   STRÁNKA                        UMIESTNENIE
---------------------------------------------------------------------------
-1.jpg   Úvodná stránka                 hlavička stránky (hero)
-2.jpg   Úvodná stránka                 pás cez celú šírku uprostred stránky
-3.jpg   Telekomunikácie a IT           hlavička stránky (hero)
-        Telekomunikácie — dočasná stránka hlavička stránky (hero)
-4.jpg   Telekomunikácie a IT           pás cez celú šírku uprostred stránky
-5.jpg   Energetika                     hlavička stránky (hero)
-6.jpg   Energetika                     pás cez celú šírku uprostred stránky
-7.jpg   Stavebné práce                 hlavička stránky (hero)
-        Stavebné práce — dočasná stránka hlavička stránky (hero)
-8.jpg   Energetika — rodinné domy      hlavička stránky (hero)
-9.jpg   Energetika — rodinné domy      pás cez celú šírku uprostred stránky
-10.jpg  Energetika — priemysel         hlavička stránky (hero)
-11.jpg  Energetika — havarijné stavy   hlavička stránky (hero)
-12.jpg  Energetika — havarijné stavy   pás cez celú šírku uprostred stránky
-13.jpg  Naša história                  hlavička stránky (hero)
-14.jpg  Energetika                     hlavička karty značky
-        Energetika — rodinné domy      malý výrez v odkaze na spodku stránky
-        Energetika — priemysel         malý výrez v odkaze na spodku stránky
-16.jpg  Referencie                     hlavička stránky (hero)
-17.jpg  Referencie                     pás cez celú šírku uprostred stránky
-18.jpg  TK — rádiové spoje             hlavička stránky (hero)
-19.jpg  TK — optika a metalika         hlavička stránky (hero)
-20.jpg  TK — IKT a bezpečnosť          hlavička stránky (hero)
-21.jpg  TK — IKT a bezpečnosť          pás cez celú šírku uprostred stránky
-22.jpg  Úvodná stránka                 hlavička karty značky
-23.jpg  Úvodná stránka                 hlavička karty značky
-24.jpg  Úvodná stránka                 hlavička karty značky
-25.jpg  Telekomunikácie a IT           hlavička karty značky
-        Referencie                     malý výrez v odkaze na spodku stránky
-        TK — IKT a bezpečnosť          malý výrez v odkaze na spodku stránky
-        TK — optika a metalika         malý výrez v odkaze na spodku stránky
-26.jpg  Telekomunikácie a IT           hlavička karty značky
-        Referencie                     malý výrez v odkaze na spodku stránky
-        TK — IKT a bezpečnosť          malý výrez v odkaze na spodku stránky
-        TK — rádiové spoje             malý výrez v odkaze na spodku stránky
-27.jpg  Telekomunikácie a IT           hlavička karty značky
-        Referencie                     malý výrez v odkaze na spodku stránky
-        TK — optika a metalika         malý výrez v odkaze na spodku stránky
-        TK — rádiové spoje             malý výrez v odkaze na spodku stránky
-28.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-29.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-30.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-31.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-32.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-33.jpg  Energetika — rodinné domy      karta konkrétnej realizácie
-34.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-        Energetika                     hlavička karty značky
-        Energetika — havarijné stavy   malý výrez v odkaze na spodku stránky
-        Energetika — priemysel         malý výrez v odkaze na spodku stránky
-        Referencie                     malý výrez v odkaze na spodku stránky
-35.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-36.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-37.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-38.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-39.jpg  Energetika — rodinné domy      posuvník fotografií zo stavieb
-40.jpg  Energetika                     hlavička karty značky
-        Energetika — rodinné domy      malý výrez v odkaze na spodku stránky
-        Energetika — havarijné stavy   malý výrez v odkaze na spodku stránky
-        Referencie                     malý výrez v odkaze na spodku stránky
-41.jpg  Energetika — priemysel         karta konkrétnej realizácie
-42.jpg  Energetika — priemysel         karta konkrétnej realizácie
-43.jpg  Energetika — priemysel         karta konkrétnej realizácie
-44.jpg  Energetika — priemysel         karta konkrétnej realizácie
-45.jpg  Energetika — priemysel         karta konkrétnej realizácie
-46.jpg  Energetika — priemysel         karta konkrétnej realizácie
-47.jpg  TK — IKT a bezpečnosť          veľký obrazový blok v texte
+spolocnost/uvod-hero.jpg                     Úvodná stránka — hlavička
+spolocnost/uvod-pas.jpg                      Úvodná stránka — pás uprostred
+spolocnost/historia-hero.jpg                 Naša história — hlavička
+spolocnost/referencie-hero.jpg               Referencie — hlavička
+spolocnost/referencie-pas.jpg                Referencie — pás uprostred
+
+telekomunikacie/telekomunikacie-hero.jpg     Telekomunikácie a IT (aj dočasná stránka) — hlavička; odkaz na TK zo stránky IKT
+telekomunikacie/telekomunikacie-pas.jpg      Telekomunikácie a IT — pás uprostred  [CHÝBA]
+telekomunikacie/telekomunikacie-karta.jpg    Úvodná stránka — karta značky Telekomunikácie a IT
+telekomunikacie/radiove-spoje-hero.jpg       TK — rádiové spoje — hlavička
+telekomunikacie/radiove-spoje-karta.jpg      karty a odkazy na Rádiové spoje (TK, Referencie, Optika)
+telekomunikacie/optika-hero.jpg              TK — optika, metalika, koax — hlavička
+telekomunikacie/optika-karta.jpg             karty a odkazy na Optiku (TK, Referencie, Rádiové spoje)
+telekomunikacie/ikt-hero.jpg                 TK — IKT a bezpečnosť — hlavička
+telekomunikacie/ikt-pas.jpg                  TK — IKT a bezpečnosť — pás uprostred
+telekomunikacie/ikt-serverovna.jpg           TK — IKT a bezpečnosť — obrazový blok „Správa serverovní"
+telekomunikacie/ikt-karta.jpg                karty a odkazy na IKT (TK, Referencie, Optika, Rádiové spoje)
+
+energetika/energetika-hero.jpg               Energetika — hlavička
+energetika/energetika-pas.jpg                Energetika — pás uprostred
+energetika/energetika-karta.jpg              Úvodná stránka — karta značky Energetika; odkaz zo stránky IKT
+energetika/havarijne-hero.jpg                Havarijné stavy — hlavička (aj náhľad pri zdieľaní)
+energetika/havarijne-pas.jpg                 Havarijné stavy — pás uprostred
+energetika/havarijne-karta.jpg               karty a odkazy na Havarijné stavy (Energetika, Domácnosti, Priemysel)
+energetika/havarijne-porucha-*.jpg           Havarijné stavy — 6 kariet porúch
+energetika/domacnosti-hero.jpg               Rodinné domy — hlavička
+energetika/domacnosti-pas.jpg                Rodinné domy — pás uprostred
+energetika/domacnosti-karta.jpg              karty a odkazy na Rodinné domy + 1. fotka v posuvníku
+energetika/domacnosti-ref-*.jpg              Rodinné domy — 6 kariet realizácií
+energetika/domacnosti-galeria-*.jpg          Rodinné domy — posuvník fotografií zo stavieb
+energetika/priemysel-hero.jpg                Priemysel — hlavička
+energetika/priemysel-karta.jpg               karty a odkazy na Priemysel (Energetika, Domácnosti, Havarijné, Referencie)
+energetika/priemysel-ref-*.jpg               Priemysel — 6 kariet realizácií
+
+stavebne-prace/stavebne-prace-hero.jpg       Stavebné práce (aj dočasná stránka) — hlavička
+stavebne-prace/stavebne-prace-karta.jpg      Úvodná stránka — karta značky Stavebné práce
 
 ==========================================================================
 
 PODROBNE
 
-1.jpg
+spolocnost/uvod-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Úvodná stránka
   Súbor:        index.html
@@ -107,7 +96,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-2.jpg
+spolocnost/uvod-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Úvodná stránka
   Súbor:        index.html
@@ -120,7 +109,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-3.jpg
+telekomunikacie/telekomunikacie-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Telekomunikácie a IT
   Súbor:        telekomunikacie-a-it.html
@@ -134,7 +123,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-4.jpg
+telekomunikacie/telekomunikacie-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Telekomunikácie a IT
   Súbor:        telekomunikacie-a-it.html
@@ -147,7 +136,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-5.jpg
+energetika/energetika-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika
   Súbor:        energetika.html
@@ -160,7 +149,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-6.jpg
+energetika/energetika-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika
   Súbor:        energetika.html
@@ -173,7 +162,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-7.jpg
+stavebne-prace/stavebne-prace-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Stavebné práce
   Súbor:        stavebne-prace.html
@@ -187,7 +176,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-8.jpg
+energetika/domacnosti-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
@@ -200,7 +189,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-9.jpg
+energetika/domacnosti-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
@@ -213,7 +202,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-10.jpg
+energetika/priemysel-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
@@ -226,7 +215,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-11.jpg
+energetika/havarijne-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — havarijné stavy
   Súbor:        energetika-havarijne-stavy.html
@@ -239,7 +228,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-12.jpg
+energetika/havarijne-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — havarijné stavy
   Súbor:        energetika-havarijne-stavy.html
@@ -252,7 +241,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-13.jpg
+spolocnost/historia-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Naša história
   Súbor:        historia.html
@@ -265,7 +254,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-14.jpg
+energetika/havarijne-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika
   Súbor:        energetika.html
@@ -280,7 +269,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-16.jpg
+spolocnost/referencie-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Referencie
   Súbor:        referencie.html
@@ -293,7 +282,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-17.jpg
+spolocnost/referencie-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      Referencie
   Súbor:        referencie.html
@@ -306,7 +295,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-18.jpg
+telekomunikacie/radiove-spoje-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      TK — rádiové spoje
   Súbor:        tk-radiove-spoje.html
@@ -319,7 +308,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-19.jpg
+telekomunikacie/optika-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      TK — optika a metalika
   Súbor:        tk-optika-metalika-koax.html
@@ -332,7 +321,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-20.jpg
+telekomunikacie/ikt-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      TK — IKT a bezpečnosť
   Súbor:        tk-ikt-vyvoj-bezpecnost.html
@@ -345,7 +334,7 @@ PODROBNE
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-21.jpg
+telekomunikacie/ikt-pas.jpg
 --------------------------------------------------------------------------
   Stránka:      TK — IKT a bezpečnosť
   Súbor:        tk-ikt-vyvoj-bezpecnost.html
@@ -358,7 +347,7 @@ PODROBNE
       Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
       umiestnite do stredu výšky, nie k hornému či dolnému okraju.
 
-22.jpg
+telekomunikacie/telekomunikacie-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Úvodná stránka
   Súbor:        index.html
@@ -371,7 +360,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-23.jpg
+energetika/energetika-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Úvodná stránka
   Súbor:        index.html
@@ -384,7 +373,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-24.jpg
+stavebne-prace/stavebne-prace-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Úvodná stránka
   Súbor:        index.html
@@ -397,7 +386,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-25.jpg
+telekomunikacie/radiove-spoje-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Telekomunikácie a IT
   Súbor:        telekomunikacie-a-it.html
@@ -413,7 +402,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-26.jpg
+telekomunikacie/optika-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Telekomunikácie a IT
   Súbor:        telekomunikacie-a-it.html
@@ -429,7 +418,7 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-27.jpg
+telekomunikacie/ikt-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Telekomunikácie a IT
   Súbor:        telekomunikacie-a-it.html
@@ -445,11 +434,11 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-28.jpg
+energetika/domacnosti-ref-drevodom-velky-folkmar.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-drevodom-velky-folkmar.jpg (z iol.sk — premenujte na 28.jpg)
+  Pôvodný súbor: reference-drevodom-velky-folkmar.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Drevodom Veľký Folkmar"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -460,11 +449,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-29.jpg
+energetika/domacnosti-ref-bytovy-dom-kosice.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-hlavne-domove-vedenie.jpg (z iol.sk — premenujte na 29.jpg)
+  Pôvodný súbor: reference-hlavne-domove-vedenie.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Bytový dom, Košice"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -475,11 +464,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-30.jpg
+energetika/domacnosti-ref-bleskozvod.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-bleskozvod.jpg (z iol.sk — premenujte na 30.jpg)
+  Pôvodný súbor: reference-bleskozvod.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Bleskozvod, okolie Košíc"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -490,11 +479,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-31.jpg
+energetika/domacnosti-ref-byt-kosice.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-rozvody-byt.jpg (z iol.sk — premenujte na 31.jpg)
+  Pôvodný súbor: reference-rozvody-byt.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Trojizbový byt, Košice"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -505,11 +494,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-32.jpg
+energetika/domacnosti-ref-podlahove-kurenie.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-podlahove-vykurovanie.jpg (z iol.sk — premenujte na 32.jpg)
+  Pôvodný súbor: reference-podlahove-vykurovanie.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Podlahové kúrenie, novostavba"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -520,11 +509,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-33.jpg
+energetika/domacnosti-ref-pripojky.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: reference-elektricke-pripojky.jpg (z iol.sk — premenujte na 33.jpg)
+  Pôvodný súbor: reference-elektricke-pripojky.jpg (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  realizácia „Prípojky pre rodinné domy"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -535,11 +524,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-34.jpg
+energetika/domacnosti-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-elektro-prace.jpg (z iol.sk — premenujte na 34.jpg)
+  Pôvodný súbor: gallery-elektro-prace.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Používa sa aj: Energetika — hlavička karty značky (karta odkazujúca na energetika-domacnosti.html)
@@ -553,11 +542,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-35.jpg
+energetika/domacnosti-galeria-novostavba.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-novostavba.jpg (z iol.sk — premenujte na 35.jpg)
+  Pôvodný súbor: gallery-novostavba.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -567,11 +556,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-36.jpg
+energetika/domacnosti-galeria-kablove-vykurovanie.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-kablove-vykurovanie.jpg (z iol.sk — premenujte na 36.jpg)
+  Pôvodný súbor: gallery-kablove-vykurovanie.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -581,11 +570,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-37.jpg
+energetika/domacnosti-galeria-rozvadzac.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-rozvadzac.jpg (z iol.sk — premenujte na 37.jpg)
+  Pôvodný súbor: gallery-rozvadzac.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -595,11 +584,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-38.jpg
+energetika/domacnosti-galeria-dom-stropkov.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-rodinny-dom-stropkov.jpg (z iol.sk — premenujte na 38.jpg)
+  Pôvodný súbor: gallery-rodinny-dom-stropkov.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -609,11 +598,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-39.jpg
+energetika/domacnosti-galeria-drevodom-velka-kamenica.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — rodinné domy
   Súbor:        energetika-domacnosti.html
-  Pôvodný súbor: gallery-drevodom-velka-kamenica.jpg (z iol.sk — premenujte na 39.jpg)
+  Pôvodný súbor: gallery-drevodom-velka-kamenica.jpg (pôvodne z iol.sk)
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -623,11 +612,11 @@ PODROBNE
       Zobrazí sa v pomere 4:3 a po kliknutí sa otvorí zväčšená. Do
       posuvníka sa dá pridať ľubovoľný počet ďalších.
 
-40.jpg
+energetika/priemysel-karta.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika
   Súbor:        energetika.html
-  Pôvodný súbor: service-fotovoltika.webp (z iol.sk — premenujte na 40.jpg)
+  Pôvodný súbor: service-fotovoltika.webp (pôvodne z iol.sk)
   Umiestnenie:  hlavička karty značky
   Nájdete pri:  karta odkazujúca na energetika-priemysel.html
   Používa sa aj: Energetika — rodinné domy — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html)
@@ -640,11 +629,11 @@ PODROBNE
       Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
       lepšie než široký celok.
 
-41.jpg
+energetika/priemysel-ref-topolcany.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-topolcany.webp (z iol.sk — premenujte na 41.jpg)
+  Pôvodný súbor: reference-topolcany.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -655,11 +644,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-42.jpg
+energetika/priemysel-ref-zvolen.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-zvolen.webp (z iol.sk — premenujte na 42.jpg)
+  Pôvodný súbor: reference-zvolen.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -670,11 +659,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-43.jpg
+energetika/priemysel-ref-kosice.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-kosice.webp (z iol.sk — premenujte na 43.jpg)
+  Pôvodný súbor: reference-kosice.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -685,11 +674,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-44.jpg
+energetika/priemysel-ref-nove-zamky.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-nove-zamky.webp (z iol.sk — premenujte na 44.jpg)
+  Pôvodný súbor: reference-nove-zamky.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -700,11 +689,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-45.jpg
+energetika/priemysel-ref-sala.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-sala.webp (z iol.sk — premenujte na 45.jpg)
+  Pôvodný súbor: reference-sala.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -715,11 +704,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-46.jpg
+energetika/priemysel-ref-bratislava.jpg
 --------------------------------------------------------------------------
   Stránka:      Energetika — priemysel
   Súbor:        energetika-priemysel.html
-  Pôvodný súbor: reference-bratislava.webp (z iol.sk — premenujte na 46.jpg)
+  Pôvodný súbor: reference-bratislava.webp (pôvodne z iol.sk)
   Umiestnenie:  karta konkrétnej realizácie
   Nájdete pri:  karta realizácie
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -730,11 +719,11 @@ PODROBNE
       sa otvorí zväčšená. Má ukazovať práve tú zákazku, o ktorej
       karta hovorí.
 
-47.jpg
+telekomunikacie/ikt-serverovna.jpg
 --------------------------------------------------------------------------
   Stránka:      TK — IKT a bezpečnosť
   Súbor:        tk-ikt-vyvoj-bezpecnost.html
-  Pôvodný súbor: iol-hero-cloud-security.webp (z iol.sk — premenujte na 47.jpg)
+  Pôvodný súbor: iol-hero-cloud-security.webp (pôvodne z iol.sk)
   Umiestnenie:  veľký obrazový blok v texte
   Nájdete pri:  blok „Správa serverovní"
   Rozmer:       1600 × 1000 px (minimum), na šírku
@@ -744,4 +733,25 @@ PODROBNE
       Vypĺňa polovicu bloku vedľa textu. Znesie aj širší záber.
 
 ==========================================================================
-Spolu 46 fotografií.
+Spolu 52 používaných fotografií (+ 1 pripravené miesto bez fotky).
+
+==========================================================================
+HAVARIJNÉ STAVY — PORUCHY (energetika/havarijne-porucha-*.jpg)
+--------------------------------------------------------------------------
+  Stránka:      Energetika — havarijné stavy
+  Súbor:        energetika-havarijne-stavy.html
+  Umiestnenie:  sekcia „Poruchy elektriny, s ktorými voláte najčastejšie"
+  Rozmer:       1200 × 900 px (minimum), na šírku
+  Súbory:
+      energetika/havarijne-porucha-vypadok.jpg          Výpadok elektriny v byte či dome
+      energetika/havarijne-porucha-istice.jpg           Vyhodené ističe alebo chránič
+      energetika/havarijne-porucha-zasuvka.jpg          Nejde zásuvka, vypínač alebo svetlo
+      energetika/havarijne-porucha-kabel.jpg            Prekopaný alebo prevŕtaný kábel
+      energetika/havarijne-porucha-chranic-dazd.jpg     Chránič vypadáva po daždi
+      energetika/havarijne-porucha-rozvadzac-burka.jpg  Poškodený rozvádzač po búrke
+  Na čo myslieť pri výbere:
+      Poradie kariet: 1. rad vypadok, istice, zasuvka;
+      2. rad kabel, chranic-dazd, rozvadzac-burka.
+      Keby súbor chýbal, karta ukáže sivú plochu s ikonou blesku.
+      Nadpis a text karty upravíte priamo v HTML (atribúty
+      data-lb-title a data-lb-text + text pod obrázkom).

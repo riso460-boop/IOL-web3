@@ -1270,7 +1270,7 @@ p { margin: 0 0 18px; }
 /* =========================================================
    Fotografie na pozadí
    Fotka sa vkladá cez premennú --foto priamo v HTML:
-     <section class="hero center has-foto" style="--foto:url('assets/images/3.jpg')">
+     <section class="hero center has-foto" style="--foto:url('assets/images/telekomunikacie/telekomunikacie-hero.jpg')">
    Cez ňu leží prekryv vo farbe segmentu, takže modrá sa
    na energetike neobjaví ani cez fotografiu.
    ========================================================= */
@@ -1556,4 +1556,332 @@ p { margin: 0 0 18px; }
     animation-iteration-count: 1 !important;
     transition-duration: .001ms !important;
   }
+}
+
+/* ---------- cenník havarijnej služby — karta z tmavého matného skla v hlavičke ---------- */
+
+.sadzba {
+  --s-text: #eef7f2;
+  --s-muted: #cfe6da;
+  --s-line: rgba(255, 255, 255, .22);
+  max-width: 620px;
+  margin: 34px auto 0;
+  padding: 22px 22px 18px;
+  text-align: left;
+  color: #fff;
+  /* matné sklo: cez kartu rozmazane presvitá fotografia z hlavičky */
+  background: rgba(6, 30, 20, .38);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-top: 3px solid var(--signal);
+  border-radius: var(--r);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+/* prehliadač bez podpory rozmazania dostane plnú tmavozelenú */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .sadzba { background: #0e3d2c; }
+}
+.sadzba-hlava { margin-bottom: 14px; }
+.sadzba-nadpis {
+  margin: 0 0 4px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+}
+.sadzba-teraz { margin: 0; font-size: 14.5px; color: var(--s-text); line-height: 1.5; }
+.sadzba-teraz b { color: #fff; font-weight: 600; }
+
+.sadzba-taby {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .18);
+}
+.sadzba-taby button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--s-text);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease;
+}
+.sadzba-taby button:hover { color: #fff; }
+.sadzba-taby button[aria-selected="true"] { background: var(--signal); color: var(--signal-ink); }
+.sadzba-taby button:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
+/* bodka: zelená bliká = sadzba práve platí, červená = neplatí */
+.sadzba-taby i,
+.sadzba-stav i {
+  flex: none;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--s-muted);
+}
+.sadzba-taby button:not(.plati) i,
+.sadzba-stav:not(.plati) i { background: #ef4444; }
+.sadzba-taby button.plati i,
+.sadzba-stav.plati i { background: #22c55e; animation: tep-zelena 1.8s ease-out infinite; }
+@keyframes tep-zelena {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, .6); }
+  70%  { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+.sadzba-taby:not(:has(.plati)) i { background: var(--s-muted); }
+
+.sadzba-stav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #ff8a7a;
+}
+.sadzba-stav.plati { color: #fff; }
+/* na smaragdovom podklade potrebuje zelená bodka biely lem */
+.sadzba-taby button.plati i,
+.sadzba-stav i { outline: 2px solid rgba(255, 255, 255, .85); }
+.sadzba-kedy { margin: 0; font-size: 14.5px; color: var(--s-muted); }
+
+/* cena a príplatky */
+.sadzba-suma { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 6px 0 12px; }
+.sadzba-suma b {
+  font-family: var(--display);
+  font-size: clamp(48px, 6vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--signal);
+}
+.sadzba-suma span { font-family: var(--mono); font-size: 12.5px; color: var(--s-muted); letter-spacing: .04em; }
+
+/* cena a príplatky spolu v jednom rámčeku */
+.sadzba-cenablok {
+  margin: 8px 0 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .25);
+}
+.sadzba-cenablok .sadzba-suma { margin: 0 0 10px; }
+.sadzba-priplatky {
+  list-style: none;
+  display: grid;
+  gap: 3px;
+  padding: 0;
+  margin: 0;
+}
+.sadzba-priplatky li { font-size: 15px; line-height: 1.45; color: var(--s-text); }
+.sadzba-priplatky b { color: var(--signal); font-weight: 700; margin-right: 4px; white-space: nowrap; }
+
+/* čo je v cene výjazdu */
+.sadzba-vcene-nadpis {
+  margin: 0 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--s-line);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--s-muted);
+}
+.sadzba-vcene { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
+.sadzba-vcene li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 196, 0, .45);
+  border-radius: 999px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.35;
+}
+.sadzba-vcene li::before {
+  content: "";
+  flex: none;
+  width: 9px; height: 5px;
+  border-left: 2px solid var(--signal);
+  border-bottom: 2px solid var(--signal);
+  transform: rotate(-45deg) translateY(-2px);
+}
+
+.sadzba-pozn {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--s-line);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--s-muted);
+}
+
+@media (max-width: 520px) {
+  .sadzba { padding: 18px 16px 16px; margin-top: 28px; }
+  .sadzba-taby { border-radius: var(--r-sm); }
+  .sadzba-taby button { border-radius: 8px; font-size: 11px; letter-spacing: .03em; padding: 6px 8px; line-height: 1.3; }
+  .sadzba-priplatky li { font-size: 14.5px; }
+  .sadzba-vcene li { font-size: 13.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sadzba-taby i, .sadzba-stav i { animation: none !important; }
+}
+
+/* obrázok, ktorý ešte nie je nahratý — namiesto rozbitej ikony
+   sa zobrazí pokojná plocha s ikonou */
+.ref.bez-foto img { display: none; }
+.ref.bez-foto::before {
+  content: "";
+  display: block;
+  height: 200px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cfdae3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 4 14h7l-1 8 9-12h-7z'/%3E%3C/svg%3E") center / 44px no-repeat,
+    var(--paper-3);
+}
+.ref.bez-foto { cursor: default; }
+
+/* karta poruchy — ikona v rožku, prekrýva spodný okraj fotografie */
+.ref-ico > div { position: relative; padding-top: 34px; }
+.ref-ico .card-ico {
+  position: absolute;
+  top: -22px; left: 20px;
+  margin: 0;
+  border: 3px solid var(--paper);
+  box-sizing: content-box;
+}
+.ref-ico h4 { font-size: 17px; }
+
+/* ---------- lišta so súhlasom s cookies — malá karta z matného skla ----------
+   Farba sa riadi značkou stránky (data-theme): zelená energetika,
+   modrá telekomunikácie, tehlová stavebné práce. Lišta nič neblokuje. */
+
+.cookie-lista {
+  position: fixed;
+  left: 16px; bottom: 16px;
+  z-index: 200;
+  width: min(380px, calc(100vw - 32px));
+  pointer-events: none;
+}
+.cookie-lista[hidden] { display: none; }
+.cookie-in {
+  pointer-events: auto;
+  padding: 16px 18px 14px;
+  color: #fff;
+  /* tmavý „lesný" odtieň farby značky, ako cenník na havarijných stavoch */
+  background: color-mix(in srgb, color-mix(in srgb, var(--accent-ink) 55%, #06120d) 88%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-top: 3px solid var(--signal);
+  border-radius: var(--r);
+  box-shadow: 0 12px 32px rgba(8, 16, 24, .22);
+  font-family: var(--body);
+  animation: cookie-in .35s cubic-bezier(.22, .8, .26, 1);
+}
+@keyframes cookie-in { from { opacity: 0; transform: translateY(12px); } }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .cookie-in { background: color-mix(in srgb, var(--accent-ink) 55%, #06120d); }
+}
+.cookie-text { margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; color: rgba(255, 255, 255, .92); }
+.cookie-text strong { color: #fff; font-weight: 600; }
+.cookie-stitok {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.cookie-akcie { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+/* nenásilné tlačidlá: rovnaká veľkosť, žiadna krikľavá farba */
+.cookie-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+/* obe voľby vyzerajú rovnako — ani jedna nie je vnucovaná */
+.cookie-btn:hover { background: rgba(255, 255, 255, .17); border-color: rgba(255, 255, 255, .28); }
+.cookie-btn:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+
+.cookie-detail { margin-top: 10px; font-size: 13.5px; }
+.cookie-detail summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .7);
+}
+.cookie-detail summary:hover { color: #fff; }
+.cookie-detail summary::-webkit-details-marker { display: none; }
+.cookie-detail summary::before {
+  content: "";
+  width: 5px; height: 5px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .18s ease;
+}
+.cookie-detail[open] summary::before { transform: rotate(45deg) translate(-2px, -1px); }
+.cookie-detail label { display: flex; gap: 9px; align-items: flex-start; padding: 8px 0 0; line-height: 1.45; color: rgba(255, 255, 255, .88); }
+.cookie-detail label b { color: #fff; font-weight: 600; }
+.cookie-detail input { margin-top: 3px; accent-color: var(--signal); }
+.cookie-btn-save { width: 100%; margin-top: 12px; }
+
+.cookie-odkaz {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.cookie-odkaz:hover { color: var(--accent); }
+
+@media (max-width: 520px) {
+  .cookie-lista { left: 10px; bottom: 10px; width: calc(100vw - 20px); }
+  .cookie-in { padding: 14px 14px 12px; }
+  .cookie-text { font-size: 14px; margin-bottom: 10px; }
 }

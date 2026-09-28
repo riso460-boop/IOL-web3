@@ -20,6 +20,14 @@ Vlastná doména iol.sk sa v tomto súpise neuvádza.
               Momentálne sa použije vždy — viď bod 4.
 
 
+  www.googletagmanager.com   Google Tag Manager (kontajner GTM-5Q7PMC5D)
+    Kde:      všetky stránky, cez assets/js/analytika.js
+    Poznámka: Načíta sa AŽ po súhlase návštevníka v lište cookies.
+              Google Analytics (G-5ERL4TTYFH) a Google Ads
+              (AW-18454394499) sa nastavujú vnútri Tag Managera,
+              nie v kóde webu.
+
+
 2. ODKAZY, NA KTORÉ SA DÁ KLIKNÚŤ (otvoria cudziu stránku)
 ----------------------------------------------------------------------
 
