@@ -31,6 +31,8 @@
   // V GTM sa na ne naviažu spúšťače typu „Vlastná udalosť".
 
   var w = window, d = document;
+  var skript = d.currentScript;
+  var TEXTY = skript ? new URL('../texty/ochrana-sukromia.html', skript.src).href : 'assets/texty/ochrana-sukromia.html';
 
   if (!NASTAVENIA.gtm || NASTAVENIA.gtm.indexOf('XXXX') !== -1) { return; }
 
@@ -133,6 +135,9 @@
     lista.setAttribute('aria-label', 'Súhlas s cookies');
     lista.innerHTML =
       '<div class="cookie-in">' +
+        '<button type="button" class="cookie-info" aria-label="Zásady cookies a ochrany osobných údajov" title="Zásady cookies a ochrany osobných údajov">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6"/></svg>' +
+        '</button>' +
         '<p class="cookie-text"><b class="cookie-stitok">Cookies</b> — <strong>Súkromie je vaša voľba, ktorú rešpektujeme.</strong> Kliknutím na Povoliť nám pomôžete zlepšiť web pre vás aj ďalších.</p>' +
         '<div class="cookie-akcie">' +
           '<button type="button" class="cookie-btn cookie-btn-all">Povoliť</button>' +
@@ -148,6 +153,7 @@
       '</div>';
     d.body.appendChild(lista);
 
+    lista.querySelector('.cookie-info').addEventListener('click', function () { otvorZasady('cookies'); });
     lista.querySelector('.cookie-btn-all').addEventListener('click', function () {
       rozhodni({ analytika: true, reklama: true });
     });
@@ -162,16 +168,138 @@
     });
   }
 
+  /* ---------- okno „Ochrana súkromia" s dvoma záložkami ----------
+     Texty sú v assets/texty/ochrana-sukromia.html a načítajú sa až po otvorení. */
+  var okno = null, vratFokusZasady = null, textyNacitane = false;
+
+  function prepniZalozku(id) {
+    [].forEach.call(okno.querySelectorAll('.zs-tab'), function (t) {
+      var on = t.getAttribute('data-zalozka') === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    [].forEach.call(okno.querySelectorAll('.zs-panel'), function (p) {
+      p.hidden = p.getAttribute('data-zalozka') !== id;
+    });
+    okno.querySelector('.zs-obsah').scrollTop = 0;
+  }
+
+  function nacitajTexty(zalozka) {
+    var obsah = okno.querySelector('.zs-obsah');
+    fetch(TEXTY).then(function (r) {
+      if (!r.ok) { throw new Error(r.status); }
+      return r.text();
+    }).then(function (html) {
+      var t = d.createElement('template');
+      t.innerHTML = html;
+      var sekcie = t.content.querySelectorAll('section[data-zalozka]');
+      var taby = okno.querySelector('.zs-taby');
+      obsah.innerHTML = '';
+      [].forEach.call(sekcie, function (sek) {
+        var id = sek.getAttribute('data-zalozka');
+        var tab = d.createElement('button');
+        tab.type = 'button';
+        tab.className = 'zs-tab';
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('data-zalozka', id);
+        tab.id = 'zs-tab-' + id;
+        tab.setAttribute('aria-controls', 'zs-panel-' + id);
+        tab.textContent = sek.getAttribute('data-nazov');
+        taby.appendChild(tab);
+        var panel = d.createElement('div');
+        panel.className = 'zs-panel';
+        panel.id = 'zs-panel-' + id;
+        panel.setAttribute('role', 'tabpanel');
+        panel.setAttribute('aria-labelledby', tab.id);
+        panel.setAttribute('data-zalozka', id);
+        while (sek.firstChild) { panel.appendChild(sek.firstChild); }
+        obsah.appendChild(panel);
+      });
+      textyNacitane = true;
+      prepniZalozku(zalozka);
+    }).catch(function () {
+      obsah.innerHTML = '<p class="zs-chyba">Zásady sa nepodarilo načítať. Skúste to prosím znova, ' +
+        'alebo nám napíšte na <a href="mailto:obchod@iol.sk">obchod@iol.sk</a>.</p>';
+    });
+  }
+
+  function zavriZasady() {
+    if (!okno || okno.hidden) { return; }
+    okno.hidden = true;
+    d.body.style.overflow = '';
+    if (vratFokusZasady && vratFokusZasady.focus) { vratFokusZasady.focus(); }
+  }
+
+  function otvorZasady(zalozka) {
+    vratFokusZasady = d.activeElement;
+    if (!okno) {
+      okno = d.createElement('div');
+      okno.className = 'zs-okno';
+      okno.setAttribute('role', 'dialog');
+      okno.setAttribute('aria-modal', 'true');
+      okno.setAttribute('aria-labelledby', 'zs-nadpis');
+      okno.innerHTML =
+        '<div class="zs-pozadie" data-zavri></div>' +
+        '<div class="zs-box">' +
+          '<div class="zs-hlava">' +
+            '<p class="zs-nadpis" id="zs-nadpis">Ochrana súkromia</p>' +
+            '<button type="button" class="zs-zavri" aria-label="Zavrieť" data-zavri>' +
+              '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>' +
+            '</button>' +
+          '</div>' +
+          '<div class="zs-taby" role="tablist" aria-label="Zásady"></div>' +
+          '<div class="zs-obsah"><p class="zs-nacitavam">Načítavam…</p></div>' +
+          '<div class="zs-paticka">' +
+            '<button type="button" class="zs-nastavenia">Nastavenia cookies</button>' +
+            '<button type="button" class="zs-ok" data-zavri>Zavrieť</button>' +
+          '</div>' +
+        '</div>';
+      d.body.appendChild(okno);
+
+      okno.addEventListener('click', function (e) {
+        var prepni = e.target.closest('[data-prepni]');
+        var tab = e.target.closest('.zs-tab');
+        if (prepni) { e.preventDefault(); prepniZalozku(prepni.getAttribute('data-prepni')); }
+        else if (tab) { prepniZalozku(tab.getAttribute('data-zalozka')); }
+        else if (e.target.closest('[data-zavri]')) { zavriZasady(); }
+        else if (e.target.closest('.zs-nastavenia')) { zavriZasady(); ukazListu(); }
+      });
+      okno.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { e.stopPropagation(); zavriZasady(); return; }
+        var tab = e.target.closest('.zs-tab');
+        if (tab && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+          var taby = [].slice.call(okno.querySelectorAll('.zs-tab'));
+          var i = (taby.indexOf(tab) + (e.key === 'ArrowRight' ? 1 : -1) + taby.length) % taby.length;
+          prepniZalozku(taby[i].getAttribute('data-zalozka'));
+          taby[i].focus();
+        }
+      });
+      nacitajTexty(zalozka);
+    } else if (textyNacitane) {
+      prepniZalozku(zalozka);
+    }
+    okno.hidden = false;
+    d.body.style.overflow = 'hidden';
+    okno.querySelector('.zs-zavri').focus();
+  }
+
   /* ---------- odkaz „Nastavenia cookies" v pätičke ---------- */
   function pridajOdkazDoPaticky() {
     var paticka = d.querySelector('.footer-bottom');
     if (!paticka) { return; }
-    var odkaz = d.createElement('button');
-    odkaz.type = 'button';
-    odkaz.className = 'cookie-odkaz';
-    odkaz.textContent = 'Nastavenia cookies';
-    odkaz.addEventListener('click', ukazListu);
-    paticka.appendChild(odkaz);
+    var skupina = d.createElement('span');
+    skupina.className = 'cookie-odkazy';
+    function odkaz(text, akcia) {
+      var b = d.createElement('button');
+      b.type = 'button';
+      b.className = 'cookie-odkaz';
+      b.textContent = text;
+      b.addEventListener('click', akcia);
+      skupina.appendChild(b);
+    }
+    odkaz('Nastavenia cookies', ukazListu);
+    odkaz('Ochrana súkromia', function () { otvorZasady('gdpr'); });
+    paticka.appendChild(skupina);
   }
 
   function start() {
