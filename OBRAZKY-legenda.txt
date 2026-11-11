@@ -17,11 +17,10 @@ Názov súboru = STRÁNKA-UMIESTNENIE[-POPIS].jpg
   …-hero       veľká fotka v hlavičke stránky
   …-pas        pás cez celú šírku uprostred stránky
   …-karta      fotka, ktorá stránku zastupuje v kartách a odkazoch
-               na iných stránkach (napr. havarijne-karta.jpg sa
-               zobrazuje všade, kde je odkaz na Havarijné stavy)
+               na iných stránkach (napr. domacnosti-karta.jpg sa
+               zobrazuje všade, kde je odkaz na Rodinné domy)
   …-ref-…      karta konkrétnej realizácie / referencie
   …-galeria-…  posuvník fotografií
-  …-porucha-…  karta typickej poruchy (havarijné stavy)
 
 Novú fotku vymeníte tak, že súbor nahradíte iným s rovnakým názvom.
 
@@ -62,18 +61,14 @@ telekomunikacie/ikt-karta.jpg                karty a odkazy na IKT (TK, Referenc
 
 energetika/energetika-hero.jpg               Energetika — hlavička
 energetika/energetika-pas.jpg                Energetika — pás uprostred
-energetika/energetika-karta.jpg              Úvodná stránka — karta značky Energetika; odkaz zo stránky IKT
-energetika/havarijne-hero.jpg                Havarijné stavy — hlavička (aj náhľad pri zdieľaní)
-energetika/havarijne-pas.jpg                 Havarijné stavy — pás uprostred
-energetika/havarijne-karta.jpg               karty a odkazy na Havarijné stavy (Energetika, Domácnosti, Priemysel)
-energetika/havarijne-porucha-*.jpg           Havarijné stavy — 6 kariet porúch
+energetika/energetika-karta.jpg              Úvodná stránka — karta značky Energetika; odkazy zo stránok IKT, Domácnosti, Priemysel
 energetika/domacnosti-hero.jpg               Rodinné domy — hlavička
 energetika/domacnosti-pas.jpg                Rodinné domy — pás uprostred
 energetika/domacnosti-karta.jpg              karty a odkazy na Rodinné domy + 1. fotka v posuvníku
 energetika/domacnosti-ref-*.jpg              Rodinné domy — 6 kariet realizácií
 energetika/domacnosti-galeria-*.jpg          Rodinné domy — posuvník fotografií zo stavieb
 energetika/priemysel-hero.jpg                Priemysel — hlavička
-energetika/priemysel-karta.jpg               karty a odkazy na Priemysel (Energetika, Domácnosti, Havarijné, Referencie)
+energetika/priemysel-karta.jpg               karty a odkazy na Priemysel (Energetika, Domácnosti, Referencie)
 energetika/priemysel-ref-*.jpg               Priemysel — 6 kariet realizácií
 
 stavebne-prace/stavebne-prace-hero.jpg       Stavebné práce (aj dočasná stránka) — hlavička
@@ -215,32 +210,6 @@ energetika/priemysel-hero.jpg
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
 
-energetika/havarijne-hero.jpg
---------------------------------------------------------------------------
-  Stránka:      Energetika — havarijné stavy
-  Súbor:        energetika-havarijne-stavy.html
-  Umiestnenie:  hlavička stránky (hero)
-  Nájdete pri:  nadpis „Nejde vám elektrina? Výpadky riešime nonstop"
-  Rozmer:       2000 × 1200 px (minimum), na šírku
-  Čo na nej má byť:
-      Poruchová služba v teréne — zásah pri rozvádzači, práca s baterkou, večerná situácia.
-  Na čo myslieť pri výbere:
-      Cez fotku ide farebný prekryv značky a v strede je nadpis —
-      stred nechajte pokojný, hlavný motív radšej do strán.
-
-energetika/havarijne-pas.jpg
---------------------------------------------------------------------------
-  Stránka:      Energetika — havarijné stavy
-  Súbor:        energetika-havarijne-stavy.html
-  Umiestnenie:  pás cez celú šírku uprostred stránky
-  Nájdete pri:  nadpis „Opakujú sa vám poruchy?Urobíme vám elektrinu nanovo"
-  Rozmer:       2000 × 900 px (minimum), na šírku
-  Čo na nej má byť:
-      Technik dodržiavajúci termín — príchod na stavbu, odovzdanie hotovej práce.
-  Na čo myslieť pri výbere:
-      Zobrazuje sa nízky výrez zo stredu fotky. Dôležitý motív
-      umiestnite do stredu výšky, nie k hornému či dolnému okraju.
-
 spolocnost/historia-hero.jpg
 --------------------------------------------------------------------------
   Stránka:      Naša história
@@ -253,21 +222,6 @@ spolocnost/historia-hero.jpg
   Na čo myslieť pri výbere:
       Cez fotku ide farebný prekryv značky a v strede je nadpis —
       stred nechajte pokojný, hlavný motív radšej do strán.
-
-energetika/havarijne-karta.jpg
---------------------------------------------------------------------------
-  Stránka:      Energetika
-  Súbor:        energetika.html
-  Umiestnenie:  hlavička karty značky
-  Nájdete pri:  karta odkazujúca na energetika-havarijne-stavy.html
-  Používa sa aj: Energetika — rodinné domy — malý výrez v odkaze na spodku stránky (odkaz na energetika-havarijne-stavy.html)
-  Používa sa aj: Energetika — priemysel — malý výrez v odkaze na spodku stránky (odkaz na energetika-havarijne-stavy.html)
-  Rozmer:       1200 × 700 px (minimum), na šírku
-  Čo na nej má byť:
-      Karta Havarijné stavy — rozvádzač, ističe, zásah pri poruche.
-  Na čo myslieť pri výbere:
-      Orezáva sa na pomer zhruba 2:1 na výšku 168 px. Detail funguje
-      lepšie než široký celok.
 
 spolocnost/referencie-hero.jpg
 --------------------------------------------------------------------------
@@ -366,6 +320,8 @@ energetika/energetika-karta.jpg
   Súbor:        index.html
   Umiestnenie:  hlavička karty značky
   Nájdete pri:  karta odkazujúca na energetika.html
+  Používa sa aj: Energetika — rodinné domy — malý výrez v odkaze na spodku stránky (odkaz na energetika.html)
+  Používa sa aj: Energetika — priemysel — malý výrez v odkaze na spodku stránky (odkaz na energetika.html)
   Rozmer:       1200 × 700 px (minimum), na šírku
   Čo na nej má byť:
       Karta Energetika — rozvádzač, elektroinštalácia alebo fotovoltika.
@@ -532,7 +488,6 @@ energetika/domacnosti-karta.jpg
   Umiestnenie:  posuvník fotografií zo stavieb
   Nájdete pri:  posuvník „Zo stavieb"
   Používa sa aj: Energetika — hlavička karty značky (karta odkazujúca na energetika-domacnosti.html)
-  Používa sa aj: Energetika — havarijné stavy — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html)
   Používa sa aj: Energetika — priemysel — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html)
   Používa sa aj: Referencie — malý výrez v odkaze na spodku stránky (odkaz na energetika-domacnosti.html#cast-5)
   Rozmer:       1200 × 900 px (minimum), na šírku
@@ -620,7 +575,6 @@ energetika/priemysel-karta.jpg
   Umiestnenie:  hlavička karty značky
   Nájdete pri:  karta odkazujúca na energetika-priemysel.html
   Používa sa aj: Energetika — rodinné domy — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html)
-  Používa sa aj: Energetika — havarijné stavy — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html)
   Používa sa aj: Referencie — malý výrez v odkaze na spodku stránky (odkaz na energetika-priemysel.html#cast-5)
   Rozmer:       1200 × 700 px (minimum), na šírku
   Čo na nej má byť:
@@ -733,25 +687,5 @@ telekomunikacie/ikt-serverovna.jpg
       Vypĺňa polovicu bloku vedľa textu. Znesie aj širší záber.
 
 ==========================================================================
-Spolu 52 používaných fotografií (+ 1 pripravené miesto bez fotky).
+Spolu 49 používaných fotografií (+ 1 pripravené miesto bez fotky).
 
-==========================================================================
-HAVARIJNÉ STAVY — PORUCHY (energetika/havarijne-porucha-*.jpg)
---------------------------------------------------------------------------
-  Stránka:      Energetika — havarijné stavy
-  Súbor:        energetika-havarijne-stavy.html
-  Umiestnenie:  sekcia „Poruchy elektriny, s ktorými voláte najčastejšie"
-  Rozmer:       1200 × 900 px (minimum), na šírku
-  Súbory:
-      energetika/havarijne-porucha-vypadok.jpg          Výpadok elektriny v byte či dome
-      energetika/havarijne-porucha-istice.jpg           Vyhodené ističe alebo chránič
-      energetika/havarijne-porucha-zasuvka.jpg          Nejde zásuvka, vypínač alebo svetlo
-      energetika/havarijne-porucha-kabel.jpg            Prekopaný alebo prevŕtaný kábel
-      energetika/havarijne-porucha-chranic-dazd.jpg     Chránič vypadáva po daždi
-      energetika/havarijne-porucha-rozvadzac-burka.jpg  Poškodený rozvádzač po búrke
-  Na čo myslieť pri výbere:
-      Poradie kariet: 1. rad vypadok, istice, zasuvka;
-      2. rad kabel, chranic-dazd, rozvadzac-burka.
-      Keby súbor chýbal, karta ukáže sivú plochu s ikonou blesku.
-      Nadpis a text karty upravíte priamo v HTML (atribúty
-      data-lb-title a data-lb-text + text pod obrázkom).

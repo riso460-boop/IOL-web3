@@ -42,8 +42,6 @@ Vlastná doména iol.sk sa v tomto súpise neuvádza.
 3. ADRESY, KTORÉ SA NENAČÍTAVAJÚ (len identifikátory)
 ----------------------------------------------------------------------
 
-  schema.org                 slovník štruktúrovaných dát
-    Kde:      energetika-havarijne-stavy.html, v JSON-LD
   www.sitemaps.org           menný priestor XML
     Kde:      sitemap.xml
     Poznámka: Nejde o sťahovanie. Sú to len texty, ktoré hovoria,
