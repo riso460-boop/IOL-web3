@@ -540,6 +540,7 @@ p { margin: 0 0 18px; }
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
 }
+@media (min-width: 1021px) { .facts.tri .container { grid-template-columns: repeat(3, 1fr); } }
 .facts div { padding: 30px 26px 30px 0; }
 .facts div + div { border-left: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); padding-left: 26px; }
 .facts b {
@@ -759,23 +760,6 @@ p { margin: 0 0 18px; }
 }
 .back-link .ico { width: 14px; height: 14px; }
 .back-link:hover { color: var(--accent); border-color: var(--accent); background: var(--paper); }
-
-/* ---------- havarijná služba ---------- */
-
-.hero-alarm {
-  background:
-    radial-gradient(ellipse 54% 70% at 12% 0%, rgba(192, 39, 26, .12), transparent 62%),
-    linear-gradient(180deg, #fff7f5, var(--paper));
-}
-.hero-alarm .mark { color: #c0271a; background: linear-gradient(transparent 64%, rgba(255, 196, 0, .55) 0); }
-.hero-alarm .back-link:hover { color: #c0271a; border-color: #c0271a; }
-
-.button-alarm {
-  background: #c0271a;
-  color: #fff;
-  border: 0;
-}
-.button-alarm:hover { background: #a41f14; color: #fff; transform: translateY(-2px); }
 
 /* ---------- postup ---------- */
 
@@ -1348,36 +1332,6 @@ p { margin: 0 0 18px; }
 }
 .hero.has-foto .pulse-badge i { background: var(--signal); }
 
-/* ---------- odznak „sme online" (len havarijná služba) ----------
-   Zelený stavový bod ako pri četovacích aplikáciách: svieti,
-   dýcha a jemne bliká, aby bolo vidieť, že služba naozaj beží. */
-
-.pulse-badge.je-aktivny,
-.hero.has-foto .pulse-badge.je-aktivny {
-  gap: 11px;
-  color: #fff;
-  /* len jemný závoj — bodka má byť to hlavné, čo je vidieť */
-  background: rgba(8, 32, 24, .26);
-  border: 1px solid rgba(60, 232, 148, .42);
-  box-shadow: 0 0 18px rgba(60, 232, 148, .14);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-}
-
-.pulse-badge.je-aktivny i,
-.hero.has-foto .pulse-badge.je-aktivny i {
-  width: 10px; height: 10px;
-  background: #3ce894;
-  animation: tep-online 2.4s ease-out infinite, blink-online 2.4s ease-in-out infinite;
-}
-
-@keyframes tep-online {
-  0%   { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 0 rgba(60, 232, 148, .55); }
-  70%  { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 11px transparent; }
-  100% { box-shadow: 0 0 9px rgba(60, 232, 148, .95), 0 0 0 0 transparent; }
-}
-@keyframes blink-online { 0%, 100% { opacity: 1; } 55% { opacity: .38; } }
-
 /* ---------- pás s fotografiou uprostred stránky ---------- */
 
 .photo-band {
@@ -1558,30 +1512,6 @@ p { margin: 0 0 18px; }
   }
 }
 
-/* obrázok, ktorý ešte nie je nahratý — namiesto rozbitej ikony
-   sa zobrazí pokojná plocha s ikonou */
-.ref.bez-foto img { display: none; }
-.ref.bez-foto::before {
-  content: "";
-  display: block;
-  height: 200px;
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cfdae3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 4 14h7l-1 8 9-12h-7z'/%3E%3C/svg%3E") center / 44px no-repeat,
-    var(--paper-3);
-}
-.ref.bez-foto { cursor: default; }
-
-/* karta poruchy — ikona v rožku, prekrýva spodný okraj fotografie */
-.ref-ico > div { position: relative; padding-top: 34px; }
-.ref-ico .card-ico {
-  position: absolute;
-  top: -22px; left: 20px;
-  margin: 0;
-  border: 3px solid var(--paper);
-  box-sizing: content-box;
-}
-.ref-ico h4 { font-size: 17px; }
-
 /* ---------- lišta so súhlasom s cookies — malá karta z matného skla ----------
    Farba sa riadi značkou stránky (data-theme): zelená energetika,
    modrá telekomunikácie, tehlová stavebné práce. Lišta nič neblokuje. */
@@ -1598,7 +1528,7 @@ p { margin: 0 0 18px; }
   pointer-events: auto;
   padding: 16px 18px 14px;
   color: #fff;
-  /* tmavý „lesný" odtieň farby značky, ako cenník na havarijných stavoch */
+  /* tmavý „lesný" odtieň farby značky */
   background: color-mix(in srgb, color-mix(in srgb, var(--accent-ink) 55%, #06120d) 88%, transparent);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   backdrop-filter: blur(16px) saturate(140%);
